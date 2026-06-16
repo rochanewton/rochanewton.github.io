@@ -1,6 +1,6 @@
 ---
 title: How to Build and Deploy a Personal Portfolio with MkDocs and GitHub Actions
-date: 2026-06-16
+date: 2026-06-15
 tags:
   - DevOps
   - Cloud
@@ -91,12 +91,12 @@ We will use Python to manage the site generator. Create a virtual environment an
 The `mkdocs.yml` file acts as the configuration hub. Here we define our theme (Material), enable features like instant navigation, configure our git repository, and register our plugins:
 
 ```yaml
-site_name: Your Name
-site_description: Cloud, DevOps, and Systems Architecture Portfolio
-site_author: Your Name
-site_url: https://username.github.io/
-repo_url: https://github.com/username/username.github.io
-repo_name: username.github.io
+site_name: Newton Rocha
+site_description: Cloud, AWS, Linux, Enterprise Integration and Cybersecurity
+site_author: Newton Rocha
+site_url: https://rochanewton.github.io/
+repo_url: https://github.com/rochanewton/rochanewton.github.io
+repo_name: rochanewton.github.io
 
 theme:
   name: material
