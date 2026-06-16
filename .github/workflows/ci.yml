@@ -28,11 +28,11 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: DavidAnson/markdownlint-cli2-action@v20
-        with:
-          globs: |
-            README.md
-	    SECURITY.md
-  	    .github/**/*.md
+  with:
+    globs: |
+      README.md
+      SECURITY.md
+      .github/**/*.md
 
   yaml:
     name: YAML Lint
