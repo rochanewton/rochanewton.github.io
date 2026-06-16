@@ -6,11 +6,7 @@ Cloud Engineer • AWS • Linux • Enterprise Integration
 
 
 
-\[Website](https://rochanewton.github.io) •
-
-\[LinkedIn](https://linkedin.com/in/rochanewton) •
-
-\[GitHub](https://github.com/rochanewton)
+\[Website](https://rochanewton.github.io) • \[LinkedIn](https://linkedin.com/in/rochanewton) • \[GitHub](https://github.com/rochanewton)
 
 
 
@@ -110,53 +106,5 @@ Every push to the `main` branch automatically:
 
 python -m venv .venv
 
-
-
 source .venv/bin/activate
-
-```
-
-
-
-```bash
-
-pip install -r requirements.txt
-
-```
-
-
-
-```bash
-
-mkdocs serve
-
-```
-
-
-
-\---
-
-
-
-\## Deployment
-
-
-
-Deployment is fully automated using GitHub Actions.
-
-
-
-No manual deployment is required.
-
-
-
-\---
-
-
-
-\## License
-
-
-
-MIT License
 
