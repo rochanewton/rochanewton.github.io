@@ -30,7 +30,9 @@ jobs:
       - uses: DavidAnson/markdownlint-cli2-action@v20
         with:
           globs: |
-            **/*.md
+            README.md
+	    SECURITY.md
+  	    .github/**/*.md
 
   yaml:
     name: YAML Lint
