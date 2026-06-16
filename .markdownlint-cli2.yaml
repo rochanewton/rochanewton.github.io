@@ -6,6 +6,4 @@ config:
   MD034: false
 
 globs:
-  - README.md
-  - SECURITY.md
   - .github/**/*.md

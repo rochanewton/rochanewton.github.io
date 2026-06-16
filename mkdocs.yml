@@ -51,7 +51,7 @@ plugins:
       pagination_per_page: 5
       categories: true
       draft_if_future_date: true
-      post_excerpt: required 
+      post_excerpt: required
 
 markdown_extensions:
   - attr_list
