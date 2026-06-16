@@ -5,7 +5,7 @@ hide:
 ---
 # Contact
 
-Let's connect! You can find my professional profile and explore my public code repositories on the platforms below.
+Let's connect! You can find my professional profile on LinkedIn below.
 
 <div class="contact-grid">
   

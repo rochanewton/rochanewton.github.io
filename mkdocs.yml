@@ -2,6 +2,8 @@ site_name: Newton Rocha
 site_description: Cloud, AWS, Linux, Enterprise Integration and Cybersecurity
 site_author: Newton Rocha
 site_url: https://rochanewton.github.io/
+repo_url: https://github.com/rochanewton/rochanewton.github.io
+repo_name: rochanewton.github.io
 
 theme:
   name: material
@@ -52,6 +54,12 @@ plugins:
       categories: true
       draft_if_future_date: true
       post_excerpt: required
+  - git-revision-date-localized:
+      type: timeago
+  - rss:
+      match_path: articles/.*
+      use_git: false
+  - mermaid2
 
 markdown_extensions:
   - attr_list

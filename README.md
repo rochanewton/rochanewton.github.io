@@ -1,110 +1,72 @@
-\# Newton Rocha
+# Newton Rocha
 
+<p align="center">
+  <strong>Cloud Engineer • AWS • Linux • Enterprise Integration</strong>
+</p>
 
+<p align="center">
+  <a href="https://rochanewton.github.io">Website</a> •
+  <a href="https://linkedin.com/in/rochanewton">LinkedIn</a> •
+  <a href="https://github.com/rochanewton">GitHub</a>
+</p>
 
-Cloud Engineer • AWS • Linux • Enterprise Integration
+---
 
+## 📖 About
 
+This repository contains the source code of my personal website, built using **MkDocs Material** and automatically deployed to **GitHub Pages** using **GitHub Actions**.
 
-\[Website](https://rochanewton.github.io) • \[LinkedIn](https://linkedin.com/in/rochanewton) • \[GitHub](https://github.com/rochanewton)
+The site documents my professional journey in Cloud Computing, AWS, Linux, Cybersecurity, and Enterprise Integration.
 
+---
 
+## 🛠️ Tech Stack
 
-\---
+- **Site Generator:** [MkDocs](https://www.mkdocs.org/)
+- **Theme:** [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
+- **Programming Language:** Python
+- **Automation & Hosting:** GitHub Actions & GitHub Pages
 
+---
 
+## ✨ Features
 
-\## About
+- **Personal Portfolio & Resume:** Modern, interactive career timeline.
+- **Technical Blog:** Step-by-step guides and articles.
+- **Responsive Layout:** Beautiful design fully optimized for mobile devices.
+- **Print-to-PDF Overrides:** High-fidelity print styles for easy resume export.
+- **Dark/Light Mode:** Seamless toggle controls.
+- **Automated Validation:** CI/CD checks for markdown syntax, links, YAML schema, and spelling.
 
+---
 
+## 🔄 CI/CD Pipeline
 
-This repository contains the source code of my personal website built with \*\*MkDocs Material\*\* and automatically deployed to \*\*GitHub Pages\*\* using \*\*GitHub Actions\*\*.
+Every push to the `main` branch triggers an automated GitHub Actions pipeline that:
 
+1. **Markdown Linting:** Validates syntax and formatting rules.
+2. **YAML Linting:** Verifies mkdocs and workflow files configuration.
+3. **Spellchecking:** Uses Codespell to detect typos.
+4. **Link Checking:** Scans document links to prevent broken references.
+5. **Static Site Build:** Compiles Markdown sources into static HTML.
+6. **Deploy:** Automatically deploys the built site to GitHub Pages.
 
+---
 
-The website documents my professional journey in Cloud Computing, AWS, Linux, Cybersecurity and Enterprise Integration.
+## 💻 Local Development
 
-
-
-\---
-
-
-
-\## Tech Stack
-
-
-
-\- MkDocs
-
-\- Material for MkDocs
-
-\- Python
-
-\- GitHub Actions
-
-\- GitHub Pages
-
-
-
-\---
-
-
-
-\## Features
-
-
-
-\- Personal portfolio
-
-\- Technical blog
-
-\- Responsive design
-
-\- Automatic deployment
-
-\- Search
-
-\- Dark / Light mode
-
-
-
-\---
-
-
-
-\## CI/CD
-
-
-
-Every push to the `main` branch automatically:
-
-
-
-1\. Validates Markdown
-
-2\. Validates YAML
-
-3\. Runs Codespell
-
-4\. Checks links
-
-5\. Builds the MkDocs site
-
-6\. Deploys to GitHub Pages
-
-
-
-\---
-
-
-
-\## Local Development
-
-
+To run the site locally, clone the repository and execute:
 
 ```bash
-
+# Create and activate virtual environment
 python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
-source .venv/bin/activate
+# Install dependencies
+pip install -r requirements.txt
 
+# Start local server
+mkdocs serve
+```
+
+The site will be available at `http://127.0.0.1:8000/`.

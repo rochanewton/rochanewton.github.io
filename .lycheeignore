@@ -1,3 +1,4 @@
-[codespell]
-skip=.git,.venv,site
-ignore-words-list=nd,ansible,mkdocs
+https://linkedin.com/.*
+https://www.linkedin.com/.*
+https://credly.com/.*
+https://www.credly.com/.*
