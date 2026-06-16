@@ -2,5 +2,19 @@ extends: default
 
 rules:
   line-length: disable
+
   document-start: disable
+
   truthy: disable
+
+  comments:
+    min-spaces-from-content: 1
+
+  empty-lines:
+    max: 2
+
+  new-line-at-end-of-file:
+    level: warning
+
+  trailing-spaces:
+    level: warning
