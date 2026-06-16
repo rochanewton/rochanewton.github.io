@@ -1,0 +1,4 @@
+globs:
+  - README.md
+  - SECURITY.md
+  - .github/**/*.md
