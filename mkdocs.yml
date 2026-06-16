@@ -1,0 +1,92 @@
+site_name: Newton Rocha
+site_description: Cloud, AWS, Linux, Enterprise Integration and Cybersecurity
+site_author: Newton Rocha
+site_url: https://rochanewton.github.io/
+
+theme:
+  name: material
+  language: en
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+    - scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.prune
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+
+plugins:
+  - search
+  - tags
+  - blog:
+      blog_dir: articles
+      post_date_format: medium
+      post_url_date_format: yyyy/MM/dd
+      post_url_format: "{slug}"
+      authors: true
+      archive: true
+      pagination: true
+      pagination_per_page: 5
+      categories: true
+      draft_if_future_date: true
+      post_excerpt: required 
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - tables
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+
+extra:
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+  consent:
+    title: Cookie consent
+    description: This site uses cookies to improve the browsing experience.
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/rochanewton
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Articles: articles/index.md
+  - Contact: contact.md
