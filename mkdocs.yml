@@ -7,23 +7,27 @@ repo_name: rochanewton.github.io
 
 theme:
   name: material
+  favicon: images/favicon.ico
+  logo: images/logo.png
   language: en
   font:
     text: Inter
     code: JetBrains Mono
   palette:
-    - scheme: slate
-      primary: indigo
-      accent: cyan
-      toggle:
-        icon: material/weather-sunny
-        name: Light mode
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: indigo
       accent: cyan
       toggle:
         icon: material/weather-night
-        name: Dark mode
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -36,10 +40,10 @@ theme:
     - search.highlight
     - search.suggest
     - content.code.copy
-    - content.action.edit
     - content.action.view
 
 plugins:
+  - social
   - search
   - tags
   - blog:
