@@ -7,7 +7,7 @@ hide:
 <div class="profile-header">
   <div class="profile-photo-container">
     <div class="profile-photo-placeholder">
-      <img src="../images/profile.png" alt="Newton Rocha" />
+      <img src="../images/profile.webp" alt="Newton Rocha" />
     </div>
   </div>
   <div class="profile-info">
