@@ -10,9 +10,8 @@ buildFuture = false
 
 enableEmoji = true
 
-# Add your Google Analytics 4 Measurement ID here once you create a free
-# property at https://analytics.google.com (format: G-XXXXXXXXXX)
-# googleAnalytics = "G-XXXXXXXXXX"
+# Google Analytics 4 (gtag.js)
+googleAnalytics = "G-3TGD9DJBVE"
 
 [pagination]
   pagerSize = 10
