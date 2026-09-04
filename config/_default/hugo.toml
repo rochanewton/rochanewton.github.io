@@ -1,0 +1,44 @@
+theme = "blowfish"
+baseURL = "https://rochanewton.github.io/"
+defaultContentLanguage = "en"
+
+enableRobotsTXT = true
+summaryLength = 30
+
+buildDrafts = false
+buildFuture = false
+
+enableEmoji = true
+
+# Add your Google Analytics 4 Measurement ID here once you create a free
+# property at https://analytics.google.com (format: G-XXXXXXXXXX)
+# googleAnalytics = "G-XXXXXXXXXX"
+
+[pagination]
+  pagerSize = 10
+
+[imaging]
+  anchor = "Center"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[related]
+  threshold = 0
+  toLower = false
+
+    [[related.indices]]
+        name = "tags"
+        weight = 100
+
+    [[related.indices]]
+        name = "categories"
+        weight = 100
+
+    [[related.indices]]
+        name = "date"
+        weight = 10

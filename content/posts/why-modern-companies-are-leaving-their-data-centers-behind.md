@@ -3,6 +3,8 @@ title: "Why Modern Companies Are Leaving Their Data Centers Behind"
 date: 2026-06-19
 description: "How cloud computing changed the way companies build and scale applications, and why on-premises infrastructure still has a place."
 tags: ["cloud", "infrastructure"]
+categories: ["Cloud"]
+showAuthor: true
 ---
 
 If you look at how companies built applications twenty years ago, things were very different from today.

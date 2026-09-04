@@ -1,9 +1,11 @@
 ---
 title: "Contact"
-url: "/contact/"
+description: "Get in touch with Newton Rocha."
+showTableOfContents: false
 ---
 
-Let's connect! You can find my professional profile on LinkedIn, or verify my certifications on Credly.
+Let's connect. Feel free to reach out on LinkedIn, verify my certifications on Credly, or send me an email.
 
-- [LinkedIn](https://www.linkedin.com/in/rochanewton)
-- [Credly](https://www.credly.com/users/rochanewton)
+- **LinkedIn:** [linkedin.com/in/rochanewton](https://www.linkedin.com/in/rochanewton)
+- **Credly:** [credly.com/users/rochanewton](https://www.credly.com/users/rochanewton)
+- **Email:** [newtonr365@gmail.com](mailto:newtonr365@gmail.com)

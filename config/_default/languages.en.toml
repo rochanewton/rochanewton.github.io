@@ -1,0 +1,23 @@
+locale = "en"
+label = "English"
+weight = 1
+title = "Newton Rocha"
+
+[params]
+  displayName = "English"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  logo = ""
+  description = "Middleware, Managed File Transfer, and Infrastructure notes from Newton Rocha — IBM Sterling, Linux, cloud, and applying AI to IT operations."
+
+[params.author]
+  name = "Newton Rocha"
+  email = "newtonr365@gmail.com"
+  headline = "Middleware Administrator | IBM Sterling File Transfer Specialist"
+  bio = "Senior IT professional with 15+ years specializing in Linux systems administration, Bash scripting, and enterprise integration using IBM Sterling technologies (File Gateway, B2B Integrator, Connect:Direct). I write about real production incidents, MFT/middleware tips, infrastructure automation, and how I'm applying AI to IT operations."
+  links = [
+    { linkedin = "https://www.linkedin.com/in/rochanewton" },
+    { email = "mailto:newtonr365@gmail.com" },
+    { link = "https://www.credly.com/users/rochanewton" },
+  ]

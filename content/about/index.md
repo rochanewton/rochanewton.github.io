@@ -1,6 +1,7 @@
 ---
 title: "About"
-url: "/about/"
+description: "Newton Rocha's background: middleware, infrastructure, and IBM Sterling Managed File Transfer experience."
+showTableOfContents: true
 ---
 
 ## Professional Summary
@@ -32,44 +33,40 @@ My goal is to become a recognized expert in IBM Sterling technologies and applie
 
 ## Professional Experience Timeline
 
-<div class="about-timeline">
-
 ### DXC Technology — Senior Middleware Engineer
-<p class="role-dates">May 2024 – Present</p>
+*May 2024 – Present*
 
 Supporting a business-critical Managed File Transfer environment for a Fortune 500 telecommunications provider, with a primary focus on IBM Sterling File Gateway, B2B Integrator, and Connect for UNIX. Acting as team lead, coordinating incident response and root cause analysis (RCA) for critical outages, and building Power BI reporting for leadership visibility.
 
 ### Kyndryl — Middleware Administrator
-<p class="role-dates">Sep 2021 – May 2024</p>
+*Sep 2021 – May 2024*
 
 Supported the same Sterling/Linux middleware stack, plus Azure infrastructure (VMs, Storage, Backup, NSGs, Bastion) and 24x7 on-call coverage. Managed incidents, changes, and inventory through ServiceNow.
 
 ### Amazon Web Services — Senior Data Center Technician
-<p class="role-dates">Jul 2018 – Jul 2021</p>
+*Jul 2018 – Jul 2021*
 
 Led a hardware decommissioning team across all company units, delivered infrastructure rollout projects, and built internal technical-interview and training programs for new hires, contributing to the buildout of Amazon's global Cloud infrastructure.
 
 ### Amazon Web Services — Data Center Technician
-<p class="role-dates">Jun 2016 – Jul 2018</p>
+*Jun 2016 – Jul 2018*
 
 Installed, maintained, and repaired high-density server and network hardware; installed and tested fiber-optic and copper cabling; resolved operational tickets according to SLA priorities.
 
 ### Acrisure Brasil — Network Administrator
-<p class="role-dates">Jun 2013 – May 2016</p>
+*Jun 2013 – May 2016*
 
 Managed on-premises and AWS infrastructure across 10 corporate locations in Brazil, led a team of four support analysts, and led the migration of corporate email to Google Workspace.
 
 ### Acrisure Brasil — Senior Support Analyst
-<p class="role-dates">Jun 2011 – Jun 2013</p>
+*Jun 2011 – Jun 2013*
 
 Provided level-2 infrastructure support, administered Active Directory, and mentored junior analysts.
 
 ### Hypera — Technical Support Analyst
-<p class="role-dates">Nov 2009 – Jun 2011</p>
+*Nov 2009 – Jun 2011*
 
 Supported office networks, switches, print servers, and ITIL-based incident and service-request processes.
-
-</div>
 
 ## Volunteer Experience
 
@@ -79,11 +76,11 @@ Conducts weekly English practice and mentoring sessions, helping students build 
 
 ## Certifications
 
-- Claude Certified Associate – Foundations (CCAF), Anthropic — Issued Sep 2026
+- [Claude Certified Associate – Foundations (CCAF), Anthropic](https://www.credly.com/badges/23196f12-65f9-4aab-b074-d3807b18599b/public_url) — Issued Sep 2026
 - AWS Certified Cloud Practitioner
 - Microsoft Certified: Azure Fundamentals
 
-*Verifiable on [Credly]({{< param "credly" >}}).*
+All certifications verifiable on [Credly](https://www.credly.com/users/rochanewton).
 
 ## Education
 

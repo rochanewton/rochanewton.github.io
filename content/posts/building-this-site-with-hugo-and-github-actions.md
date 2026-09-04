@@ -3,6 +3,8 @@ title: "Building This Site: A CI/CD Pipeline with Hugo and GitHub Actions"
 date: 2026-09-04
 description: "How this site is built, tested, and deployed automatically — a small, real CI/CD pipeline running on GitHub Actions and GitHub Pages."
 tags: ["ci-cd", "github-actions", "hugo", "devops"]
+categories: ["DevOps"]
+showAuthor: true
 ---
 
 I wanted a place to write about infrastructure, middleware, and AI in operations — and I wanted building it to prove something too: that I can design and run a real CI/CD pipeline, not just talk about one.
