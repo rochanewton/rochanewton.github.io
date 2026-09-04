@@ -6,6 +6,7 @@ showDate: false
 showAuthor: false
 showReadingTime: false
 showWordCount: false
+showHero: false
 ---
 
 Senior IT professional with 15+ years specializing in Linux systems administration, Bash scripting, and enterprise integration using IBM Sterling technologies (File Gateway, B2B Integrator, Connect:Direct). Over the last five years, hands-on supporting business-critical Managed File Transfer environments for a Fortune 500 telecommunications provider, in 24x7 and follow-the-sun production models.
