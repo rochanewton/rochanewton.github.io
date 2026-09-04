@@ -2,15 +2,17 @@
 title: "Resume"
 description: "Newton Rocha's full resume: experience, certifications, and education."
 showTableOfContents: true
+showDate: false
+showAuthor: false
+showReadingTime: false
+showWordCount: false
 ---
 
-## Professional Summary
-
-Senior IT professional with 15+ years specializing in Linux systems administration, Bash scripting, and enterprise integration using IBM tools (Sterling File Gateway, B2B Integrator, Connect:Direct for UNIX). Over the last five years, hands-on with IBM Sterling technologies supporting business-critical Managed File Transfer environments for a Fortune 500 telecommunications provider, in 24x7 and follow-the-sun production models.
-
-## Career Vision
+Senior IT professional with 15+ years specializing in Linux systems administration, Bash scripting, and enterprise integration using IBM Sterling technologies (File Gateway, B2B Integrator, Connect:Direct). Over the last five years, hands-on supporting business-critical Managed File Transfer environments for a Fortune 500 telecommunications provider, in 24x7 and follow-the-sun production models.
 
 My goal is to become a recognized expert in IBM Sterling technologies and applied AI, while deepening my cloud architecture skills. I believe technology should be secure, scalable, reliable, and simple to operate.
+
+{{< button href="https://www.linkedin.com/in/rochanewton" target="_blank" rel="noopener noreferrer" >}}Connect on LinkedIn{{< /button >}}
 
 ## Key Highlights
 
@@ -31,42 +33,39 @@ My goal is to become a recognized expert in IBM Sterling technologies and applie
 
 **Automation & Operations:** Bash scripting, Git/GitHub, GitHub Actions/CI-CD, ServiceNow, change management, disaster recovery, technical documentation, Power BI reporting
 
-## Professional Experience Timeline
+## Professional Experience
 
-### DXC Technology — Senior Middleware Engineer
-*May 2024 – Present*
+{{< timeline >}}
 
+{{< timelineItem icon="worktree" header="Senior Middleware Engineer" badge="May 2024 – Present" subheader="DXC Technology" >}}
 Supporting a business-critical Managed File Transfer environment for a Fortune 500 telecommunications provider, with a primary focus on IBM Sterling File Gateway, B2B Integrator, and Connect for UNIX. Acting as team lead, coordinating incident response and root cause analysis (RCA) for critical outages, and building Power BI reporting for leadership visibility.
+{{< /timelineItem >}}
 
-### Kyndryl — Middleware Administrator
-*Sep 2021 – May 2024*
-
+{{< timelineItem icon="worktree" header="Middleware Administrator" badge="Sep 2021 – May 2024" subheader="Kyndryl" >}}
 Supported the same Sterling/Linux middleware stack, plus Azure infrastructure (VMs, Storage, Backup, NSGs, Bastion) and 24x7 on-call coverage. Managed incidents, changes, and inventory through ServiceNow.
+{{< /timelineItem >}}
 
-### Amazon Web Services — Senior Data Center Technician
-*Jul 2018 – Jul 2021*
-
+{{< timelineItem icon="worktree" header="Senior Data Center Technician" badge="Jul 2018 – Jul 2021" subheader="Amazon Web Services" >}}
 Led a hardware decommissioning team across all company units, delivered infrastructure rollout projects, and built internal technical-interview and training programs for new hires, contributing to the buildout of Amazon's global Cloud infrastructure.
+{{< /timelineItem >}}
 
-### Amazon Web Services — Data Center Technician
-*Jun 2016 – Jul 2018*
-
+{{< timelineItem icon="worktree" header="Data Center Technician" badge="Jun 2016 – Jul 2018" subheader="Amazon Web Services" >}}
 Installed, maintained, and repaired high-density server and network hardware; installed and tested fiber-optic and copper cabling; resolved operational tickets according to SLA priorities.
+{{< /timelineItem >}}
 
-### Acrisure Brasil — Network Administrator
-*Jun 2013 – May 2016*
-
+{{< timelineItem icon="worktree" header="Network Administrator" badge="Jun 2013 – May 2016" subheader="Acrisure Brasil" >}}
 Managed on-premises and AWS infrastructure across 10 corporate locations in Brazil, led a team of four support analysts, and led the migration of corporate email to Google Workspace.
+{{< /timelineItem >}}
 
-### Acrisure Brasil — Senior Support Analyst
-*Jun 2011 – Jun 2013*
-
+{{< timelineItem icon="worktree" header="Senior Support Analyst" badge="Jun 2011 – Jun 2013" subheader="Acrisure Brasil" >}}
 Provided level-2 infrastructure support, administered Active Directory, and mentored junior analysts.
+{{< /timelineItem >}}
 
-### Hypera — Technical Support Analyst
-*Nov 2009 – Jun 2011*
-
+{{< timelineItem icon="worktree" header="Technical Support Analyst" badge="Nov 2009 – Jun 2011" subheader="Hypera" >}}
 Supported office networks, switches, print servers, and ITIL-based incident and service-request processes.
+{{< /timelineItem >}}
+
+{{< /timeline >}}
 
 ## Volunteer Experience
 
@@ -76,11 +75,9 @@ Conducts weekly English practice and mentoring sessions, helping students build 
 
 ## Certifications
 
-- [Claude Certified Associate – Foundations (CCAF), Anthropic](https://www.credly.com/badges/23196f12-65f9-4aab-b074-d3807b18599b/public_url) — Issued Sep 2026
+- Claude Certified Associate – Foundations (CCAF), Anthropic — Issued Sep 2026
 - AWS Certified Cloud Practitioner
 - Microsoft Certified: Azure Fundamentals
-
-All certifications verifiable on [Credly](https://www.credly.com/users/rochanewton).
 
 ## Education
 
