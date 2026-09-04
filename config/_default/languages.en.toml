@@ -14,7 +14,7 @@ title = "Newton Rocha"
 [params.author]
   name = "Newton Rocha"
   image = "img/avatar.png"
-  headline = "Middleware Administrator | IBM Sterling File Transfer Specialist"
+  headline = "Middleware Engineer"
   bio = "Senior IT professional with 15+ years specializing in Linux systems administration, Bash scripting, and enterprise integration using IBM Sterling technologies (File Gateway, B2B Integrator, Connect:Direct). I write about real production incidents, MFT/middleware tips, infrastructure automation, and how I'm applying AI to IT operations."
   links = [
     { linkedin = "https://www.linkedin.com/in/rochanewton" },

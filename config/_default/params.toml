@@ -9,6 +9,10 @@ colorScheme = "congo"
 defaultAppearance = "light" # valid options: light or dark
 autoSwitchAppearance = true
 
+# Fixed background image shown behind every page (home, resume, articles, etc.)
+defaultBackgroundImage = "img/cover.png"
+backgroundCanvas = true
+
 enableSearch = true
 enableCodeCopy = true
 
@@ -28,8 +32,7 @@ smartTOC = true
   showScrollToTop = true
 
 [homepage]
-  layout = "hero" # valid options: page, profile, hero, card, background, custom
-  homepageImage = "img/cover.png" # used in: hero, and card
+  layout = "profile" # valid options: page, profile, hero, card, background, custom
   showRecent = true
   showRecentItems = 10
   showMoreLink = true
