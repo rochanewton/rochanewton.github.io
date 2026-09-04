@@ -1,6 +1,6 @@
 ---
-title: "About"
-description: "Newton Rocha's background: middleware, infrastructure, and IBM Sterling Managed File Transfer experience."
+title: "Resume"
+description: "Newton Rocha's full resume: experience, certifications, and education."
 showTableOfContents: true
 ---
 

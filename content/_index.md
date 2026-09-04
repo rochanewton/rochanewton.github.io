@@ -5,4 +5,4 @@ description: "Middleware, Managed File Transfer, and Infrastructure notes from N
 
 I write about real production incidents, IBM Sterling / Managed File Transfer troubleshooting, Linux and Bash automation, and how I'm applying AI to infrastructure and operations work — the kind of practical, hands-on content I'd want to read myself.
 
-Take a look at my [background and experience](/about/), browse [recent articles](/posts/), or [get in touch](/contact/).
+{{< button href="/resume/" target="_self" >}}View my resume{{< /button >}}
