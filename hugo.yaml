@@ -1,0 +1,43 @@
+baseURL: "https://rochanewton.github.io/"
+languageCode: "en-us"
+title: "Newton Rocha"
+
+pagination:
+  pagerSize: 8
+
+params:
+  author: "Newton Rocha"
+  tagline: "Middleware Administrator | IBM Sterling File Transfer Specialist"
+  description: "Cloud, AWS, Linux, Enterprise Integration, Managed File Transfer, and applying AI to IT operations."
+  summary: "Senior IT professional with 15+ years specializing in Linux systems administration, Bash scripting, and enterprise integration using IBM tools (Sterling File Gateway, B2B Integrator, Connect:Direct). Deeply focused on IBM Sterling Managed File Transfer, business-critical production operations, and applying AI and cloud-native technologies to infrastructure work."
+  vision: "My goal is to become a recognized expert in IBM Sterling technologies and applied AI, while deepening my cloud architecture skills. I believe technology should be secure, scalable, reliable, and simple to operate."
+  linkedin: "https://www.linkedin.com/in/rochanewton"
+  credly: "https://www.credly.com/users/rochanewton"
+  highlights:
+    - "15+ Years in Information Technology"
+    - "IBM Sterling File Gateway, B2B Integrator, Connect:Direct"
+    - "Cloud: AWS & Microsoft Azure"
+    - "Former Amazon Web Services employee"
+    - "Languages: Portuguese (native), English (fluent), Spanish (intermediate)"
+    - "MBA in Project Management (in progress)"
+    - "Current focus: IBM Sterling expertise, applied AI, AWS Solutions Architect Associate"
+
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "Articles"
+      url: "/posts/"
+      weight: 2
+    - name: "About"
+      url: "/about/"
+      weight: 3
+    - name: "Contact"
+      url: "/contact/"
+      weight: 4
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

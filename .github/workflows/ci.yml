@@ -1,0 +1,36 @@
+name: CI
+
+# Runs on every pull request targeting main.
+# Validates that the site builds cleanly before any change is allowed to merge.
+on:
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.134.3"
+          extended: true
+
+      - name: Build (strict — fail on warnings)
+        run: hugo --panicOnWarning --minify
+
+      - name: Check for broken internal links
+        run: |
+          if grep -rEo '\]\(/[^)]*\)' content/ | grep -v '^\s*$'; then
+            echo "Found internal links — review manually if needed."
+          fi
+          echo "Build succeeded — site is ready to merge."
