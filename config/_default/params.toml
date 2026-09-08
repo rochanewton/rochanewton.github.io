@@ -64,6 +64,8 @@ smartTOC = true
   showAuthorsBadges = false
   showWordCount = true
   showSummary = true
+  showViews = true
+  showLikes = true
   sharingLinks = [ "linkedin", "twitter", "whatsapp", "reddit", "email"]
 
 [list]
@@ -74,6 +76,8 @@ smartTOC = true
   cardView = true
   cardViewScreenWidth = false
   groupByYear = false
+  showViews = true
+  showLikes = true
 
 [term]
   cardView = true
@@ -96,3 +100,11 @@ smartTOC = true
 [umamiAnalytics]
   # websiteid = ""
   # domain = ""
+
+[firebase]
+  apiKey = "AIzaSyCq1RpbGaGhvRrspXVwHyc2CATF8jjCpNA"
+  authDomain = "rochanewton-site.firebaseapp.com"
+  projectId = "rochanewton-site"
+  storageBucket = "rochanewton-site.firebasestorage.app"
+  messagingSenderId = "482025276017"
+  appId = "1:482025276017:web:7cfea2cadc966e27dd51d0"
