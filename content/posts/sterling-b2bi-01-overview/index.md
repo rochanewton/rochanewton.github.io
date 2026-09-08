@@ -7,9 +7,7 @@ categories: ["Middleware"]
 series: ["sterling-b2bi-architecture"]
 series_order: 1
 showAuthor: true
-# To add a card/thumbnail image: drop the file in this same folder
-# (content/posts/sterling-b2bi-01-overview/) and uncomment the line below.
-# image: "cover.jpg"
+image: "cover.png"
 ---
 
 The first time I opened the Sterling B2B Integrator admin console, I remember staring at the left-hand menu for a good few minutes trying to figure out where to even start. Adapters, Services, Business Processes, Mailboxes, Envelopes, Maps — all sitting in the same tree, all sounding vaguely related, and nothing on the screen telling you how they connect. IBM's documentation is thorough once you know what you're looking for, but it reads like a reference manual, not a map. Nobody hands you the map on day one. You build it yourself, slowly, usually while troubleshooting something at 2am.
