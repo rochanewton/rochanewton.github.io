@@ -22,6 +22,8 @@ googleAnalytics = "G-3TGD9DJBVE"
 [taxonomies]
   tag = "tags"
   category = "categories"
+  author = "authors"
+  series = "series"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
