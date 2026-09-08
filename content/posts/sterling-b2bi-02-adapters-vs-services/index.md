@@ -1,6 +1,6 @@
 ---
 title: "Adapters vs. Services in IBM Sterling B2B Integrator: The Distinction That Actually Matters"
-date: 2026-09-15
+date: 2026-09-08
 description: "Why 'adapter' and 'service' aren't interchangeable jargon in Sterling B2B Integrator, and why getting this straight saves you real time when a Business Process breaks at 2am."
 tags: ["ibm-sterling", "b2bi", "mft", "middleware", "architecture"]
 categories: ["Middleware"]
@@ -92,4 +92,4 @@ As with Part 1, the framing and the war stories are mine — the definitions are
 
 ## What's next
 
-Next up: **Business Processes and BPML**, the actual workflow engine tying every adapter and service call together — including why the visual Graphical Process Modeler and the raw BPML underneath it are worth understanding as two views of the same thing, not two separate tools.
+Next up: **Business Processes and BPML (Business Process Model Language)**, the actual workflow engine tying every adapter and service call together — including why the visual Graphical Process Modeler and the raw BPML underneath it are worth understanding as two views of the same thing, not two separate tools.
