@@ -148,4 +148,4 @@ As with Part 1, the framing, the recommendations, and the war stories are mine �
 
 ## What's next
 
-Next up: **Business Processes and BPML (Business Process Model Language)**, the actual workflow engine tying every adapter and service call together — including why the visual Graphical Process Modeler and the raw BPML underneath it are worth understanding as two views of the same thing, not two separate tools.
+Next up: [**Business Processes and BPML**](/posts/sterling-b2bi-03-business-processes-bpml/) — the actual workflow engine tying every adapter and service call together, and why the visual Graphical Process Modeler and the raw BPML underneath it are worth understanding as two views of the same thing, not two separate tools.
