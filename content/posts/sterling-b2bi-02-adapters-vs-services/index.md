@@ -1,19 +1,21 @@
 ---
-title: "Adapters vs. Services in IBM Sterling B2B Integrator: The Distinction That Actually Matters"
+title: "IBM Sterling B2B Integrator: Adapters vs. Services - The Distinction That Actually Matters"
 date: 2026-09-08
-description: "Why 'adapter' and 'service' aren't interchangeable jargon in Sterling B2B Integrator — what each one is, the ones you'll actually use, and real scenarios for choosing between them."
-tags: ["ibm-sterling", "b2bi", "mft", "middleware", "architecture"]
-categories: ["Middleware"]
-series: ["sterling-b2bi-architecture"]
+description: Why 'adapter' and 'service' aren't interchangeable jargon in Sterling B2B Integrator — what each one is, the ones you'll actually use, and real scenarios for choosing between them.
+tags:
+  - ibm-sterling
+  - b2bi
+  - mft
+  - middleware
+  - architecture
+categories:
+  - Middleware
+series:
+  - sterling-b2bi-architecture
 series_order: 2
 showAuthor: true
-image: "cover.png"
+image: cover.png
 ---
-
-A few weeks into my first Sterling project, someone on a call asked me to "check the adapter" for a failing file transfer. I went straight to the adapter config, found nothing wrong, and spent another twenty minutes convinced I was losing my mind before I realized the actual failure was three steps later, inside a service doing field validation. Nobody had lied to me — they'd just used "adapter" the way most people use "the internet": as a catch-all for the whole pipe, not the specific part.
-
-So here's the standard I wish someone had handed me back then: what each one actually is, the ones you'll run into constantly, real configuration examples, and a few scenarios that show them working together.
-
 ## What is an Adapter
 
 An **Adapter** is a service whose entire job is reaching outside Sterling B2B Integrator — connecting the Business Process Engine to "dissimilar systems and applications" that live outside the environment ([IBM Documentation](https://www.ibm.com/docs/en/b2b-integrator/6.2.0?topic=integrator-services-adapters)). An SFTP adapter opens a connection to a partner's SFTP server. An AS2 adapter speaks the AS2 protocol to a trading partner's gateway. Same underlying mechanism as any other service — the Business Process Engine calls it, it runs, it returns a result — but the work itself happens somewhere else, over a network, against a system you don't control.
