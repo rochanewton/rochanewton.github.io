@@ -34,6 +34,8 @@ From there, an **Adapter** picks it up. Adapters are narrow by design — SFTP, 
 ### Business Process
 That handoff is where things get interesting. A **Business Process** is a workflow — modeled visually in the Graphical Process Modeler, stored underneath as [BPML](https://www.ibm.com/docs/en/b2b-integrator/6.2.0?topic=integrator-business-processes) (Business Process Markup Language) — that strings together steps: validate this, map that, encrypt this, route it, page someone if it fails. Practically everything meaningful in B2Bi happens inside a Business Process. It's the closest thing the platform has to a heart.
 
+![Business Process Manager list in the Sterling B2B Integrator admin console, showing 807 processes including ACHDeenvelope, ACHEnvelope, and various AFTRoute processes](business-process-manager.webp "807 Business Processes in one environment — and that's a modest one")
+
 ### Services
 Inside that process, **Services** do the internal work — mapping, validation, extraction, compression, custom logic — while Adapters keep handling the outside world. A Business Process, stripped down, is mostly just Adapter and Service calls in sequence, with branches for when things go wrong (and in production, something always eventually goes wrong).
 
@@ -47,8 +49,12 @@ Somewhere in that sequence, a **Map** usually runs. Partners almost never send d
 ### Mailbox
 The file usually lands in a **Mailbox** — a secure, permissioned drop box inside B2Bi. This is where I see the most confusion, even among people who've used Sterling for years: File Gateway is not a separate product competing with B2Bi. It's a purpose-built UI and routing layer sitting on top of B2Bi's mailbox and adapter machinery, built specifically so partner file exchange can be managed without anyone having to touch BPML directly ([IBM's File Gateway overview](https://www.ibm.com/docs/en/b2b-integrator/6.2.0?topic=glance-sterling-file-gateway) is worth reading if this is new to you).
 
+![Mailboxes list in the Sterling B2B Integrator admin console, showing the Root Mailbox, Dead Letter Mailbox, EDI Inbound/Outbound Collection and Extraction mailboxes, and per-partner mailboxes](mailboxes-list.webp "A typical mailbox tree — shared EDI collection points plus one mailbox per trading partner")
+
 ### Database
 And underneath all of it sits the **Database** — every Business Process's state, every document's tracking history, the full audit trail. Easy to take for granted until your first real outage, when document tracking data becomes the only honest record of what actually happened to a file. I've reconstructed more than one incident timeline purely from that table.
+
+![Database Usage dashboard in the Sterling B2B Integrator admin console, showing database capacity, business processes waiting to be archived, indexed, or purged, and environment pool usage](database-usage.webp "The Database Usage dashboard — capacity, backlog, and connection pool health in one place")
 
 For production environments that can't tolerate downtime, B2Bi also supports multi-node **Clustering** — worth knowing it exists, not something you need on day one.
 
