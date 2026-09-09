@@ -1,7 +1,7 @@
 ---
 title: "Adapters vs. Services in IBM Sterling B2B Integrator: The Distinction That Actually Matters"
 date: 2026-09-08
-description: "Why 'adapter' and 'service' aren't interchangeable jargon in Sterling B2B Integrator, and why getting this straight saves you real time when a Business Process breaks at 2am."
+description: "Why 'adapter' and 'service' aren't interchangeable jargon in Sterling B2B Integrator — what each one is, the ones you'll actually use, and real scenarios for choosing between them."
 tags: ["ibm-sterling", "b2bi", "mft", "middleware", "architecture"]
 categories: ["Middleware"]
 series: ["sterling-b2bi-architecture"]
@@ -10,41 +10,39 @@ showAuthor: true
 image: "cover.png"
 ---
 
-A few weeks into my first Sterling project, someone on a call asked me to "check the adapter" for a failing file transfer. I went straight to the adapter config, found nothing wrong, and spent another twenty minutes convinced I was losing my mind before I realized the actual failure was three steps later, inside a service doing field validation. Nobody had lied to me — they'd just used "adapter" the way most people use "the internet": as a catch-all for the whole pipe, not the specific part. That mix-up cost me twenty minutes. It's cost other people entire afternoons.
+A few weeks into my first Sterling project, someone on a call asked me to "check the adapter" for a failing file transfer. I went straight to the adapter config, found nothing wrong, and spent another twenty minutes convinced I was losing my mind before I realized the actual failure was three steps later, inside a service doing field validation. Nobody had lied to me — they'd just used "adapter" the way most people use "the internet": as a catch-all for the whole pipe, not the specific part.
 
-So this post is the one I wish someone had sent me back then: what an adapter actually is, what a service actually is, which ones you'll actually run into day to day, and where the line between them sits.
+So here's the standard I wish someone had handed me back then: what each one actually is, the ones you'll run into constantly, real configuration examples, and a few scenarios that show them working together.
 
-## The one-sentence version
+## What is an Adapter
 
-Every adapter is a service. Not every service is an adapter.
+An **Adapter** is a service whose entire job is reaching outside Sterling B2B Integrator — connecting the Business Process Engine to "dissimilar systems and applications" that live outside the environment ([IBM Documentation](https://www.ibm.com/docs/en/b2b-integrator/6.2.0?topic=integrator-services-adapters)). An SFTP adapter opens a connection to a partner's SFTP server. An AS2 adapter speaks the AS2 protocol to a trading partner's gateway. Same underlying mechanism as any other service — the Business Process Engine calls it, it runs, it returns a result — but the work itself happens somewhere else, over a network, against a system you don't control.
 
-That's the whole distinction, and it's worth sitting with for a second, because it explains almost every confusing conversation you'll have about this platform. "Service" is the broad category — a unit of work the Business Process Engine can execute as a step. "Adapter" is a specific kind of service: one whose job is to talk to something outside Sterling B2B Integrator.
+## What is a Service
 
-## What makes something a service
-
-IBM's documentation defines a service as a set of instructions the Business Process Engine uses to carry out an activity inside a Business Process. That's deliberately broad, because services cover a huge range of work: mapping a document from one format to another, validating a field against a schema, encrypting a payload, checking a condition and branching, even pausing a process to wait for a human to click "approve" in a web form.
+A **Service** is the broad category: any set of instructions the Business Process Engine uses to carry out an activity inside a Business Process. That's deliberately broad — services cover mapping a document from one format to another, validating a field against a schema, encrypting a payload, checking a condition and branching, even pausing a process to wait for a human to click "approve" in a web form.
 
 The thread connecting all of that is that a service does its work using data the Business Process already has, or produces data the Business Process will use next. It doesn't need to reach outside the system to do its job.
 
-## What makes something an adapter
+Put the two together and you get the whole distinction in one line: **every adapter is a service, but not every service is an adapter.** That's worth sitting with, because it explains almost every confusing conversation you'll have about this platform.
 
-Adapters are the subset of services whose entire purpose is reaching outside the system — connecting the Business Process Engine to "dissimilar systems and applications" that live outside the Sterling B2B Integrator environment ([IBM Documentation](https://www.ibm.com/docs/en/b2b-integrator/6.2.0?topic=integrator-services-adapters)). An SFTP adapter opens a connection to a partner's SFTP server. An AS2 adapter speaks the AS2 protocol to a trading partner's gateway. A JDBC adapter talks to an external database. Same underlying mechanism as any other service — the Business Process Engine calls it, it runs, it returns a result — but the work itself happens somewhere else.
+There's a useful three-way split worth knowing, because it comes up constantly once you start reading Business Process logs: internal services process parameters and produce results without ever leaving the system; input and output adapters are the ones that reach outward; and a separate category, human interaction services, exist purely to pause a process until a person acts, typically through a web browser approving or rejecting a step. That last category trips people up the most, because it's technically "just a service," but it behaves nothing like the mapping-and-validation services people picture by default.
 
-<!--
-IMAGE IDEA: side-by-side screenshot from the admin console showing an
-Adapter configuration screen (e.g. SFTP Adapter) next to a Service
-configuration screen (e.g. a mapping or validation service), so the visual
-similarity — and the practical difference — is obvious at a glance. To add:
-![Adapter configuration next to a Service configuration in the Sterling admin console](adapter-vs-service-config.png)
--->
+A single node in a real environment can easily run into the hundreds of registered services once you count every adapter, translator, and utility service installed — this is one node in a production-sized deployment:
 
-There's a useful three-way split worth knowing, because it comes up constantly once you start reading Business Process logs: internal services process parameters and produce results without ever leaving the system; input and output adapters are the ones that reach outward — receiving from or sending to something external; and a separate category, human interaction services, exist purely to pause a process until a person acts, typically through a web browser approving or rejecting a step. That last category trips people up the most, because it's technically "just a service," but it behaves nothing like the mapping-and-validation services people picture by default.
+![Services Configuration list in the Sterling B2B Integrator admin console for node2, showing 444 services including ACH Deenvelope, AFT Route, Alert Service, AS2 Global Mailbox Cleanup, and AS3 services](services-configuration-list.webp "444 services on a single node — most of them you'll never touch directly")
 
 ## The adapters you'll actually use
 
 Sterling ships dozens of adapters, but in practice most deployments lean on a handful of them, over and over, because most trading-partner requirements boil down to a handful of protocols:
 
-**SFTP Adapter (Client and Server).** The default choice for new partner connections when nobody's dictating otherwise. It's encrypted, nearly every partner's IT team already knows how to stand one up, and the setup overhead is low compared to AS2. I reach for SFTP first unless a partner's own security or compliance team specifically requires something else.
+**SFTP Adapter (Client and Server).** The default choice for new partner connections when nobody's dictating otherwise. It's encrypted, nearly every partner's IT team already knows how to stand one up, and the setup overhead is low compared to AS2. I reach for SFTP first unless a partner's own security or compliance team specifically requires something else. Here's a real SFTP Client Adapter configuration — notice how little there actually is to it: a system name, an environment, a perimeter server assignment, and thread limits:
+
+![SFTP Client Adapter 2.0 configuration screen in the Sterling B2B Integrator admin console, showing service settings including system name, environment, perimeter server, and thread limits](sftp-client-adapter-config.webp "SFTP Client Adapter 2.0 — a minimal, mostly-defaults configuration")
+
+The Server-side adapter carries a lot more surface area, because now you're the one being connected to: listen port, host identity key, cipher and MAC preferences, authentication requirements, and mailbox routing all live here:
+
+![SFTP Server Adapter 2.0 configuration screen in the Sterling B2B Integrator admin console, showing listen port, host identity key, enabled protocols, cipher and MAC preferences, and authentication settings](sftp-server-adapter-config.webp "SFTP Server Adapter 2.0 — this is the side of the connection partners actually authenticate against")
 
 **AS2 Adapter.** The one you don't get to choose — it's the one a partner mandates. AS2 is built around signed, encrypted messages with Message Disposition Notifications (MDNs) that give both sides a cryptographic receipt proving a file arrived intact. That receipt is exactly why large retailers, logistics networks, and anyone running EDI at scale tends to require it: when a dispute happens over whether a purchase order was actually delivered, the MDN settles it. The tradeoff is setup cost — certificates, partner profiles, and MDN configuration all have to match exactly on both ends, and a mismatched cert is the single most common AS2 onboarding headache I've dealt with.
 
@@ -70,12 +68,29 @@ Fewer categories here, but they show up in nearly every Business Process regardl
 
 **Human interaction services.** The odd one out, and worth normalizing rather than being confused by. They're genuinely a service by the platform's own definition, but their entire job is pausing a process until a person clicks approve or reject in a web form — useful for anything that needs a manual review step, like an unusually large invoice or a first-time partner document.
 
-<!--
-IMAGE IDEA: a simple table or graphic summarizing which adapter/service to
-reach for in which scenario (partner mandates AS2, need guaranteed large-file
-delivery, need PGP-encrypted-at-rest, etc). To add:
-![Adapter and service selection cheat sheet](adapter-service-cheatsheet.png)
--->
+### Operational services worth knowing about
+
+Not every service touches a trading partner's document. A chunk of that 444-service list is pure platform housekeeping — services that keep the system itself healthy rather than moving anyone's file. Two worth knowing by name:
+
+**Alert Service.** Deliberately minimal — its entire job is checking your workflows and raising an alert when something needs attention. This is usually one of the first things wired up in a new environment, because "did anything break overnight" needs an answer that doesn't depend on someone manually checking logs.
+
+![Alert Service configuration screen in the Sterling B2B Integrator admin console, showing service type, description "Check the Workflows", and system name](alert-service-config.webp "Alert Service — small on purpose, and usually one of the first services configured in a new environment")
+
+**BackupService.** Runs on a schedule (2:00 AM in most environments I've seen) to archive completed or terminated Business Process data in chunks, so the database in [Part 1](/posts/sterling-b2bi-01-overview/) doesn't grow forever. If you've ever wondered how document tracking history stays queryable for months without the database falling over, this service — and the archive/purge/index numbers on that Database Usage dashboard — is the answer.
+
+![BackupService configuration screen in the Sterling B2B Integrator admin console, showing thread pool size, business processes per backup set chunk, compression, maximum backup file size, and a 2:00 AM schedule](backup-service-config.webp "BackupService — the reason your Business Process history doesn't grow forever")
+
+## Scenarios: adapters in the wild
+
+Definitions only get you so far. Here's how the adapter choice actually plays out across a few real situations:
+
+**Scenario 1 — A new partner wants to send you flat files, no special requirements.** Default to SFTP. Stand up an SFTP Server Adapter (or reuse an existing one — most environments run a shared server adapter across many partners, distinguished by mailbox and credentials rather than one adapter each), issue the partner a key or password, and route their inbound files to a dedicated mailbox. This is the fastest partner onboarding path in the whole platform, usually a same-day turnaround.
+
+**Scenario 2 — A retail partner requires AS2 with MDN receipts in their trading partner agreement.** No choice here — configure an AS2 adapter, exchange certificates with the partner (theirs and yours, both directions), and make sure MDN settings (synchronous vs. asynchronous, signed vs. unsigned) match exactly what's in the agreement. Budget real time for this one; certificate mismatches are the most common reason AS2 onboarding drags past its estimate.
+
+**Scenario 3 — A bank needs guaranteed delivery of a multi-gigabyte nightly settlement file, and a failed transfer can't restart from zero.** This is Connect:Direct's exact reason for existing. Configure the Connect:Direct adapter with checkpoint restart enabled, and a transfer that drops at 2GB into a 5GB file resumes from 2GB rather than starting over — which matters a lot when the file has to land before a batch window closes.
+
+**Scenario 4 — Partners keep asking "did my file arrive," and you're tired of manually checking.** This isn't a new adapter — it's wiring the Alert Service into the Business Processes that matter, so a failure state triggers a notification instead of sitting silently until someone goes looking. Combine it with document tracking (from [Part 1](/posts/sterling-b2bi-01-overview/)) and most "did it arrive" questions get answered before anyone has to ask.
 
 ## Why the distinction actually matters
 
@@ -127,7 +142,7 @@ Blue is "leaves the system." Gray is "stays inside." When something breaks, that
 - [Command Line Adapter 2 (CLA2) overview](https://www.ibm.com/docs/integrating/integrator/cla2_overview.html)
 - [File transfer capabilities and integration with IBM Sterling B2B Integrator](https://www.ibm.com/support/pages/file-transfer-capabilities-and-integration-ibm-sterling-b2b-integrator)
 
-As with Part 1, the framing, the recommendations, and the war stories are mine — the definitions are IBM's.
+As with Part 1, the framing, the recommendations, and the war stories are mine — the definitions are IBM's, and the screenshots are from my own environment.
 
 ## What's next
 
