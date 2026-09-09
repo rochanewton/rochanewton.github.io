@@ -9,11 +9,6 @@ series_order: 3
 showAuthor: true
 image: "cover.png"
 ---
-
-The first time a Business Process failed on me in production, someone more senior pulled up something called "the BPML" and started reading it like a paragraph. I'd only ever seen Business Processes as boxes and arrows in the Graphical Process Modeler — dragging icons, connecting lines, clicking Save. Watching someone read the same thing as plain text, faster than I could follow the diagram, was the moment I realized I'd only learned half the tool.
-
-So this post covers the half most people skip: what's actually running under those boxes and arrows, and why being able to read it directly — not just draw it — is the difference between a five-minute fix and a fifty-minute one.
-
 ## What is a Business Process
 
 A **Business Process** is the workflow that strings adapters and services together into something that actually does a job: receive a file, validate it, map it, encrypt it, hand it to an adapter for delivery, log every step along the way. It's the thing [Part 1](/posts/sterling-b2bi-01-overview/) called "the closest thing the platform has to a heart" — because almost nothing meaningful happens in Sterling B2B Integrator outside of one running.
@@ -30,13 +25,6 @@ The **Graphical Process Modeler (GPM)** is the tool most people learn first: dra
 
 That reversibility is the part worth internalizing: nothing is lost going from diagram to code or back. A Business Process built entirely by dragging icons and a Business Process typed by hand in a text editor are functionally identical once saved — the engine doesn't know or care which one you used.
 
-<!--
-IMAGE IDEA: side-by-side screenshot showing the same Business Process in
-GPM's graphical view and its BPML text view (GPM has a toggle for this),
-to make the "same thing, two views" point visually obvious. To add:
-![The same Business Process shown in GPM's graphical view and its BPML text view](gpm-vs-bpml-view.png)
--->
-
 ## The BPML elements you'll actually use
 
 BPML has a fairly large vocabulary, but a handful of elements cover the overwhelming majority of what you'll read and write:
@@ -50,12 +38,6 @@ BPML has a fairly large vocabulary, but a handful of elements cover the overwhel
 **ASSIGN.** Moves data between the Business Process's working memory and a service's input or output parameters. Unglamorous, but this is where a huge share of "the map got the wrong field" bugs actually originate — not in the map itself, but in an ASSIGN that pointed it at the wrong piece of data.
 
 **ONFAULT.** Error handling. When a step inside a SEQUENCE fails, an ONFAULT block lets you catch that failure and do something deliberate about it — retry, notify, route to a dead-letter mailbox — instead of letting the process die silently. A Business Process with no ONFAULT handling isn't wrong, exactly, but it's the single most common reason "the file just disappeared" turns into a long investigation.
-
-<!--
-IMAGE IDEA: screenshot of a Business Process in GPM showing an OnFault
-branch attached to a step, to make error handling visually concrete. To add:
-![OnFault error handling attached to a step in the Graphical Process Modeler](onfault-example.png)
--->
 
 ## Scenarios: reading and writing BPML in practice
 
