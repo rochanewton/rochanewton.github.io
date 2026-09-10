@@ -101,10 +101,13 @@ smartTOC = true
   # websiteid = ""
   # domain = ""
 
+# Firebase config for anonymous view/like counters (see partials/vendor.html
+# in the Blowfish theme). The actual values are NOT stored here — they're
+# injected at build time via environment variables in GitHub Actions
+# (HUGO_PARAMS_FIREBASE_APIKEY, _AUTHDOMAIN, _PROJECTID, _STORAGEBUCKET,
+# _MESSAGINGSENDERID, _APPID), sourced from repository secrets.
+#
+# For local development, export the same variables before running `hugo
+# server`, or the Firebase-backed views/likes counters simply won't appear
+# (everything else on the site builds and works normally without them).
 [firebase]
-  apiKey = "AIzaSyCq1RpbGaGhvRrspXVwHyc2CATF8jjCpNA"
-  authDomain = "rochanewton-site.firebaseapp.com"
-  projectId = "rochanewton-site"
-  storageBucket = "rochanewton-site.firebasestorage.app"
-  messagingSenderId = "482025276017"
-  appId = "1:482025276017:web:7cfea2cadc966e27dd51d0"
