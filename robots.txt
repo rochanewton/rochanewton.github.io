@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+ 
+Sitemap: https://rochanewton.github.io/sitemap.xml
+ 
