@@ -101,4 +101,4 @@ As with the rest of this series, the framing, the scenarios, and the war stories
 
 ## What's next
 
-Next up: **Mailboxes and File Gateway** — untangling the confusion flagged back in [Part 1](/posts/sterling-b2bi-01-overview/), with a closer look at how File Gateway's routing actually sits on top of the mailbox and adapter machinery underneath it.
+Next up: **SFTP: The Protocol Behind the Adapter** — a closer look at the transport, authentication, and key mechanics underneath the SFTP Server Adapter configured back in [Part 2](/posts/sterling-b2bi-02-adapters-vs-services/).
