@@ -20,6 +20,7 @@ series_order: 4
 showAuthor: true
 image: cover.png
 ---
+
 ## Three protocols, one job, very different guts
 
 FTP, FTPS, and SFTP all claim to do the same thing — move a file from one place to another — and partners use the names almost interchangeably, which is exactly the problem. They are three genuinely different protocols with different port models, different security properties, and different failure modes, and the [SFTP Server Adapter and SFTP Client Adapter](/posts/sterling-b2bi-02-adapters-vs-services/) you configure in Sterling only make sense once you know which one you're actually running. This post goes through each one on its own terms, then spends the back half on SFTP specifically, since that's what carries the overwhelming majority of partner traffic in B2Bi.
@@ -183,7 +184,7 @@ The authoritative, current list of what OpenSSH supports — and how to set expl
 
 **Thread and connection limits.** The SFTP Client Adapter config from Part 2 has explicit thread limits for a reason — a partner running a burst of parallel transfers against a shared adapter can exhaust connection slots for every other partner sharing it. Worth knowing your adapter's limits before a partner asks "can we push 200 files at once."
 
-**Host key changes without warning.** Partners rebuild servers and rotate keys without telling you in advance. A strict `known_hosts` policy is the right default, but it means every unannounced rotation is a failed connection until someone manually verifies and accepts the new key — worth a documented, fast verification path rather than reaching for "just disable strict checking," which defeats the entire point.
+**Host key changes without warning.** Partners rebuild servers and rotate keys without telling you in advance. A strict `known_hosts` policy is the right default, but it means every unannounced rotation is a failed connection until someone manually verifies and accepts the new key — worth a documented, fast verification path rather than reaching for "just disable strict checking," which defeats the entire point. This happens often enough, and has enough nuance, that it gets its own post: [SSH known_hosts: How Host Key Verification Actually Works](/posts/ssh-known-hosts-host-key-verification/).
 
 ## Where this fits in Sterling
 
