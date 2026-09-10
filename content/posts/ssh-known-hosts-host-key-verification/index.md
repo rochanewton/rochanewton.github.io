@@ -47,6 +47,28 @@ This is genuinely simple and it's exactly why the warning above is scary: a mism
 
 For anything partner-facing or automated — which describes basically every B2Bi SFTP connection — `StrictHostKeyChecking yes` with a deliberately managed `known_hosts` file is the right posture. Unattended jobs should never be the ones deciding whether to trust a changed key.
 
+Here's the whole verification decision as one picture — this is what runs on *every* SSH or SFTP connection, not just the scary ones:
+
+{{< mermaid >}}
+flowchart TD
+    A["Client connects"] --> B{"Host already in\nknown_hosts?"}
+    B -->|"No — first time"| C{"StrictHostKeyChecking\nmode"}
+    C -->|"yes"| D["Refuse connection"]
+    C -->|"accept-new"| E["Store key silently,\nproceed"]
+    C -->|"ask"| F["Prompt user,\nthen store if confirmed"]
+    C -->|"no"| G["Store key silently,\nproceed — no verification"]
+    B -->|"Yes"| H{"Presented key matches\nstored entry?"}
+    H -->|"Match"| I["Proceed normally —\nno prompt, no warning"]
+    H -->|"Mismatch"| J["⚠ REMOTE HOST IDENTIFICATION\nHAS CHANGED — fail closed"]
+
+    style D fill:#4a1a1a,stroke:#c0392b
+    style J fill:#4a1a1a,stroke:#c0392b
+    style G fill:#4a1a1a,stroke:#c0392b
+    style I fill:#1a3a1a,stroke:#27ae60
+{{< /mermaid >}}
+
+That bottom-right red box is the warning from the top of this post. Everything above it is what got you there — and the `no` path (bottom left, also red) is the forum "fix" that skips verification entirely rather than actually resolving anything.
+
 ## Fingerprints and host key algorithms
 
 A host key fingerprint is a short hash of the actual key, used because comparing a full key visually is impractical. Modern OpenSSH shows fingerprints as base64-encoded SHA256 by default:
@@ -77,6 +99,27 @@ The only reliable way to answer that is to verify the new fingerprint through a 
 4. **Only then remove the stale entry and reconnect.** `ssh-keygen -R hostname` removes the old entry from `known_hosts` cleanly (it also handles the hashed-hostname case correctly, which manually editing the file doesn't); reconnecting under `accept-new` or interactively then stores the verified new key.
 
 Skipping straight to `ssh-keygen -R` the moment a connection fails is the single most common mistake here — it "fixes" the symptom identically whether the cause was a legitimate server rebuild or an active interception, which is exactly the distinction this whole mechanism exists to preserve.
+
+As a decision tree, the four steps above look like this:
+
+{{< mermaid >}}
+flowchart TD
+    A["⚠ Host key mismatch warning"] --> B["Do NOT accept —\nleave the connection failed"]
+    B --> C["Contact the partner via an\nalready-trusted out-of-band channel"]
+    C --> D["Partner reads back the new\nSHA256 fingerprint directly"]
+    D --> E{"Matches what the\nconnection is presenting?"}
+    E -->|"Yes"| F["ssh-keygen -R hostname\n— remove stale entry"]
+    F --> G["Reconnect — new key\nstored and trusted"]
+    E -->|"No"| H["STOP — treat as a\npossible interception"]
+    H --> I["Investigate the network path.\nDo not connect."]
+
+    style A fill:#4a3a1a,stroke:#d4a017
+    style H fill:#4a1a1a,stroke:#c0392b
+    style I fill:#4a1a1a,stroke:#c0392b
+    style G fill:#1a3a1a,stroke:#27ae60
+{{< /mermaid >}}
+
+The entire point of the flow is that the verification step (D → E) happens on a channel the attacker in a MITM scenario doesn't control. Skip that step and the flowchart collapses into "accept whatever the connection shows me" — which is just `StrictHostKeyChecking no` with extra steps.
 
 ### Scaling this beyond one-off verification
 
