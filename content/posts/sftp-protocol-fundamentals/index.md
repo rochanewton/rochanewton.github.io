@@ -207,4 +207,4 @@ As with the rest of this series: the protocol definitions, RFCs, and man page co
 
 ## What's next
 
-Next up: **Mailboxes and File Gateway** — untangling the confusion flagged back in [Part 1](/posts/sterling-b2bi-01-overview/), with a closer look at how File Gateway's routing actually sits on top of the mailbox and adapter machinery underneath it.
+Next up: **Mailboxes and File Gateway** — untangling the confusion flagged back in [Part 1](/posts/sterling-b2bi-01-overview/), with a closer look at how File Gateway's routing actually sits on top of the mailbox and adapter machinery underneath it. Read it here: [Part 5](/posts/sterling-b2bi-05-mailboxes-file-gateway/).
