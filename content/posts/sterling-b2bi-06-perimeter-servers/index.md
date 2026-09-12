@@ -24,7 +24,33 @@ image: cover.png
 
 Most people's first assumption about a box sitting in the DMZ is that your trusted, internal network reaches out to it — the secure side initiates, the exposed side listens. A Perimeter Server does the opposite. The core B2Bi engine sitting safely inside your network never opens a connection out into the DMZ at all. Instead, the Perimeter Server — the box actually facing partners and the internet — dials *back in* to the core engine and holds that connection open. Partner traffic lands on the DMZ box first, and only then gets forwarded inward over a channel the DMZ side itself established.
 
-I called this component out in [Part 1](/posts/sterling-b2bi-01-overview/) and promised to come back to it, because most intro material skips it entirely — which is a shame, since it's the actual reason a Sterling deployment diagram has boxes sitting outside the firewall in the first place, and it's the detail that makes the whole DMZ story click once you understand which direction the wire actually runs.
+I called this component out in [Part 1](/posts/sterling-b2bi-01-overview/) and promised to come back to it, because most intro material skips it entirely — which is a shame, since it's the actual reason a Sterling deployment diagram has boxes sitting outside the firewall in the first place, and it's the detail that makes the whole DMZ story click once you understand which direction the wire actually runs. Side by side, the assumption and the reality look like this:
+
+{{< mermaid >}}
+flowchart TB
+    subgraph Assumed["What you'd assume"]
+        direction LR
+        C1["Core Engine\n(trusted zone)"]
+        FW1{{"Inner Firewall"}}
+        PS1["Perimeter Server\n(DMZ)"]
+        C1 -- "Core opens a new\nconnection into the DMZ" --> FW1
+        FW1 -- "requires an inbound\nallow rule from the DMZ" --> PS1
+    end
+
+    subgraph Actual["What actually happens"]
+        direction LR
+        PS2["Perimeter Server\n(DMZ)"]
+        FW2{{"Inner Firewall"}}
+        C2["Core Engine\n(trusted zone)"]
+        PS2 -- "PS dials out\n(reverseConnect)" --> FW2
+        FW2 -- "outbound-only rule —\nno inbound hole needed" --> C2
+    end
+
+    style FW1 fill:#4a1a1a,stroke:#c0392b
+    style FW2 fill:#12331a,stroke:#27ae60
+{{< /mermaid >}}
+
+The top half is the rule your inner firewall would need if the core engine reached outward into the DMZ — an inbound allow rule that lets a DMZ host initiate traffic into the trusted zone, which is precisely the kind of hole a DMZ exists to prevent. The bottom half is what a Perimeter Server actually requires: an outbound-only rule, and nothing listening for connections from the DMZ side at all.
 
 ## What a Perimeter Server is
 
@@ -64,6 +90,29 @@ sequenceDiagram
     Core->>Core: Hand off to Adapter → Business Process
     Note over Partner,Core: Inner firewall never has to accept<br/>an inbound connection initiated from the DMZ
 {{< /mermaid >}}
+
+That sequence hides an important detail: at the network layer, there are really two separate connections doing two separate jobs, not one. Laid out as a topology instead of a timeline, it looks like this:
+
+{{< mermaid >}}
+flowchart LR
+    subgraph Internet["Internet"]
+        Partner["Trading Partner"]
+    end
+
+    subgraph DMZ["DMZ"]
+        PS["Perimeter Server"]
+    end
+
+    subgraph Trusted["Trusted Zone"]
+        Core["B2Bi Core Engine"]
+    end
+
+    PS == "1 — outbound, PS-initiated\npersistent control channel\n(reverseConnect, port 9999)" ==> Core
+    Partner -- "2 — inbound to PS only\n(SFTP / AS2 / HTTP)" --> PS
+    PS -. "3 — partner session tunneled\nover the channel opened in step 1" .-> Core
+{{< /mermaid >}}
+
+Step 1 has to happen first and stays up continuously — it's infrastructure, not per-session traffic. Step 2 is the only connection a partner ever makes, and it terminates at the Perimeter Server; it never becomes a second, independent connection reaching into the trusted zone. Step 3 isn't a new connection at all — it's the partner's session riding inside the channel that already exists from step 1. From the inner firewall's point of view, exactly one connection ever crosses the boundary, and the DMZ box is the one that opened it.
 
 *(Screenshot placeholder: the "Add Perimeter Server" screen in the admin console — Deployment > Perimeter Servers > Add — showing the name, description, and the local/embedded vs. remote type selector. Worth a second screenshot of a configured remote Perimeter Server's detail view if the `remote_perimeter.properties` values are visible there.)*
 
