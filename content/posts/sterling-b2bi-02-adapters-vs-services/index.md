@@ -38,7 +38,7 @@ A single node in a real environment can easily run into the hundreds of register
 
 Sterling ships dozens of adapters, but in practice most deployments lean on a handful of them, over and over, because most trading-partner requirements boil down to a handful of protocols:
 
-**SFTP Adapter (Client and Server).** The default choice for new partner connections when nobody's dictating otherwise. It's encrypted, nearly every partner's IT team already knows how to stand one up, and the setup overhead is low compared to AS2. I reach for SFTP first unless a partner's own security or compliance team specifically requires something else. Here's a real SFTP Client Adapter configuration — notice how little there actually is to it: a system name, an environment, a perimeter server assignment, and thread limits:
+**SFTP Adapter (Client and Server).** The default choice for new partner connections when nobody's dictating otherwise. It's encrypted, nearly every partner's IT team already knows how to stand one up, and the setup overhead is low compared to AS2. I reach for SFTP first unless a partner's own security or compliance team specifically requires something else. Here's a real SFTP Client Adapter configuration — notice how little there actually is to it: a system name, an environment, a [perimeter server](/posts/sterling-b2bi-06-perimeter-servers/) assignment, and thread limits:
 
 ![SFTP Client Adapter 2.0 configuration screen in the Sterling B2B Integrator admin console, showing service settings including system name, environment, perimeter server, and thread limits](sftp-client-adapter-config.webp "SFTP Client Adapter 2.0 — a minimal, mostly-defaults configuration")
 

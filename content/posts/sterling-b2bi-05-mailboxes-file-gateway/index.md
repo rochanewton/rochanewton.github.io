@@ -151,7 +151,7 @@ In practice, most new external partner onboarding at the SFTP-in, deliver-somewh
 
 ## Where this fits in the series
 
-This closes the loop from [Part 1's](/posts/sterling-b2bi-01-overview/) component overview: Perimeter Server and Adapters get the file in ([Part 2](/posts/sterling-b2bi-02-adapters-vs-services/)), Business Processes and BPML move and transform it ([Part 3](/posts/sterling-b2bi-03-business-processes-bpml/)), SFTP is the protocol most of those adapters actually speak ([Part 4](/posts/sftp-protocol-fundamentals/)), and Mailboxes — with File Gateway as an optional, higher-level way of managing them — are where the file lands and gets picked up from. Every piece from the Part 1 topology diagram now has its own post behind it.
+This closes the loop from [Part 1's](/posts/sterling-b2bi-01-overview/) component overview: the [Perimeter Server](/posts/sterling-b2bi-06-perimeter-servers/) and [Adapters](/posts/sterling-b2bi-02-adapters-vs-services/) get the file in, Business Processes and BPML move and transform it ([Part 3](/posts/sterling-b2bi-03-business-processes-bpml/)), SFTP is the protocol most of those adapters actually speak ([Part 4](/posts/sftp-protocol-fundamentals/)), and Mailboxes — with File Gateway as an optional, higher-level way of managing them — are where the file lands and gets picked up from. One piece from the Part 1 topology diagram is still owed its own deep dive: the Perimeter Server itself, next.
 
 ## Sources & further reading
 
@@ -163,4 +163,4 @@ As with the rest of this series: the definitions are IBM's, the framing, the rou
 
 ## What's next
 
-Next up: **The Map Editor** — the translation layer flagged back in [Part 1](/posts/sterling-b2bi-01-overview/), and the source of some of the gnarliest bugs I've chased in production.
+Next up: **Perimeter Servers** — the DMZ component every partner connection touches first, mentioned back in [Part 1](/posts/sterling-b2bi-01-overview/) and never fully explained until now. Read it here: [Part 6](/posts/sterling-b2bi-06-perimeter-servers/). The Map Editor follows after that.
