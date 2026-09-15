@@ -21,7 +21,7 @@ image: cover.png
 
 ## A confusão que sinalizei lá na Parte 1
 
-Mencionei isso na [Parte 1](/posts/sterling-b2bi-01-overview/) e prometi voltar ao assunto: **o File Gateway não é um produto separado concorrendo com o B2Bi.** É uma camada de UI e roteamento construída especificamente por cima da estrutura de mailbox e adapters do B2Bi, feita justamente para que a troca de arquivos com parceiros possa ser gerenciada sem que ninguém precise mexer diretamente em BPML. Ainda vejo gente que roda Sterling há anos falando dos dois como se fossem alternativas entre as quais você escolhe. Não são — um é a fundação, o outro é uma forma de trabalhar com essa fundação sem escrever um Business Process à mão.
+Mencionei isso na [Parte 1]({{< ref "/posts/sterling-b2bi-01-overview/" >}}) e prometi voltar ao assunto: **o File Gateway não é um produto separado concorrendo com o B2Bi.** É uma camada de UI e roteamento construída especificamente por cima da estrutura de mailbox e adapters do B2Bi, feita justamente para que a troca de arquivos com parceiros possa ser gerenciada sem que ninguém precise mexer diretamente em BPML. Ainda vejo gente que roda Sterling há anos falando dos dois como se fossem alternativas entre as quais você escolhe. Não são — um é a fundação, o outro é uma forma de trabalhar com essa fundação sem escrever um Business Process à mão.
 
 Uma observação sobre nomenclatura antes de mais nada, porque causa confusão de verdade em vagas de emprego, chamados e conversas casuais: o **File Gateway é quase sempre chamado de "SFG" — Sterling File Gateway** — seu nome de produto de fato, distinto de "B2Bi" (Sterling B2B Integrator), mesmo que o SFG rode como um componente instalado por cima de um ambiente B2Bi em vez de um sistema independente. Quando alguém diz "a gente roda SFG," está se referindo especificamente a essa camada: o console de administração de Routes/Participants/Tools mostrado ao longo deste post, não o console de administração central do B2Bi das partes anteriores desta série. Vou usar "File Gateway" e "SFG" de forma intercambiável daqui para frente, já que você vai encontrar os dois por aí — a própria documentação da IBM, e-mails de parceiros e vagas de emprego misturam os dois.
 
@@ -151,7 +151,7 @@ Na prática, a maioria dos onboardings de novos parceiros externos no padrão "e
 
 ## Onde isso se encaixa na série
 
-Isso fecha o ciclo da visão geral de componentes da [Parte 1](/posts/sterling-b2bi-01-overview/): o [Perimeter Server](/posts/sterling-b2bi-06-perimeter-servers/) e os [Adapters](/posts/sterling-b2bi-02-adapters-vs-services/) trazem o arquivo para dentro, Business Processes e BPML movem e transformam ele ([Parte 3](/posts/sterling-b2bi-03-business-processes-bpml/)), SFTP é o protocolo que a maioria desses adapters de fato fala ([Parte 4](/posts/sftp-protocol-fundamentals/)), e Mailboxes — com o File Gateway como uma forma opcional, de nível mais alto, de geri-las — são onde o arquivo pousa e é retirado. Uma peça do diagrama de topologia da Parte 1 ainda deve seu próprio aprofundamento: o próprio Perimeter Server, a seguir.
+Isso fecha o ciclo da visão geral de componentes da [Parte 1]({{< ref "/posts/sterling-b2bi-01-overview/" >}}): o [Perimeter Server]({{< ref "/posts/sterling-b2bi-06-perimeter-servers/" >}}) e os [Adapters]({{< ref "/posts/sterling-b2bi-02-adapters-vs-services/" >}}) trazem o arquivo para dentro, Business Processes e BPML movem e transformam ele ([Parte 3]({{< ref "/posts/sterling-b2bi-03-business-processes-bpml/" >}})), SFTP é o protocolo que a maioria desses adapters de fato fala ([Parte 4]({{< ref "/posts/sftp-protocol-fundamentals/" >}})), e Mailboxes — com o File Gateway como uma forma opcional, de nível mais alto, de geri-las — são onde o arquivo pousa e é retirado. Uma peça do diagrama de topologia da Parte 1 ainda deve seu próprio aprofundamento: o próprio Perimeter Server, a seguir.
 
 ## Fontes e leituras complementares
 
@@ -163,4 +163,4 @@ Como no resto desta série: as definições são da IBM, o enquadramento, o diag
 
 ## O que vem a seguir
 
-A seguir: **Perimeter Servers** — o componente de DMZ que toda conexão de parceiro toca primeiro, mencionado lá na [Parte 1](/posts/sterling-b2bi-01-overview/) e nunca totalmente explicado até agora. Leia aqui: [Parte 6](/posts/sterling-b2bi-06-perimeter-servers/). O Map Editor vem depois disso.
+A seguir: **Perimeter Servers** — o componente de DMZ que toda conexão de parceiro toca primeiro, mencionado lá na [Parte 1]({{< ref "/posts/sterling-b2bi-01-overview/" >}}) e nunca totalmente explicado até agora. Leia aqui: [Parte 6]({{< ref "/posts/sterling-b2bi-06-perimeter-servers/" >}}). O Map Editor vem depois disso.

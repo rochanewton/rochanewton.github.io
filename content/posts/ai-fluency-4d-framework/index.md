@@ -1,6 +1,8 @@
 ---
 title: "The 4D Framework: Delegation, Description, Discernment, Diligence"
 date: 2026-09-15
+aliases:
+  - /posts/why-a-middleware-engineer-is-getting-certified-in-claude/
 description: "Anthropic's AI Fluency framework breaks working with AI into four competencies instead of a pile of prompt tricks. Here's what each one actually means in practice, and where I've seen myself skip straight past one of them."
 tags:
   - claude

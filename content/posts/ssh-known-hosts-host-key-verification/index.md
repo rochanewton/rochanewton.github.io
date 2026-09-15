@@ -26,11 +26,11 @@ IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
 Someone could be eavesdropping on you right now (man-in-the-middle attack)!
 ```
 
-I called this out in passing in the [SFTP/FTP/FTPS post](/posts/sftp-protocol-fundamentals/) as one of the operational things that trips people up, and it deserves its own post, because the honest, complete answer to "what do I do here" is more than one sentence — and "just disable strict checking" is the wrong answer often enough that it's worth explaining exactly why.
+I called this out in passing in the [SFTP/FTP/FTPS post]({{< ref "/posts/sftp-protocol-fundamentals/" >}}) as one of the operational things that trips people up, and it deserves its own post, because the honest, complete answer to "what do I do here" is more than one sentence — and "just disable strict checking" is the wrong answer often enough that it's worth explaining exactly why.
 
 ## What known_hosts actually is
 
-During the SSH handshake — the same one from the [SFTP post's sequence diagram](/posts/sftp-protocol-fundamentals/) — the server presents a **host key** to prove its identity, the same way a private/public key pair proves a client's identity during authentication. The client's job is to verify that host key actually belongs to the server it thinks it's talking to, *before* trusting anything else about the connection, including where it sends your password or which files it hands over.
+During the SSH handshake — the same one from the [SFTP post's sequence diagram]({{< ref "/posts/sftp-protocol-fundamentals/" >}}) — the server presents a **host key** to prove its identity, the same way a private/public key pair proves a client's identity during authentication. The client's job is to verify that host key actually belongs to the server it thinks it's talking to, *before* trusting anything else about the connection, including where it sends your password or which files it hands over.
 
 SSH does this with a trust-on-first-use (TOFU) model, not a certificate authority chain like TLS normally uses. The first time you connect to a given host, OpenSSH shows you the server's key fingerprint and asks you to confirm it, then stores an entry — hostname (or IP), key algorithm, and the key itself — in a local `known_hosts` file (`~/.ssh/known_hosts` per user, or `/etc/ssh/ssh_known_hosts` system-wide). Every connection after that compares the presented key against the stored entry automatically, with no prompt, unless something doesn't match.
 
@@ -149,7 +149,7 @@ Collecting a new key walks through the same fingerprint-review step `ssh` does o
 
 ![Sterling B2B Integrator "SSH Known Host Key" review screen, showing key collected from host 192.168.100.251 with public key algorithm ecdsa-sha2-nistp256, bit length 256, and SHA256 fingerprint, plus a choice to save the key to disk in OpenSSH or SECSH format](known-host-key-collect.webp "Reviewing a freshly-collected host key before trusting it — this is Sterling's UI over the exact TOFU verification step described above")
 
-Notice the **Save To Disk** option at the bottom, with a choice between **OpenSSH Format** and **SECSH Format** — the exact same two key file formats covered in the [SFTP/FTP/FTPS post](/posts/sftp-protocol-fundamentals/#ssh-key-pairs). This is precisely why that distinction matters in practice: exporting a host key from Sterling to hand to a partner (or importing one they send you) means picking the format the receiving system actually understands, not just downloading whatever the default is.
+Notice the **Save To Disk** option at the bottom, with a choice between **OpenSSH Format** and **SECSH Format** — the exact same two key file formats covered in the [SFTP/FTP/FTPS post]({{< ref "/posts/sftp-protocol-fundamentals/#ssh-key-pairs" >}}). This is precisely why that distinction matters in practice: exporting a host key from Sterling to hand to a partner (or importing one they send you) means picking the format the receiving system actually understands, not just downloading whatever the default is.
 
 Once a key is reviewed and checked in, it shows up as a managed entry — key ID, name, type, length, status, and fingerprint, all visible at a glance:
 
@@ -172,4 +172,4 @@ The practical process I run: partner notifies us (or we notice the failure) → 
 
 As with the rest of what I write about this stuff: the man page content is the authoritative source linked above, the framing, the rotation process, and the B2Bi-specific notes are mine.
 
-This post is a spin-off from [SFTP, FTP, FTPS: Protocol Behind the Adapters](/posts/sftp-protocol-fundamentals/) — worth reading first if you want the full picture of where host key verification fits into the SSH handshake.
+This post is a spin-off from [SFTP, FTP, FTPS: Protocol Behind the Adapters]({{< ref "/posts/sftp-protocol-fundamentals/" >}}) — worth reading first if you want the full picture of where host key verification fits into the SSH handshake.

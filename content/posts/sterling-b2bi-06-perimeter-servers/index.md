@@ -24,7 +24,7 @@ image: cover.png
 
 Most people's first assumption about a box sitting in the DMZ is that your trusted, internal network reaches out to it — the secure side initiates, the exposed side listens. A Perimeter Server does the opposite. The core B2Bi engine sitting safely inside your network never opens a connection out into the DMZ at all. Instead, the Perimeter Server — the box actually facing partners and the internet — dials *back in* to the core engine and holds that connection open. Partner traffic lands on the DMZ box first, and only then gets forwarded inward over a channel the DMZ side itself established.
 
-I called this component out in [Part 1](/posts/sterling-b2bi-01-overview/) and promised to come back to it, because most intro material skips it entirely — which is a shame, since it's the actual reason a Sterling deployment diagram has boxes sitting outside the firewall in the first place, and it's the detail that makes the whole DMZ story click once you understand which direction the wire actually runs. Side by side, the assumption and the reality look like this:
+I called this component out in [Part 1]({{< ref "/posts/sterling-b2bi-01-overview/" >}}) and promised to come back to it, because most intro material skips it entirely — which is a shame, since it's the actual reason a Sterling deployment diagram has boxes sitting outside the firewall in the first place, and it's the detail that makes the whole DMZ story click once you understand which direction the wire actually runs. Side by side, the assumption and the reality look like this:
 
 {{< mermaid >}}
 flowchart TB
@@ -66,7 +66,7 @@ That's the whole value proposition in one sentence: it lets you expose partner-f
 
 **Remote (installed) Perimeter Server.** A separate installation, deployed on its own host physically or logically inside the DMZ, independent of the B2Bi installation itself. This is the one doing real work in any production topology — the one partner traffic actually hits.
 
-Multiple remote Perimeter Servers can run against a single B2Bi node at once, which is what lets you segment traffic deliberately: one DMZ box handling high-volume SFTP from your largest trading partners, a separate one for a partner whose security team insists on physically isolated infrastructure, without touching the core engine's configuration to add either. That per-adapter assignment is exactly the field you'd have glossed over in [Part 2's](/posts/sterling-b2bi-02-adapters-vs-services/) SFTP Client Adapter screenshot — "system name, environment, a perimeter server assignment, and thread limits" was doing a lot of quiet work in that one line.
+Multiple remote Perimeter Servers can run against a single B2Bi node at once, which is what lets you segment traffic deliberately: one DMZ box handling high-volume SFTP from your largest trading partners, a separate one for a partner whose security team insists on physically isolated infrastructure, without touching the core engine's configuration to add either. That per-adapter assignment is exactly the field you'd have glossed over in [Part 2's]({{< ref "/posts/sterling-b2bi-02-adapters-vs-services/" >}}) SFTP Client Adapter screenshot — "system name, environment, a perimeter server assignment, and thread limits" was doing a lot of quiet work in that one line.
 
 ## The reverseConnect mechanic
 
@@ -132,7 +132,7 @@ This is the other recurring source of confusion, and it's worth being precise ab
 
 ## Where this fits in the series
 
-Perimeter Server is the piece from [Part 1's](/posts/sterling-b2bi-01-overview/) topology diagram that got a one-paragraph mention and nothing else until now. It's the first thing a partner's connection touches — before the [Adapter](/posts/sterling-b2bi-02-adapters-vs-services/), before the Business Process, before the file ever reaches a [Mailbox](/posts/sterling-b2bi-05-mailboxes-file-gateway/). Every piece from that original diagram now genuinely has its own post behind it.
+Perimeter Server is the piece from [Part 1's]({{< ref "/posts/sterling-b2bi-01-overview/" >}}) topology diagram that got a one-paragraph mention and nothing else until now. It's the first thing a partner's connection touches — before the [Adapter]({{< ref "/posts/sterling-b2bi-02-adapters-vs-services/" >}}), before the Business Process, before the file ever reaches a [Mailbox]({{< ref "/posts/sterling-b2bi-05-mailboxes-file-gateway/" >}}). Every piece from that original diagram now genuinely has its own post behind it.
 
 ## Sources & further reading
 
@@ -147,4 +147,4 @@ As with the rest of this series: the definitions and the documented parameters a
 
 ## What's next
 
-Next up: **The Map Editor** — the translation layer flagged back in [Part 1](/posts/sterling-b2bi-01-overview/), and the source of some of the gnarliest bugs I've chased in production.
+Next up: **The Map Editor** — the translation layer flagged back in [Part 1]({{< ref "/posts/sterling-b2bi-01-overview/" >}}), and the source of some of the gnarliest bugs I've chased in production.

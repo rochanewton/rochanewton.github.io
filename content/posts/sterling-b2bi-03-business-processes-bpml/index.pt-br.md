@@ -19,7 +19,7 @@ image: cover.png
 ---
 ## O que é um Business Process
 
-Um **Business Process** é o fluxo de trabalho que encadeia adapters e services em algo que de fato realiza uma tarefa: receber um arquivo, validá-lo, mapeá-lo, criptografá-lo, entregá-lo a um adapter para envio, registrando cada etapa pelo caminho. É a coisa que a [Parte 1](/posts/sterling-b2bi-01-overview/) chamou de "a coisa mais parecida com um coração que a plataforma tem" — porque quase nada relevante acontece no Sterling B2B Integrator fora da execução de um deles.
+Um **Business Process** é o fluxo de trabalho que encadeia adapters e services em algo que de fato realiza uma tarefa: receber um arquivo, validá-lo, mapeá-lo, criptografá-lo, entregá-lo a um adapter para envio, registrando cada etapa pelo caminho. É a coisa que a [Parte 1]({{< ref "/posts/sterling-b2bi-01-overview/" >}}) chamou de "a coisa mais parecida com um coração que a plataforma tem" — porque quase nada relevante acontece no Sterling B2B Integrator fora da execução de um deles.
 
 Estruturalmente, um Business Process é apenas uma sequência de etapas com lógica de ramificação: chame este service, verifique esta condição, chame aquele adapter, trate de forma diferente se algo der errado. Nada nessa descrição exige um diagrama. E esse é exatamente o ponto.
 
@@ -65,7 +65,7 @@ Nenhum dos dois é o Business Process "de verdade" e o outro um atalho. São a m
 
 ## Onde isso se encaixa no quadro geral
 
-Toda chamada de adapter e service da [Parte 1](/posts/sterling-b2bi-01-overview/) e da [Parte 2](/posts/sterling-b2bi-02-adapters-vs-services/) acontece porque o BPML de um Business Process disse ao motor para fazer isso acontecer, nessa ordem, com aquele tratamento de erro. O GPM e o BPML bruto são só duas portas para editar o mesmo arquivo:
+Toda chamada de adapter e service da [Parte 1]({{< ref "/posts/sterling-b2bi-01-overview/" >}}) e da [Parte 2]({{< ref "/posts/sterling-b2bi-02-adapters-vs-services/" >}}) acontece porque o BPML de um Business Process disse ao motor para fazer isso acontecer, nessa ordem, com aquele tratamento de erro. O GPM e o BPML bruto são só duas portas para editar o mesmo arquivo:
 
 {{< mermaid >}}
 flowchart TB
@@ -101,4 +101,4 @@ Como no resto desta série, o enquadramento, os cenários e as histórias de gue
 
 ## O que vem a seguir
 
-A seguir: **SFTP: O Protocolo Por Trás do Adapter** — um olhar mais de perto sobre o transporte, a autenticação e a mecânica de chaves por trás do SFTP Server Adapter configurado na [Parte 2](/posts/sterling-b2bi-02-adapters-vs-services/).
+A seguir: **SFTP: O Protocolo Por Trás do Adapter** — um olhar mais de perto sobre o transporte, a autenticação e a mecânica de chaves por trás do SFTP Server Adapter configurado na [Parte 2]({{< ref "/posts/sterling-b2bi-02-adapters-vs-services/" >}}).

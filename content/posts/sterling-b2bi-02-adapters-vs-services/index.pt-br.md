@@ -38,7 +38,7 @@ Um único node em um ambiente real facilmente chega à casa das centenas de serv
 
 O Sterling vem com dezenas de adapters, mas na prática a maioria das implantações se apoia em um punhado deles, repetidamente, porque a maioria dos requisitos de parceiro comercial se resume a um punhado de protocolos:
 
-**SFTP Adapter (Client e Server).** A escolha padrão para novas conexões de parceiro quando ninguém está ditando o contrário. É criptografado, quase toda equipe de TI de parceiro já sabe como configurar um, e o esforço de setup é baixo comparado ao AS2. Eu recorro ao SFTP primeiro, a menos que a equipe de segurança ou compliance do próprio parceiro exija especificamente outra coisa. Aqui está uma configuração real de SFTP Client Adapter — repare como há pouca coisa nela de fato: um nome de sistema, um ambiente, uma atribuição de [perimeter server](/posts/sterling-b2bi-06-perimeter-servers/) e limites de threads:
+**SFTP Adapter (Client e Server).** A escolha padrão para novas conexões de parceiro quando ninguém está ditando o contrário. É criptografado, quase toda equipe de TI de parceiro já sabe como configurar um, e o esforço de setup é baixo comparado ao AS2. Eu recorro ao SFTP primeiro, a menos que a equipe de segurança ou compliance do próprio parceiro exija especificamente outra coisa. Aqui está uma configuração real de SFTP Client Adapter — repare como há pouca coisa nela de fato: um nome de sistema, um ambiente, uma atribuição de [perimeter server]({{< ref "/posts/sterling-b2bi-06-perimeter-servers/" >}}) e limites de threads:
 
 ![Tela de configuração do SFTP Client Adapter 2.0 no console de administração do Sterling B2B Integrator, mostrando configurações de service incluindo nome do sistema, ambiente, perimeter server e limites de threads](sftp-client-adapter-config.webp "SFTP Client Adapter 2.0 — uma configuração mínima, majoritariamente com valores padrão")
 
@@ -78,7 +78,7 @@ Nem todo service toca o documento de um parceiro comercial. Uma parte dessa list
 
 ![Tela de configuração do Alert Service no console de administração do Sterling B2B Integrator, mostrando tipo de service, descrição "Check the Workflows" e nome do sistema](alert-service-config.webp "Alert Service — pequeno de propósito, e geralmente um dos primeiros services configurados em um ambiente novo")
 
-**BackupService.** Roda em um horário programado (2h da manhã na maioria dos ambientes que já vi) para arquivar dados de Business Process concluídos ou encerrados em blocos, para que o database da [Parte 1](/posts/sterling-b2bi-01-overview/) não cresça para sempre. Se você já se perguntou como o histórico de rastreamento de documentos continua consultável por meses sem o database cair, esse service — e os números de archive/purge/index naquele dashboard de Database Usage — é a resposta.
+**BackupService.** Roda em um horário programado (2h da manhã na maioria dos ambientes que já vi) para arquivar dados de Business Process concluídos ou encerrados em blocos, para que o database da [Parte 1]({{< ref "/posts/sterling-b2bi-01-overview/" >}}) não cresça para sempre. Se você já se perguntou como o histórico de rastreamento de documentos continua consultável por meses sem o database cair, esse service — e os números de archive/purge/index naquele dashboard de Database Usage — é a resposta.
 
 ![Tela de configuração do BackupService no console de administração do Sterling B2B Integrator, mostrando tamanho do thread pool, business processes por bloco de backup, compressão, tamanho máximo de arquivo de backup e um horário de 2h da manhã](backup-service-config.webp "BackupService — o motivo pelo qual seu histórico de Business Process não cresce para sempre")
 
@@ -92,7 +92,7 @@ Definições só te levam até certo ponto. Aqui está como a escolha de adapter
 
 **Cenário 3 — Um banco precisa de entrega garantida de um arquivo de liquidação noturno de múltiplos gigabytes, e uma transferência falha não pode recomeçar do zero.** Esse é exatamente o motivo de existir do Connect:Direct. Configure o adapter Connect:Direct com checkpoint restart habilitado, e uma transferência que cai em 2GB de um arquivo de 5GB retoma a partir de 2GB em vez de recomeçar — o que importa muito quando o arquivo precisa chegar antes que a janela de batch feche.
 
-**Cenário 4 — Parceiros ficam perguntando "meu arquivo chegou?", e você está cansado de checar manualmente.** Isso não é um adapter novo — é conectar o Alert Service aos Business Processes que importam, para que um estado de falha dispare uma notificação em vez de ficar parado silenciosamente até que alguém vá procurar. Combine isso com o rastreamento de documentos (da [Parte 1](/posts/sterling-b2bi-01-overview/)) e a maioria das perguntas de "chegou?" é respondida antes mesmo de alguém precisar perguntar.
+**Cenário 4 — Parceiros ficam perguntando "meu arquivo chegou?", e você está cansado de checar manualmente.** Isso não é um adapter novo — é conectar o Alert Service aos Business Processes que importam, para que um estado de falha dispare uma notificação em vez de ficar parado silenciosamente até que alguém vá procurar. Combine isso com o rastreamento de documentos (da [Parte 1]({{< ref "/posts/sterling-b2bi-01-overview/" >}})) e a maioria das perguntas de "chegou?" é respondida antes mesmo de alguém precisar perguntar.
 
 ## Por que a distinção realmente importa
 
@@ -106,7 +106,7 @@ Confunda os dois e você acaba fazendo exatamente o que eu fiz naquele primeiro 
 
 ## Onde isso se encaixa no quadro geral
 
-Adapters ficam nas duas bordas do fluxo da [Parte 1](/posts/sterling-b2bi-01-overview/) — recebendo um arquivo de um Perimeter Server na entrada, ou entregando um arquivo a um parceiro na saída. Services ficam no meio, fazendo tudo o que acontece com um arquivo depois que ele já está dentro dos muros: mapear, validar, rotear, ocasionalmente esperar por um humano. Um Business Process é, na prática, apenas uma sequência de chamadas para os dois, com lógica de ramificação costurando tudo junto.
+Adapters ficam nas duas bordas do fluxo da [Parte 1]({{< ref "/posts/sterling-b2bi-01-overview/" >}}) — recebendo um arquivo de um Perimeter Server na entrada, ou entregando um arquivo a um parceiro na saída. Services ficam no meio, fazendo tudo o que acontece com um arquivo depois que ele já está dentro dos muros: mapear, validar, rotear, ocasionalmente esperar por um humano. Um Business Process é, na prática, apenas uma sequência de chamadas para os dois, com lógica de ramificação costurando tudo junto.
 
 {{< mermaid >}}
 flowchart LR
@@ -148,4 +148,4 @@ Como na Parte 1, o enquadramento, as recomendações e as histórias de guerra s
 
 ## O que vem a seguir
 
-A seguir: [**Business Processes e BPML**](/posts/sterling-b2bi-03-business-processes-bpml/) — o motor de workflow de fato que amarra cada chamada de adapter e service, e por que o Graphical Process Modeler visual e o BPML bruto por baixo dele valem a pena serem entendidos como duas visões da mesma coisa, não duas ferramentas separadas.
+A seguir: [**Business Processes e BPML**]({{< ref "/posts/sterling-b2bi-03-business-processes-bpml/" >}}) — o motor de workflow de fato que amarra cada chamada de adapter e service, e por que o Graphical Process Modeler visual e o BPML bruto por baixo dele valem a pena serem entendidos como duas visões da mesma coisa, não duas ferramentas separadas.

@@ -19,7 +19,7 @@ image: cover.png
 ---
 ## What is a Business Process
 
-A **Business Process** is the workflow that strings adapters and services together into something that actually does a job: receive a file, validate it, map it, encrypt it, hand it to an adapter for delivery, log every step along the way. It's the thing [Part 1](/posts/sterling-b2bi-01-overview/) called "the closest thing the platform has to a heart" — because almost nothing meaningful happens in Sterling B2B Integrator outside of one running.
+A **Business Process** is the workflow that strings adapters and services together into something that actually does a job: receive a file, validate it, map it, encrypt it, hand it to an adapter for delivery, log every step along the way. It's the thing [Part 1]({{< ref "/posts/sterling-b2bi-01-overview/" >}}) called "the closest thing the platform has to a heart" — because almost nothing meaningful happens in Sterling B2B Integrator outside of one running.
 
 Structurally, a Business Process is just a sequence of steps with branching logic: call this service, check this condition, call that adapter, handle it differently if something goes wrong. Nothing about that description requires a diagram. Which is exactly the point.
 
@@ -65,7 +65,7 @@ Neither one is the "real" Business Process and the other a shortcut. They're the
 
 ## Where this sits in the bigger picture
 
-Every adapter and service call from [Part 1](/posts/sterling-b2bi-01-overview/) and [Part 2](/posts/sterling-b2bi-02-adapters-vs-services/) happens because a Business Process's BPML told the engine to make it happen, in that order, with that error handling. The GPM and the raw BPML are just two doors into editing the same file:
+Every adapter and service call from [Part 1]({{< ref "/posts/sterling-b2bi-01-overview/" >}}) and [Part 2]({{< ref "/posts/sterling-b2bi-02-adapters-vs-services/" >}}) happens because a Business Process's BPML told the engine to make it happen, in that order, with that error handling. The GPM and the raw BPML are just two doors into editing the same file:
 
 {{< mermaid >}}
 flowchart TB
@@ -101,4 +101,4 @@ As with the rest of this series, the framing, the scenarios, and the war stories
 
 ## What's next
 
-Next up: **SFTP: The Protocol Behind the Adapter** — a closer look at the transport, authentication, and key mechanics underneath the SFTP Server Adapter configured back in [Part 2](/posts/sterling-b2bi-02-adapters-vs-services/).
+Next up: **SFTP: The Protocol Behind the Adapter** — a closer look at the transport, authentication, and key mechanics underneath the SFTP Server Adapter configured back in [Part 2]({{< ref "/posts/sterling-b2bi-02-adapters-vs-services/" >}}).

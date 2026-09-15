@@ -38,7 +38,7 @@ A single node in a real environment can easily run into the hundreds of register
 
 Sterling ships dozens of adapters, but in practice most deployments lean on a handful of them, over and over, because most trading-partner requirements boil down to a handful of protocols:
 
-**SFTP Adapter (Client and Server).** The default choice for new partner connections when nobody's dictating otherwise. It's encrypted, nearly every partner's IT team already knows how to stand one up, and the setup overhead is low compared to AS2. I reach for SFTP first unless a partner's own security or compliance team specifically requires something else. Here's a real SFTP Client Adapter configuration — notice how little there actually is to it: a system name, an environment, a [perimeter server](/posts/sterling-b2bi-06-perimeter-servers/) assignment, and thread limits:
+**SFTP Adapter (Client and Server).** The default choice for new partner connections when nobody's dictating otherwise. It's encrypted, nearly every partner's IT team already knows how to stand one up, and the setup overhead is low compared to AS2. I reach for SFTP first unless a partner's own security or compliance team specifically requires something else. Here's a real SFTP Client Adapter configuration — notice how little there actually is to it: a system name, an environment, a [perimeter server]({{< ref "/posts/sterling-b2bi-06-perimeter-servers/" >}}) assignment, and thread limits:
 
 ![SFTP Client Adapter 2.0 configuration screen in the Sterling B2B Integrator admin console, showing service settings including system name, environment, perimeter server, and thread limits](sftp-client-adapter-config.webp "SFTP Client Adapter 2.0 — a minimal, mostly-defaults configuration")
 
@@ -78,7 +78,7 @@ Not every service touches a trading partner's document. A chunk of that 444-serv
 
 ![Alert Service configuration screen in the Sterling B2B Integrator admin console, showing service type, description "Check the Workflows", and system name](alert-service-config.webp "Alert Service — small on purpose, and usually one of the first services configured in a new environment")
 
-**BackupService.** Runs on a schedule (2:00 AM in most environments I've seen) to archive completed or terminated Business Process data in chunks, so the database in [Part 1](/posts/sterling-b2bi-01-overview/) doesn't grow forever. If you've ever wondered how document tracking history stays queryable for months without the database falling over, this service — and the archive/purge/index numbers on that Database Usage dashboard — is the answer.
+**BackupService.** Runs on a schedule (2:00 AM in most environments I've seen) to archive completed or terminated Business Process data in chunks, so the database in [Part 1]({{< ref "/posts/sterling-b2bi-01-overview/" >}}) doesn't grow forever. If you've ever wondered how document tracking history stays queryable for months without the database falling over, this service — and the archive/purge/index numbers on that Database Usage dashboard — is the answer.
 
 ![BackupService configuration screen in the Sterling B2B Integrator admin console, showing thread pool size, business processes per backup set chunk, compression, maximum backup file size, and a 2:00 AM schedule](backup-service-config.webp "BackupService — the reason your Business Process history doesn't grow forever")
 
@@ -92,7 +92,7 @@ Definitions only get you so far. Here's how the adapter choice actually plays ou
 
 **Scenario 3 — A bank needs guaranteed delivery of a multi-gigabyte nightly settlement file, and a failed transfer can't restart from zero.** This is Connect:Direct's exact reason for existing. Configure the Connect:Direct adapter with checkpoint restart enabled, and a transfer that drops at 2GB into a 5GB file resumes from 2GB rather than starting over — which matters a lot when the file has to land before a batch window closes.
 
-**Scenario 4 — Partners keep asking "did my file arrive," and you're tired of manually checking.** This isn't a new adapter — it's wiring the Alert Service into the Business Processes that matter, so a failure state triggers a notification instead of sitting silently until someone goes looking. Combine it with document tracking (from [Part 1](/posts/sterling-b2bi-01-overview/)) and most "did it arrive" questions get answered before anyone has to ask.
+**Scenario 4 — Partners keep asking "did my file arrive," and you're tired of manually checking.** This isn't a new adapter — it's wiring the Alert Service into the Business Processes that matter, so a failure state triggers a notification instead of sitting silently until someone goes looking. Combine it with document tracking (from [Part 1]({{< ref "/posts/sterling-b2bi-01-overview/" >}})) and most "did it arrive" questions get answered before anyone has to ask.
 
 ## Why the distinction actually matters
 
@@ -106,7 +106,7 @@ Confuse the two and you end up doing exactly what I did on that first project: c
 
 ## Where this sits in the bigger picture
 
-Adapters sit at the two edges of the flow from [Part 1](/posts/sterling-b2bi-01-overview/) — receiving a file from a Perimeter Server on the way in, or handing a file off to a partner on the way out. Services sit in the middle, doing everything that happens to a file once it's inside the walls: mapping, validating, routing, occasionally waiting on a human. A Business Process is really just a sequence of calls to both, with branching logic stitching them together.
+Adapters sit at the two edges of the flow from [Part 1]({{< ref "/posts/sterling-b2bi-01-overview/" >}}) — receiving a file from a Perimeter Server on the way in, or handing a file off to a partner on the way out. Services sit in the middle, doing everything that happens to a file once it's inside the walls: mapping, validating, routing, occasionally waiting on a human. A Business Process is really just a sequence of calls to both, with branching logic stitching them together.
 
 {{< mermaid >}}
 flowchart LR
@@ -148,4 +148,4 @@ As with Part 1, the framing, the recommendations, and the war stories are mine �
 
 ## What's next
 
-Next up: [**Business Processes and BPML**](/posts/sterling-b2bi-03-business-processes-bpml/) — the actual workflow engine tying every adapter and service call together, and why the visual Graphical Process Modeler and the raw BPML underneath it are worth understanding as two views of the same thing, not two separate tools.
+Next up: [**Business Processes and BPML**]({{< ref "/posts/sterling-b2bi-03-business-processes-bpml/" >}}) — the actual workflow engine tying every adapter and service call together, and why the visual Graphical Process Modeler and the raw BPML underneath it are worth understanding as two views of the same thing, not two separate tools.
