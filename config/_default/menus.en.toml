@@ -9,6 +9,9 @@
 # By default the menu is ordered alphabetically. This can be
 # overridden by providing a weight value. The menu will then be
 # ordered by weight from lowest to highest.
+#
+# A menu item becomes a dropdown by giving one or more other items
+# `parent = "<identifier>"` matching its `identifier`.
 
 [[main]]
   name = "Home"
@@ -21,9 +24,22 @@
   weight = 20
 
 [[main]]
+  identifier = "articles"
   name = "Articles"
   pageRef = "posts"
   weight = 30
+
+[[main]]
+  name = "IBM Sterling"
+  pageRef = "categories/ibm-sterling"
+  parent = "articles"
+  weight = 31
+
+[[main]]
+  name = "Claude"
+  pageRef = "categories/claude"
+  parent = "articles"
+  weight = 32
 
 [[main]]
   identifier = "linkedin"

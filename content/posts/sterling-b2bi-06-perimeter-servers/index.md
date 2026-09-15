@@ -12,7 +12,7 @@ tags:
   - dmz
   - network-security
 categories:
-  - Middleware
+  - IBM Sterling
 series:
   - sterling-b2bi-architecture
 series_order: 6

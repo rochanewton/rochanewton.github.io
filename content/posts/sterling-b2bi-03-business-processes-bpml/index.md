@@ -10,7 +10,7 @@ tags:
   - architecture
   - bpml
 categories:
-  - Middleware
+  - IBM Sterling
 series:
   - sterling-b2bi-architecture
 series_order: 3

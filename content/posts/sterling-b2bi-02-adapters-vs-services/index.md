@@ -9,7 +9,7 @@ tags:
   - middleware
   - architecture
 categories:
-  - Middleware
+  - IBM Sterling
 series:
   - sterling-b2bi-architecture
 series_order: 2

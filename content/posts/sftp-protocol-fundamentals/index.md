@@ -13,7 +13,7 @@ tags:
   - mft
   - middleware
 categories:
-  - Middleware
+  - IBM Sterling
 series:
   - sterling-b2bi-architecture
 series_order: 4

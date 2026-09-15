@@ -9,7 +9,7 @@ tags:
   - ibm-sterling
   - mft
 categories:
-  - Middleware
+  - IBM Sterling
 showAuthor: true
 image: cover.png
 ---
