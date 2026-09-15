@@ -20,13 +20,11 @@ image: cover.png
 
 ## Prompting is the smallest part of this
 
-Most advice about "getting better at AI" is really just a bigger collection of prompt tricks — better phrasing, a magic system prompt, a template someone swears by. None of that is wrong exactly, but it treats the wrong layer as the hard part. The actual skill isn't writing a clever prompt. It's deciding what to hand over in the first place, saying clearly what you need, judging honestly whether what came back is any good, and being straight about your own role once you use it.
-
 Anthropic's **AI Fluency: Framework & Foundations** course — one of the three that make up the Claude Certified Associate – Foundations curriculum — names those four things directly: **Delegation, Description, Discernment, Diligence**. The 4Ds. I went in expecting a prompting course and came out with a decision framework instead, which is a better outcome. This kicks off a series where I'll work through what actually helped while studying for the certification, and more generally what's made the biggest difference in how I use Claude day to day — useful whether or not the exam itself is the goal.
 
-## The four competencies, at a glance
+## The four competencies
 
-I put together the version of this I actually wanted to see — the four competencies as one picture, split above and below the waterline, since two of them are about what you produce and two are about what you don't see unless you go looking for it:
+The four competencies as one picture, split above and below the waterline, since two of them are about what you produce and two are about what you don't see unless you go looking for it:
 
 ![The 4 core competencies of AI fluency, shown as an iceberg: Delegation and Description above the waterline as "what shows up after the pilot succeeds," Discernment and Diligence below it as "what AI fluency actually costs"](4d-ai-fluency-iceberg.webp "The framing I keep coming back to: delegation and description are the visible half of the work, discernment and diligence are the half nobody sees in the demo")
 
@@ -70,7 +68,3 @@ As with the rest of this site: the framework and its terminology are Anthropic's
 ## Where this fits
 
 This is Part 1 of **Getting Claude Certified** — an ongoing series of tips, study notes, and lessons learned from working toward Anthropic's Claude certifications, and from using Claude seriously day to day. The 4D framework goes first because everything else in the certification, and honestly everything else about using AI well, builds on it.
-
-## What's next
-
-Discernment is the competency I keep coming back to as the hardest one to actually practice well. Part 2 takes just that piece further: treating AI output evaluation with the same rigor I'd apply to verifying any other system before trusting it in production.
