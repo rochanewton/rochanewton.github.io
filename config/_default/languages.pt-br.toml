@@ -1,0 +1,21 @@
+locale = "pt-BR"
+label = "Português"
+weight = 2
+title = "Newton Rocha"
+
+[params]
+  displayName = "Português"
+  isoCode = "pt-BR"
+  rtl = false
+  dateFormat = "02/01/2006"
+  logo = ""
+  description = "Notas sobre Middleware, Managed File Transfer e Infraestrutura por Newton Rocha — IBM Sterling, Linux, nuvem e como estou aplicando IA em operações de TI."
+
+[params.author]
+  name = "Newton Rocha"
+  image = "img/avatar.png"
+  headline = "Engenheiro de Middleware"
+  bio = "Profissional sênior de TI com mais de 15 anos de experiência em administração de sistemas Linux, automação com Bash e integração corporativa usando tecnologias IBM Sterling (File Gateway, B2B Integrator, Connect:Direct). Escrevo sobre incidentes reais de produção, dicas de MFT/middleware, automação de infraestrutura e como estou aplicando IA em operações de TI."
+  links = [
+    { linkedin = "https://www.linkedin.com/in/rochanewton" },
+  ]

@@ -1,6 +1,7 @@
 theme = "blowfish"
 baseURL = "https://rochanewton.github.io/"
 defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 
 enableRobotsTXT = true
 summaryLength = 30

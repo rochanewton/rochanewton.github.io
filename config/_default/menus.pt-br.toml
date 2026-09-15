@@ -1,0 +1,61 @@
+# -- Menu Principal --
+# Espelha config/_default/menus.en.toml com rótulos traduzidos.
+# pageRef aponta para os mesmos identificadores de seção/taxonomia;
+# o Hugo resolve automaticamente para a versão em pt-BR de cada página.
+
+[[main]]
+  name = "Início"
+  pageRef = "/"
+  weight = 10
+
+[[main]]
+  name = "Currículo"
+  pageRef = "resume"
+  weight = 20
+
+[[main]]
+  identifier = "articles"
+  name = "Artigos"
+  pageRef = "posts"
+  weight = 30
+
+[[main]]
+  name = "IBM Sterling"
+  pageRef = "categories/ibm-sterling"
+  parent = "articles"
+  weight = 31
+
+[[main]]
+  name = "Claude"
+  pageRef = "categories/claude"
+  parent = "articles"
+  weight = 32
+
+[[main]]
+  identifier = "linkedin"
+  pre = "linkedin"
+  url = "https://www.linkedin.com/in/rochanewton"
+  weight = 40
+
+
+# -- Menu do Rodapé --
+
+[[footer]]
+  name = "Currículo"
+  pageRef = "resume"
+  weight = 10
+
+[[footer]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 20
+
+[[footer]]
+  name = "Categorias"
+  pageRef = "categories"
+  weight = 30
+
+[[footer]]
+  name = "RSS"
+  url = "/index.xml"
+  weight = 40
