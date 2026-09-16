@@ -19,6 +19,8 @@ series:
 series_order: 4
 showAuthor: true
 image: cover.png
+aliases:
+  - /posts/sftp-protocol-fundamentals/
 ---
 
 ## Three protocols, one job, very different guts
@@ -184,7 +186,7 @@ The authoritative, current list of what OpenSSH supports — and how to set expl
 
 **Thread and connection limits.** The SFTP Client Adapter config from Part 2 has explicit thread limits for a reason — a partner running a burst of parallel transfers against a shared adapter can exhaust connection slots for every other partner sharing it. Worth knowing your adapter's limits before a partner asks "can we push 200 files at once."
 
-**Host key changes without warning.** Partners rebuild servers and rotate keys without telling you in advance. A strict `known_hosts` policy is the right default, but it means every unannounced rotation is a failed connection until someone manually verifies and accepts the new key — worth a documented, fast verification path rather than reaching for "just disable strict checking," which defeats the entire point. This happens often enough, and has enough nuance, that it gets its own post: [SSH known_hosts: How Host Key Verification Actually Works]({{< ref "/posts/ssh-known-hosts-host-key-verification/" >}}).
+**Host key changes without warning.** Partners rebuild servers and rotate keys without telling you in advance. A strict `known_hosts` policy is the right default, but it means every unannounced rotation is a failed connection until someone manually verifies and accepts the new key — worth a documented, fast verification path rather than reaching for "just disable strict checking," which defeats the entire point. This happens often enough, and has enough nuance, that it gets its own post: [SSH known_hosts: How Host Key Verification Actually Works]({{< ref "/posts/sterling-b2bi-08-ssh-known-hosts-host-key-verification/" >}}).
 
 ## Where this fits in Sterling
 

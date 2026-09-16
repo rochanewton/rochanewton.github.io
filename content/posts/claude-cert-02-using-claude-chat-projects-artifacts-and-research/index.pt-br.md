@@ -16,6 +16,8 @@ series:
 series_order: 2
 showAuthor: true
 image: cover.png
+aliases:
+  - /posts/using-claude-beyond-chat/
 ---
 
 ## A janela de chat é onde a maioria para
@@ -56,7 +58,7 @@ O gatilho prático para "isso deveria ser um project, não mais um chat" é simp
 
 Um [artifact](https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them) é um conteúdo substancial o suficiente para ganhar sua própria janela dedicada ao lado da conversa — um documento, um diagrama, uma página HTML funcional, um trecho de código — em vez de um bloco de texto enterrado no chat que você nunca vai rolar a tela para encontrar de novo. O Claude cria um automaticamente quando algo cruza a linha para "significativo e autocontido": geralmente mais de 15 linhas, e algo que você realmente vai editar, reutilizar ou consultar depois, em vez de só ler uma vez.
 
-A distinção que importa aqui não é o tamanho, é a descartabilidade. Uma explicação rápida pertence ao chat. Um diagrama do seu processo de onboarding, o primeiro rascunho de um relatório, um protótipo funcional — essas coisas têm vida depois que a conversa termina, e enterrá-las na rolagem do chat é como você as perde. Usei exatamente isso para o [gráfico do iceberg do framework 4D](/posts/ai-fluency-4d-framework/) no primeiro post desta série: ele precisava existir como algo que eu pudesse extrair, refinar e reutilizar no LinkedIn — não como uma descrição no meio de uma resposta de chat.
+A distinção que importa aqui não é o tamanho, é a descartabilidade. Uma explicação rápida pertence ao chat. Um diagrama do seu processo de onboarding, o primeiro rascunho de um relatório, um protótipo funcional — essas coisas têm vida depois que a conversa termina, e enterrá-las na rolagem do chat é como você as perde. Usei exatamente isso para o [gráfico do iceberg do framework 4D](/posts/claude-cert-01-fluency-4d-framework/) no primeiro post desta série: ele precisava existir como algo que eu pudesse extrair, refinar e reutilizar no LinkedIn — não como uma descrição no meio de uma resposta de chat.
 
 Se você pedir algo substancial e o Claude apenas responder no chat em vez de criar um artifact, você pode pedir diretamente: "crie isso como um artifact." Nem sempre é automático, e vale a pena pedir.
 
@@ -95,8 +97,8 @@ Como no resto deste site: as definições das funcionalidades são da Anthropic,
 
 ## Onde isso se encaixa
 
-Esta é a Parte 2 de **Getting Claude Certified**. A Parte 1 cobriu o [Framework 4D](/posts/ai-fluency-4d-framework/) — a camada de decisão por trás de tudo. Este post é a camada de superfície: qual recurso do Claude usar de fato depois que essa decisão já foi tomada.
+Esta é a Parte 2 de **Getting Claude Certified**. A Parte 1 cobriu o [Framework 4D](/posts/claude-cert-01-fluency-4d-framework/) — a camada de decisão por trás de tudo. Este post é a camada de superfície: qual recurso do Claude usar de fato depois que essa decisão já foi tomada.
 
 ## O que vem a seguir
 
-Discernment continua sendo a competência que considero mais difícil de praticar bem, e merece seu próprio post em vez de um parágrafo neste aqui. A Parte 3 aprofunda exatamente isso: tratar a avaliação de resultados de IA com o mesmo rigor que eu aplicaria para verificar qualquer outro sistema antes de confiar nele em produção.
+A Parte 3, [Domínio 1 — Avaliação e Validação de Resultados]({{< ref "/posts/claude-cert-03-output-evaluation-and-validation/" >}}), aprofunda o Discernment: é o domínio de maior peso na prova de certificação de verdade, e merece o mesmo rigor que eu aplicaria para verificar qualquer outro sistema antes de confiar nele em produção.

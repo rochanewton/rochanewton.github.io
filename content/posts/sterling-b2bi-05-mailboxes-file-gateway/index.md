@@ -151,7 +151,7 @@ In practice, most new external partner onboarding at the SFTP-in, deliver-somewh
 
 ## Where this fits in the series
 
-This closes the loop from [Part 1's]({{< ref "/posts/sterling-b2bi-01-overview/" >}}) component overview: the [Perimeter Server]({{< ref "/posts/sterling-b2bi-06-perimeter-servers/" >}}) and [Adapters]({{< ref "/posts/sterling-b2bi-02-adapters-vs-services/" >}}) get the file in, Business Processes and BPML move and transform it ([Part 3]({{< ref "/posts/sterling-b2bi-03-business-processes-bpml/" >}})), SFTP is the protocol most of those adapters actually speak ([Part 4]({{< ref "/posts/sftp-protocol-fundamentals/" >}})), and Mailboxes — with File Gateway as an optional, higher-level way of managing them — are where the file lands and gets picked up from. One piece from the Part 1 topology diagram is still owed its own deep dive: the Perimeter Server itself, next.
+This closes the loop from [Part 1's]({{< ref "/posts/sterling-b2bi-01-overview/" >}}) component overview: the [Perimeter Server]({{< ref "/posts/sterling-b2bi-06-perimeter-servers/" >}}) and [Adapters]({{< ref "/posts/sterling-b2bi-02-adapters-vs-services/" >}}) get the file in, Business Processes and BPML move and transform it ([Part 3]({{< ref "/posts/sterling-b2bi-03-business-processes-bpml/" >}})), SFTP is the protocol most of those adapters actually speak ([Part 4]({{< ref "/posts/sterling-b2bi-07-sftp-protocol-fundamentals/" >}})), and Mailboxes — with File Gateway as an optional, higher-level way of managing them — are where the file lands and gets picked up from. One piece from the Part 1 topology diagram is still owed its own deep dive: the Perimeter Server itself, next.
 
 ## Sources & further reading
 

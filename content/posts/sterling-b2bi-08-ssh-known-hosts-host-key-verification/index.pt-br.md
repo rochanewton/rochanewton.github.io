@@ -12,6 +12,8 @@ categories:
   - IBM Sterling
 showAuthor: true
 image: cover.png
+aliases:
+  - /posts/ssh-known-hosts-host-key-verification/
 ---
 
 ## O aviso que ninguém deveria simplesmente clicar e ignorar
@@ -26,11 +28,11 @@ IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
 Someone could be eavesdropping on you right now (man-in-the-middle attack)!
 ```
 
-Mencionei isso de passagem no [post de SFTP/FTP/FTPS]({{< ref "/posts/sftp-protocol-fundamentals/" >}}) como uma das coisas operacionais que costumam confundir, e o assunto merece seu próprio post, porque a resposta honesta e completa para "o que eu faço aqui" é mais do que uma frase — e "simplesmente desabilita a checagem estrita" é a resposta errada com frequência suficiente para valer a pena explicar exatamente por quê.
+Mencionei isso de passagem no [post de SFTP/FTP/FTPS]({{< ref "/posts/sterling-b2bi-07-sftp-protocol-fundamentals/" >}}) como uma das coisas operacionais que costumam confundir, e o assunto merece seu próprio post, porque a resposta honesta e completa para "o que eu faço aqui" é mais do que uma frase — e "simplesmente desabilita a checagem estrita" é a resposta errada com frequência suficiente para valer a pena explicar exatamente por quê.
 
 ## O que o known_hosts realmente é
 
-Durante o handshake SSH — o mesmo do [diagrama de sequência do post de SFTP]({{< ref "/posts/sftp-protocol-fundamentals/" >}}) — o servidor apresenta uma **host key** para provar sua identidade, da mesma forma que um par de chave privada/pública prova a identidade de um cliente durante a autenticação. O trabalho do cliente é verificar que essa host key realmente pertence ao servidor com quem ele acha que está falando, *antes* de confiar em qualquer outra coisa sobre a conexão, incluindo para onde ele envia sua senha ou quais arquivos ele entrega.
+Durante o handshake SSH — o mesmo do [diagrama de sequência do post de SFTP]({{< ref "/posts/sterling-b2bi-07-sftp-protocol-fundamentals/" >}}) — o servidor apresenta uma **host key** para provar sua identidade, da mesma forma que um par de chave privada/pública prova a identidade de um cliente durante a autenticação. O trabalho do cliente é verificar que essa host key realmente pertence ao servidor com quem ele acha que está falando, *antes* de confiar em qualquer outra coisa sobre a conexão, incluindo para onde ele envia sua senha ou quais arquivos ele entrega.
 
 O SSH faz isso com um modelo de confiança no primeiro uso (trust-on-first-use, ou TOFU), não uma cadeia de autoridade certificadora como o TLS normalmente usa. Na primeira vez que você se conecta a um determinado host, o OpenSSH mostra a fingerprint da chave do servidor e pede para você confirmá-la, depois armazena uma entrada — hostname (ou IP), algoritmo de chave e a própria chave — em um arquivo `known_hosts` local (`~/.ssh/known_hosts` por usuário, ou `/etc/ssh/ssh_known_hosts` para todo o sistema). Toda conexão depois dessa compara a chave apresentada com a entrada armazenada automaticamente, sem prompt, a menos que algo não bata.
 
@@ -149,7 +151,7 @@ Coletar uma chave nova passa pela mesma etapa de revisão de fingerprint que o `
 
 ![Tela de revisão "SSH Known Host Key" do Sterling B2B Integrator, mostrando a chave coletada do host 192.168.100.251 com algoritmo de chave pública ecdsa-sha2-nistp256, tamanho de 256 bits, e fingerprint SHA256, mais a opção de salvar a chave em disco em formato OpenSSH ou SECSH](known-host-key-collect.webp "Revisando uma host key recém-coletada antes de confiar nela — esta é a UI do Sterling sobre a exata etapa de verificação TOFU descrita acima")
 
-Repare na opção **Save To Disk** na parte de baixo, com uma escolha entre **OpenSSH Format** e **SECSH Format** — exatamente os mesmos dois formatos de arquivo de chave cobertos no [post de SFTP/FTP/FTPS]({{< ref "/posts/sftp-protocol-fundamentals/#pares-de-chaves-ssh" >}}). É exatamente por isso que essa distinção importa na prática: exportar uma host key do Sterling para entregar a um parceiro (ou importar uma que ele te envia) significa escolher o formato que o sistema receptor de fato entende, não só baixar o que quer que seja o padrão.
+Repare na opção **Save To Disk** na parte de baixo, com uma escolha entre **OpenSSH Format** e **SECSH Format** — exatamente os mesmos dois formatos de arquivo de chave cobertos no [post de SFTP/FTP/FTPS]({{< ref "/posts/sterling-b2bi-07-sftp-protocol-fundamentals/#pares-de-chaves-ssh" >}}). É exatamente por isso que essa distinção importa na prática: exportar uma host key do Sterling para entregar a um parceiro (ou importar uma que ele te envia) significa escolher o formato que o sistema receptor de fato entende, não só baixar o que quer que seja o padrão.
 
 Depois que uma chave é revisada e registrada, ela aparece como uma entrada gerenciada — ID da chave, nome, tipo, tamanho, status e fingerprint, tudo visível de relance:
 
@@ -172,4 +174,4 @@ O processo prático que eu sigo: o parceiro nos avisa (ou nós percebemos a falh
 
 Como no resto do que escrevo sobre esse assunto: o conteúdo das páginas de manual é a fonte autoritativa linkada acima, o enquadramento, o processo de rotação e as notas específicas do B2Bi são meus.
 
-Este post é um spin-off de [SFTP, FTP, FTPS: O Protocolo Por Trás dos Adapters]({{< ref "/posts/sftp-protocol-fundamentals/" >}}) — vale a pena ler primeiro se você quiser o quadro completo de onde a verificação de host key se encaixa no handshake SSH.
+Este post é um spin-off de [SFTP, FTP, FTPS: O Protocolo Por Trás dos Adapters]({{< ref "/posts/sterling-b2bi-07-sftp-protocol-fundamentals/" >}}) — vale a pena ler primeiro se você quiser o quadro completo de onde a verificação de host key se encaixa no handshake SSH.

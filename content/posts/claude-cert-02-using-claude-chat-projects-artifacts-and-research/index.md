@@ -16,6 +16,8 @@ series:
 series_order: 2
 showAuthor: true
 image: cover.png
+aliases:
+  - /posts/using-claude-beyond-chat/
 ---
 
 ## The chat window is where most people stop
@@ -56,7 +58,7 @@ The practical trigger for "this should be a project, not another chat" is simple
 
 An [artifact](https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them) is content substantial enough to get its own dedicated window next to the conversation — a document, a diagram, a working HTML page, a piece of code — instead of a block of text buried in chat that you'll never scroll back to find. Claude creates one automatically once something crosses the line into "significant and self-contained": generally over 15 lines, and something you're actually going to edit, reuse, or reference later rather than just read once.
 
-The distinction that matters here isn't length, it's disposability. A quick explanation belongs in chat. A diagram of your onboarding process, a first draft of a report, a working prototype — those are things with a life after this conversation ends, and burying them in scrollback is how you lose them. I used exactly this for the [4D framework iceberg graphic](/posts/ai-fluency-4d-framework/) in the first post of this series: it needed to exist as its own thing I could pull out, refine, and reuse on LinkedIn — not as a description in the middle of a chat reply.
+The distinction that matters here isn't length, it's disposability. A quick explanation belongs in chat. A diagram of your onboarding process, a first draft of a report, a working prototype — those are things with a life after this conversation ends, and burying them in scrollback is how you lose them. I used exactly this for the [4D framework iceberg graphic](/posts/claude-cert-01-fluency-4d-framework/) in the first post of this series: it needed to exist as its own thing I could pull out, refine, and reuse on LinkedIn — not as a description in the middle of a chat reply.
 
 If you ask for something substantial and Claude just answers in the chat instead, you can say so directly: "create that as an artifact." It's not always automatic, and it's worth the ask.
 
@@ -95,4 +97,8 @@ As with the rest of this site: the feature definitions are Anthropic's, the fram
 
 ## Where this fits
 
-This is Part 2 of **Getting Claude Certified**. Part 1 covered the [4D Framework](/posts/ai-fluency-4d-framework/) — the decision-making layer underneath everything. This post is the surface layer: which Claude surface to actually reach for once you've made that decision.
+This is Part 2 of **Getting Claude Certified**. Part 1 covered the [4D Framework](/posts/claude-cert-01-fluency-4d-framework/) — the decision-making layer underneath everything. This post is the surface layer: which Claude surface to actually reach for once you've made that decision.
+
+## What's next
+
+Part 3, [Domain 1 — Output Evaluation and Validation]({{< ref "/posts/claude-cert-03-output-evaluation-and-validation/" >}}), takes Discernment further: it's the highest-weighted domain on the actual certification exam, and it deserves the same rigor I'd apply to verifying any other system before trusting it in production.

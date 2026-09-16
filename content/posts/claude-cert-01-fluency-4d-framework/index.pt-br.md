@@ -16,6 +16,8 @@ series:
 series_order: 1
 showAuthor: true
 image: cover.png
+aliases:
+  - /posts/ai-fluency-4d-framework/
 ---
 
 ## Prompt é a menor parte disso
@@ -73,4 +75,4 @@ Este é a Parte 1 de **Getting Claude Certified** — uma série contínua de di
 
 ## O que vem a seguir
 
-A Parte 2, [Você Está Usando o Claude Como se Fosse o ChatGPT de 2020]({{< ref "/posts/using-claude-beyond-chat/" >}}), cobre a camada de superfície em cima desse framework: Chat, Projects, Artifacts e Research, e quando usar cada um. Discernimento — tratar a avaliação de saídas de IA com o mesmo rigor que eu aplicaria para verificar qualquer outro sistema antes de confiar nele em produção — ainda está por vir, agora como Parte 3.
+A Parte 2, [Você Está Usando o Claude Como se Fosse o ChatGPT de 2020]({{< ref "/posts/claude-cert-02-using-claude-chat-projects-artifacts-and-research/" >}}), cobre a camada de superfície em cima desse framework: Chat, Projects, Artifacts e Research, e quando usar cada um. Discernimento — tratar a avaliação de saídas de IA com o mesmo rigor que eu aplicaria para verificar qualquer outro sistema antes de confiar nele em produção — ainda está por vir, agora como Parte 3.

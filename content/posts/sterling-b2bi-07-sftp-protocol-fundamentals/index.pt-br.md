@@ -19,6 +19,8 @@ series:
 series_order: 4
 showAuthor: true
 image: cover.png
+aliases:
+  - /posts/sftp-protocol-fundamentals/
 ---
 
 ## Três protocolos, um trabalho, mecânicas internas muito diferentes
@@ -184,7 +186,7 @@ A lista atual e autoritativa do que o OpenSSH suporta — e como definir uma ord
 
 **Limites de thread e conexão.** A configuração do SFTP Client Adapter da Parte 2 tem limites explícitos de thread por um motivo — um parceiro rodando uma rajada de transferências paralelas contra um adapter compartilhado pode esgotar os slots de conexão de todo outro parceiro que o compartilha. Vale a pena saber os limites do seu adapter antes de um parceiro perguntar "podemos enviar 200 arquivos de uma vez?"
 
-**Mudanças de host key sem aviso.** Parceiros reconstroem servidores e rotacionam chaves sem te avisar com antecedência. Uma política estrita de `known_hosts` é o padrão certo, mas significa que toda rotação não anunciada vira uma conexão falha até que alguém verifique e aceite manualmente a nova chave — vale a pena ter um caminho de verificação rápido e documentado, em vez de recorrer a "só desabilita a checagem estrita", o que anula o propósito inteiro. Isso acontece com frequência suficiente, e tem nuance suficiente, para merecer seu próprio post: [SSH known_hosts: Como a Verificação de Host Key Realmente Funciona]({{< ref "/posts/ssh-known-hosts-host-key-verification/" >}}).
+**Mudanças de host key sem aviso.** Parceiros reconstroem servidores e rotacionam chaves sem te avisar com antecedência. Uma política estrita de `known_hosts` é o padrão certo, mas significa que toda rotação não anunciada vira uma conexão falha até que alguém verifique e aceite manualmente a nova chave — vale a pena ter um caminho de verificação rápido e documentado, em vez de recorrer a "só desabilita a checagem estrita", o que anula o propósito inteiro. Isso acontece com frequência suficiente, e tem nuance suficiente, para merecer seu próprio post: [SSH known_hosts: Como a Verificação de Host Key Realmente Funciona]({{< ref "/posts/sterling-b2bi-08-ssh-known-hosts-host-key-verification/" >}}).
 
 ## Onde isso se encaixa no Sterling
 

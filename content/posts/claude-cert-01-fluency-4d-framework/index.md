@@ -3,6 +3,7 @@ title: "The 4D Framework: Delegation, Description, Discernment, Diligence"
 date: 2026-09-15
 aliases:
   - /posts/why-a-middleware-engineer-is-getting-certified-in-claude/
+  - /posts/ai-fluency-4d-framework/
 description: "Anthropic's AI Fluency framework breaks working with AI into four competencies instead of a pile of prompt tricks. Here's what each one actually means in practice, and where I've seen myself skip straight past one of them."
 tags:
   - claude
@@ -73,4 +74,4 @@ This is Part 1 of **Getting Claude Certified** — an ongoing series of tips, st
 
 ## What's next
 
-Part 2, [You're Using Claude Like It's ChatGPT 2020]({{< ref "/posts/using-claude-beyond-chat/" >}}), covers the surface layer sitting on top of this framework: Chat, Projects, Artifacts, and Research, and when to reach for each one. Discernment — treating AI output evaluation with the same rigor I'd apply to verifying any other system before trusting it in production — is still coming, now as Part 3.
+Part 2, [You're Using Claude Like It's ChatGPT 2020]({{< ref "/posts/claude-cert-02-using-claude-chat-projects-artifacts-and-research/" >}}), covers the surface layer sitting on top of this framework: Chat, Projects, Artifacts, and Research, and when to reach for each one. Discernment — treating AI output evaluation with the same rigor I'd apply to verifying any other system before trusting it in production — is still coming, now as Part 3.
