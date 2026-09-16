@@ -1,6 +1,6 @@
 ---
 title: "You're Using Claude Like It's ChatGPT 2020"
-date: 2026-09-22
+date: 2026-09-16
 description: "If Claude is just a chat window for you, you're re-explaining your context every session and throwing away your best output. Projects, Artifacts, and Research fix that — here's how I actually use each one."
 tags:
   - claude
