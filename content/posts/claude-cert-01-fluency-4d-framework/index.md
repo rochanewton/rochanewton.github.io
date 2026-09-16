@@ -4,7 +4,7 @@ date: 2026-09-15
 aliases:
   - /posts/why-a-middleware-engineer-is-getting-certified-in-claude/
   - /posts/ai-fluency-4d-framework/
-description: "Anthropic's AI Fluency framework breaks working with AI into four competencies instead of a pile of prompt tricks. Here's what each one actually means in practice, and where I've seen myself skip straight past one of them."
+description: "AI Fluency isn't a pile of prompt tricks — it's four competencies. Here's Delegation, Description, Discernment, and Diligence, condensed to what actually changes how you work with Claude."
 tags:
   - claude
   - anthropic
@@ -21,57 +21,55 @@ showAuthor: true
 image: cover.png
 ---
 
-## Prompting is the smallest part of this
+## What this is about
 
-Anthropic's **AI Fluency: Framework & Foundations** course — one of the three that make up the Claude Certified Associate – Foundations curriculum — names those four things directly: **Delegation, Description, Discernment, Diligence**. The 4Ds. I went in expecting a prompting course and came out with a decision framework instead, which is a better outcome. This kicks off a series where I'll work through what actually helped while studying for the certification, and more generally what's made the biggest difference in how I use Claude day to day — useful whether or not the exam itself is the goal.
+Anthropic's AI Fluency course breaks working with AI into four competencies instead of a pile of prompt tricks: **Delegation, Description, Discernment, Diligence**. The 4Ds. I went in expecting a prompting course and came out with a decision framework instead — one that's less about writing better prompts and more about deciding what to hand off, how to communicate it, how to judge what comes back, and who's accountable for it. Here's each one, condensed to what actually matters.
 
-## The four competencies
+## Key point 1: Delegation — the decision before the prompt
 
-The four competencies as one picture, split above and below the waterline, since two of them are about what you produce and two are about what you don't see unless you go looking for it:
+Delegation is deciding what's yours to do, what's AI's to do, and what's worth doing together — before any of that becomes a prompt. It comes down to knowing the actual goal, knowing what the specific AI system in front of you is good and bad at, and only then making the handoff call. The part most people underrate: what's safe to delegate changes by context. A quick chat answer and an unattended agent running tool calls don't get the same trust by default, so the question gets re-asked every time, not decided once and reused.
 
-![The 4 core competencies of AI fluency, shown as an iceberg: Delegation and Description above the waterline as "what shows up after the pilot succeeds," Discernment and Diligence below it as "what AI fluency actually costs"](4d-ai-fluency-iceberg.webp "The framing I keep coming back to: delegation and description are the visible half of the work, discernment and diligence are the half nobody sees in the demo")
+## Key point 2: Description — AI can't read your mind
 
-That's the whole framework in one image, but each quadrant deserves more than an icon and a caption.
+Description is telling AI what you want clearly enough that it can actually deliver — not just the end result, but the method you want followed and how it should behave while working with you. Most disappointing AI output traces back to specifying only the end result and skipping the other two. Ask for a summary without saying how blunt the feedback should be, and don't be surprised when it agrees with everything you wrote.
 
-## Delegation: the decision before the prompt
+## Key point 3: Discernment — the flip side of description
 
-Delegation is deciding what work is appropriate for you to do, what's appropriate for AI, and what genuinely benefits from doing together — before any of that turns into an instruction. Anthropic breaks it into three pieces: **Problem Awareness** (do you actually understand the goal and the shape of the work), **Platform Awareness** (do you know what this specific AI system is actually good and bad at), and **Task Delegation** itself, which is the distribution decision that only makes sense once the first two are in place.
+Discernment is judging what comes back: the output itself, the reasoning behind it, and whether the interaction was actually responsive to your direction or just agreeable. The catch — your discernment is only as strong as your own expertise in the topic. A wrong claim in your own field jumps out in a sentence. The same wrong claim outside your field reads as confidently correct, because to you, it's indistinguishable from a right one.
 
-The part I underestimated is Platform Awareness. It's tempting to treat "AI" as one undifferentiated capability level and delegate the same way regardless of which system or which mode you're in. In practice, what's safe to hand off changes based on what you're actually working with — a quick chat answer, an agent running tool calls unattended, a long research task — and Delegation done well means re-asking the question every time, not deciding once and reusing the answer forever.
+## Key point 4: Diligence — the part that isn't about quality at all
 
-## Description: AI can't read your mind
+Diligence isn't about getting better output — it's about owning what you did to get it: being thoughtful about which system you use, being honest with people about AI's role when they see the result, and actually standing behind it once it ships under your name. The piece most often skipped is standing behind it — nobody checks until something's wrong in front of someone who matters, and "the AI wrote that part" doesn't hold up in that moment.
 
-Description is communicating with AI in a way that actually creates a working collaboration, and it splits into three layers that map to three different questions: **Product Description** (what do you want, in what format, for what audience), **Process Description** (how should it get there — is there a method or sequence you want followed), and **Performance Description** (how should it behave while working with you — terse or thorough, quick to push back or quick to agree).
+## How the four fit together
 
-Most disappointing AI output I've seen — mine included — traces back to skipping Process or Performance entirely and only ever specifying Product. You say what you want, get something plausible-looking back, and only notice in hindsight that you never said how you wanted it approached, or how blunt you wanted the feedback along the way. Anthropic's framing that stuck with me: AI systems are interactive partners, not vending machines. A vending machine doesn't need Process or Performance instructions. A partner does.
+{{< mermaid >}}
+flowchart LR
+    A[Delegation<br/>decide what to hand off] --> B[Description<br/>say how, not just what]
+    B --> C{Discernment<br/>judge the output}
+    C -->|Gaps found| B
+    C -->|Holds up| D[Diligence<br/>own the outcome]
+    D -->|Next task| A
 
-## Discernment: the flip side of description
+    style A fill:#2a78d6,stroke:#1a5fb4,color:#fff
+    style B fill:#2a78d6,stroke:#1a5fb4,color:#fff
+    style C fill:#eda100,stroke:#c98500,color:#fff
+    style D fill:#eda100,stroke:#c98500,color:#fff
+{{< /mermaid >}}
 
-If Description is you communicating outward, Discernment is judging what comes back — and it mirrors the same three-part structure. **Product Discernment** evaluates the output itself: is it accurate, coherent, actually relevant to what you asked. **Process Discernment** looks at how the AI got there: did the reasoning have gaps, did it skip a step it should have caught. **Performance Discernment** evaluates the interaction itself: was it actually responsive to your direction, or just agreeable.
+Delegation and Description are the two competencies visible in any AI demo — they're what produce the output. Discernment and Diligence are the two nobody sees on stage, and they're the two that actually determine whether that output was safe to use.
 
-Here's the uncomfortable part Anthropic's material is honest about: your Discernment is only as good as your own expertise in the subject. Ask an AI to explain something you already know well, and you'll catch a wrong claim in a sentence. Ask it about something you don't know, and the same wrong claim reads as confidently correct — because to you, it is indistinguishable from a right one. That's not a reason to avoid using AI outside your expertise. It's a reason to be more careful, not less, exactly where you're least equipped to catch a mistake — which is the opposite of how most people actually behave.
+![The 4 core competencies of AI fluency, shown as an iceberg: Delegation and Description above the waterline as "what shows up after the pilot succeeds," Discernment and Diligence below it as "what AI fluency actually costs"](4d-ai-fluency-iceberg.webp "Delegation and description are the visible half of the work. Discernment and diligence are the half nobody sees in the demo.")
 
-## Diligence: the part that isn't about quality at all
+## Conclusion
 
-Diligence is different from the other three because it isn't really about getting better output — it's about taking responsibility for what you did to get it. Three components again: **Creation Diligence** (are you thoughtful about which AI system you're using and what you're feeding it), **Transparency Diligence** (are you honest with the people who'll see the result about AI's role in producing it), and **Deployment Diligence** (are you actually standing behind the output once it goes out under your name).
+The 4D framework in one line: decide what to delegate, describe it fully (not just the end result), judge what comes back with the same rigor you'd apply to a colleague's work, and own the outcome once it ships. Most disappointing AI experiences trace back to skipping one of these four — usually Description or Diligence — not to the model itself. That's the whole framework, and everything else about using Claude well builds on it.
 
-Deployment Diligence is the one I think gets skipped most often, because it's invisible right up until it isn't. Nobody asks whether you verified an AI-assisted deliverable until the moment it's wrong in front of someone who matters — at which point "the AI wrote that part" is not an acceptable answer. Diligence means the accuracy of the output is yours to answer for, full stop, regardless of what produced the first draft.
-
-## A diligence statement, since I just wrote about the concept
-
-In the spirit of the Diligence competency this post is literally about: I collaborated with Claude to research, structure, and draft this post from my own notes on Anthropic's AI Fluency course. The four-competency breakdown and the framing choices are mine; I reviewed the content against my source notes for accuracy before publishing, and I stand behind what's written here as an accurate representation of the framework and my own take on it.
-
-## Sources & further reading
+## Sources
 
 - [AI Fluency: Framework & Foundations — Claude Academy](https://academy.claude.com/courses/ai-fluency-framework-foundations)
 - [AI Fluency Framework — documentation, papers, and open resources](https://aifluencyframework.org/)
 
-As with the rest of this site: the framework and its terminology are Anthropic's, the practitioner framing and the examples of where each competency tends to get skipped are mine.
-
 ## Where this fits
 
-This is Part 1 of **Getting Claude Certified** — an ongoing series of tips, study notes, and lessons learned from working toward Anthropic's Claude certifications, and from using Claude seriously day to day. The 4D framework goes first because everything else in the certification, and honestly everything else about using AI well, builds on it.
-
-## What's next
-
-Part 2, [You're Using Claude Like It's ChatGPT 2020]({{< ref "/posts/claude-cert-02-using-claude-chat-projects-artifacts-and-research/" >}}), covers the surface layer sitting on top of this framework: Chat, Projects, Artifacts, and Research, and when to reach for each one. Discernment — treating AI output evaluation with the same rigor I'd apply to verifying any other system before trusting it in production — is still coming, now as Part 3.
+Part 1 of **Getting Claude Certified**. Part 2 covers [Chat, Projects, Artifacts, and Research]({{< ref "/posts/claude-cert-02-using-claude-chat-projects-artifacts-and-research/" >}}), Part 3 covers [Domain 1 — Output Evaluation and Validation]({{< ref "/posts/claude-cert-03-output-evaluation-and-validation/" >}}), which is Discernment's deep dive.
