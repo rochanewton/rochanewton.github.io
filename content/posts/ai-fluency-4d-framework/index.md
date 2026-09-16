@@ -70,3 +70,7 @@ As with the rest of this site: the framework and its terminology are Anthropic's
 ## Where this fits
 
 This is Part 1 of **Getting Claude Certified** — an ongoing series of tips, study notes, and lessons learned from working toward Anthropic's Claude certifications, and from using Claude seriously day to day. The 4D framework goes first because everything else in the certification, and honestly everything else about using AI well, builds on it.
+
+## What's next
+
+Part 2, [You're Using Claude Like It's ChatGPT 2020]({{< ref "/posts/using-claude-beyond-chat/" >}}), covers the surface layer sitting on top of this framework: Chat, Projects, Artifacts, and Research, and when to reach for each one. Discernment — treating AI output evaluation with the same rigor I'd apply to verifying any other system before trusting it in production — is still coming, now as Part 3.

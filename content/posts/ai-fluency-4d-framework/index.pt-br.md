@@ -73,4 +73,4 @@ Este é a Parte 1 de **Getting Claude Certified** — uma série contínua de di
 
 ## O que vem a seguir
 
-Discernimento é a competência à qual eu sempre volto como a mais difícil de praticar bem de verdade. A Parte 2 aprofunda exatamente esse ponto: tratar a avaliação de saídas de IA com o mesmo rigor que eu aplicaria para verificar qualquer outro sistema antes de confiar nele em produção.
+A Parte 2, [Você Está Usando o Claude Como se Fosse o ChatGPT de 2020]({{< ref "/posts/using-claude-beyond-chat/" >}}), cobre a camada de superfície em cima desse framework: Chat, Projects, Artifacts e Research, e quando usar cada um. Discernimento — tratar a avaliação de saídas de IA com o mesmo rigor que eu aplicaria para verificar qualquer outro sistema antes de confiar nele em produção — ainda está por vir, agora como Parte 3.
