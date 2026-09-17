@@ -99,6 +99,8 @@ Final client deliverables, audit-critical calculations, and public or legal comm
 - **Input curation is part of validation, not prep.** Noisy, contradictory source material produces noisy output. A bigger model doesn't fix that — de-duplicating and labeling your sources does.
 - **Same facts, different delivery.** An executive wants the decision and the impact first. A working team wants the method and the owner. An external audience needs controlled disclosure. Sending the same raw draft to all three fails at least two of them.
 
+![Infographic summarizing the Output Evaluation and Validation framework in five numbered sections: check against three references (requirements, source material, professional standards), accuracy and completeness as different tests, the three-way triage (minor issue / material issue / high-stakes issue), spotting a hallucination by its shape (six patterns), and when a human has to be in the loop (stakes, reversibility, audience, regulatory exposure)](domain-1-output-evaluation-infographic.webp "The whole Domain 1 framework on one page — built to share as a standalone summary")
+
 ## Conclusion
 
 Domain 1 is the highest-weighted section of the Claude certification exam because evaluation is the actual skill — not prompting, not workflow design. The short version: check output against requirements, source, and professional standard; treat accuracy and completeness as separate tests; triage into ready / needs revision / needs a human; know the six hallucination patterns; and know the four questions that force human review no matter how good the output looks. That's the whole domain, and it's the part of working with Claude that pays off the most.
@@ -110,4 +112,4 @@ Domain 1 is the highest-weighted section of the Claude certification exam becaus
 
 ## Where this fits
 
-Part 3 of **Getting Claude Certified**. Part 1 covered the [4D Framework](/posts/claude-cert-01-fluency-4d-framework/), Part 2 covered [Chat, Projects, Artifacts, and Research](/posts/claude-cert-02-using-claude-chat-projects-artifacts-and-research/). Part 4 takes on Domain 2 — Workflow Integration and Solution Design.
+Part 3 of **Getting Claude Certified**. Part 1 covered the [4D Framework](/posts/claude-cert-01-fluency-4d-framework/), Part 2 covered [Chat, Projects, Artifacts, and Research](/posts/claude-cert-02-using-claude-chat-projects-artifacts-and-research/). Part 4 takes on [Domain 2 — Workflow Integration and Solution Design]({{< ref "/posts/claude-cert-04-workflow-integration-and-solution-design/" >}}).

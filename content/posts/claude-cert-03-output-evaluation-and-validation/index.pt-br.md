@@ -99,6 +99,8 @@ Entregas finais para clientes, cálculos críticos para auditoria e comunicaçõ
 - **Curadoria de entrada é parte da validação, não um preparo prévio.** Material-fonte ruidoso e contraditório produz saída ruidosa. Um modelo maior não resolve isso — eliminar duplicatas e rotular suas fontes resolve.
 - **Os mesmos fatos, entregas diferentes.** Um executivo quer a decisão e o impacto primeiro. Um time de trabalho quer o método e quem é responsável. Um público externo precisa de divulgação controlada. Mandar o mesmo rascunho bruto para os três falha com pelo menos dois deles.
 
+![Infográfico resumindo o framework de Avaliação e Validação de Resultados em cinco seções numeradas: checar contra três referências (requisitos, material-fonte, padrões profissionais), precisão e completude como testes diferentes, a triagem em três vias (problema menor / problema material / problema de alto risco), reconhecendo uma alucinação pelo formato (seis padrões), e quando um humano precisa estar no circuito (risco, reversibilidade, público, exposição regulatória)](domain-1-output-evaluation-infographic.webp "O framework inteiro do Domínio 1 em uma página — feito para compartilhar como resumo autônomo")
+
 ## Conclusão
 
 O Domínio 1 é a seção de maior peso da prova de certificação Claude porque avaliação é a habilidade de verdade — não prompting, não design de workflow. A versão curta: cheque o resultado contra requisitos, fonte e padrão profissional; trate precisão e completude como testes separados; faça a triagem entre pronto / precisa de revisão / precisa de um humano; conheça os seis padrões de alucinação; e conheça as quatro perguntas que forçam revisão humana independente de quão bom o resultado pareça. Isso é o domínio inteiro, e é a parte de trabalhar com o Claude que mais compensa.
@@ -110,4 +112,4 @@ O Domínio 1 é a seção de maior peso da prova de certificação Claude porque
 
 ## Onde isso se encaixa
 
-Parte 3 de **Getting Claude Certified**. A Parte 1 cobriu o [Framework 4D](/posts/claude-cert-01-fluency-4d-framework/), a Parte 2 cobriu [Chat, Projects, Artifacts e Research](/posts/claude-cert-02-using-claude-chat-projects-artifacts-and-research/). A Parte 4 assume o Domínio 2 — Workflow Integration and Solution Design.
+Parte 3 de **Getting Claude Certified**. A Parte 1 cobriu o [Framework 4D](/posts/claude-cert-01-fluency-4d-framework/), a Parte 2 cobriu [Chat, Projects, Artifacts e Research](/posts/claude-cert-02-using-claude-chat-projects-artifacts-and-research/). A Parte 4 assume o [Domínio 2 — Integração de Workflow e Design de Soluções]({{< ref "/posts/claude-cert-04-workflow-integration-and-solution-design/" >}}).
