@@ -78,4 +78,4 @@ Domain 2 comes down to this: pick the interaction pattern that matches how much 
 
 ## Where this fits
 
-Part 4 of **Getting Claude Certified**. Part 1 covered the [4D Framework]({{< ref "/posts/claude-cert-01-fluency-4d-framework/" >}}), Part 2 covered [Chat, Projects, Artifacts, and Research]({{< ref "/posts/claude-cert-02-using-claude-chat-projects-artifacts-and-research/" >}}), Part 3 covered [Domain 1 — Output Evaluation and Validation]({{< ref "/posts/claude-cert-03-output-evaluation-and-validation/" >}}). Part 5 takes on Domain 3 — Governance, Risk, and Responsible Use.
+Part 4 of **Getting Claude Certified**. Part 1 covered the [4D Framework]({{< ref "/posts/claude-cert-01-fluency-4d-framework/" >}}), Part 2 covered [Chat, Projects, Artifacts, and Research]({{< ref "/posts/claude-cert-02-using-claude-chat-projects-artifacts-and-research/" >}}), Part 3 covered [Domain 1 — Output Evaluation and Validation]({{< ref "/posts/claude-cert-03-output-evaluation-and-validation/" >}}). Part 5 takes on [Domain 3 — Governance, Risk, and Responsible Use]({{< ref "/posts/claude-cert-05-governance-risk-and-responsible-use/" >}}).
