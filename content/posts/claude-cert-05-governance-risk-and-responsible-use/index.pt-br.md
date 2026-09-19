@@ -1,7 +1,7 @@
 ---
 title: "Claude Certified Associate – Foundations: Domínio 3 — Governança, Risco e Uso Responsável"
-date: 2026-09-18
-description: "Um único caso de uso inapropriado pode congelar todo o programa de IA de uma organização. O Domínio 3 da prova de certificação Claude, 15% dela, é o framework de julgamento para manter a adoção avançando com segurança."
+date: 2026-09-15
+description: Um único caso de uso inapropriado pode congelar todo o programa de IA de uma organização. O Domínio 3 da prova de certificação Claude, 15% dela, é o framework de julgamento para manter a adoção avançando com segurança.
 tags:
   - claude
   - anthropic

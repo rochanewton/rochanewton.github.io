@@ -1,7 +1,7 @@
 ---
 title: "Claude Certified Associate – Foundations: Domínio 1 — Avaliação e Validação de Resultados"
-date: 2026-09-16
-description: "O Domínio 1 vale 21% da prova de certificação Claude — o maior domínio individual. Aqui está o framework para distinguir um resultado de IA com boa aparência de um resultado validado, condensado nas partes que realmente importam."
+date: 2026-09-13
+description: O Domínio 1 vale 21% da prova de certificação Claude — o maior domínio individual. Aqui está o framework para distinguir um resultado de IA com boa aparência de um resultado validado, condensado nas partes que realmente importam.
 tags:
   - claude
   - anthropic

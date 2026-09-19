@@ -1,7 +1,7 @@
 ---
 title: "Claude Certified Associate – Foundations: Domain 3 — Governance, Risk, and Responsible Use"
-date: 2026-09-18
-description: "One inappropriate use case can freeze an entire organization's AI program. Domain 3 of the Claude certification exam, 15% of it, is the judgment framework for keeping adoption moving safely."
+date: 2026-09-15
+description: One inappropriate use case can freeze an entire organization's AI program. Domain 3 of the Claude certification exam, 15% of it, is the judgment framework for keeping adoption moving safely.
 tags:
   - claude
   - anthropic

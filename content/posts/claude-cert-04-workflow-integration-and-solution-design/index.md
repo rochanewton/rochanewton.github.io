@@ -1,7 +1,7 @@
 ---
 title: "Claude Certified Associate – Foundations: Domain 2 — Workflow Integration and Solution Design"
-date: 2026-09-17
-description: "Domain 2 is 16% of the Claude certification exam. It's not about whether one output is good — it's about deciding where Claude actually belongs in a workflow, and where it doesn't."
+date: 2026-09-14
+description: Domain 2 is 16% of the Claude certification exam. It's not about whether one output is good — it's about deciding where Claude actually belongs in a workflow, and where it doesn't.
 tags:
   - claude
   - anthropic

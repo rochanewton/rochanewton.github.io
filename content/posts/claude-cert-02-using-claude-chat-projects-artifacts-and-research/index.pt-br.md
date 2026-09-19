@@ -1,7 +1,7 @@
 ---
-title: "Você Está Usando o Claude Como se Fosse o ChatGPT de 2020"
-date: 2026-09-16
-description: "Se o Claude é só uma janela de chat pra você, você está reexplicando seu contexto toda sessão e jogando fora seu melhor resultado. Projects, Artifacts e Research resolvem isso — veja como eu uso cada um na prática."
+title: Você Está Usando o Claude Como se Fosse o ChatGPT de 2020
+date: 2026-09-12
+description: Se o Claude é só uma janela de chat pra você, você está reexplicando seu contexto toda sessão e jogando fora seu melhor resultado. Projects, Artifacts e Research resolvem isso — veja como eu uso cada um na prática.
 tags:
   - claude
   - anthropic

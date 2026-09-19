@@ -1,7 +1,7 @@
 ---
 title: "Claude Certified Associate – Foundations: Domain 6 — Configuration and Knowledge Management"
-date: 2026-09-19
-description: "There's a line between using Claude and operating Claude. Domain 6 of the Claude certification exam, 12% of it, is the discipline of setting up an environment once and benefiting from it every conversation after."
+date: 2026-09-18
+description: There's a line between using Claude and operating Claude. Domain 6 of the Claude certification exam, 12% of it, is the discipline of setting up an environment once and benefiting from it every conversation after.
 tags:
   - claude
   - anthropic

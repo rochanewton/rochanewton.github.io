@@ -1,7 +1,7 @@
 ---
 title: "Claude Certified Associate – Foundations: Domain 1 — Output Evaluation and Validation"
-date: 2026-09-16
-description: "Domain 1 is 21% of the Claude certification exam — the biggest single domain. Here's the framework for telling good-looking AI output from validated AI output, condensed to the parts that actually matter."
+date: 2026-09-13
+description: Domain 1 is 21% of the Claude certification exam — the biggest single domain. Here's the framework for telling good-looking AI output from validated AI output, condensed to the parts that actually matter.
 tags:
   - claude
   - anthropic

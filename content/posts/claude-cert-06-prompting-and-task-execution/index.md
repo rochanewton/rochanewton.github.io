@@ -1,7 +1,7 @@
 ---
 title: "Claude Certified Associate – Foundations: Domain 4 — Prompting and Task Execution"
-date: 2026-09-19
-description: "The same request, phrased two ways, produces two different levels of output. Domain 4 of the Claude certification exam, 14% of it, treats prompting as structure you can learn, not a knack some people have."
+date: 2026-09-16
+description: The same request, phrased two ways, produces two different levels of output. Domain 4 of the Claude certification exam, 14% of it, treats prompting as structure you can learn, not a knack some people have.
 tags:
   - claude
   - anthropic

@@ -1,7 +1,7 @@
 ---
 title: "Claude Certified Associate – Foundations: Domínio 6 — Configuração e Gestão de Conhecimento"
-date: 2026-09-19
-description: "Existe uma linha entre usar o Claude e operar o Claude. O Domínio 6 da prova de certificação Claude, 12% dela, é a disciplina de configurar um ambiente uma vez e se beneficiar disso em toda conversa depois."
+date: 2026-09-18
+description: Existe uma linha entre usar o Claude e operar o Claude. O Domínio 6 da prova de certificação Claude, 12% dela, é a disciplina de configurar um ambiente uma vez e se beneficiar disso em toda conversa depois.
 tags:
   - claude
   - anthropic

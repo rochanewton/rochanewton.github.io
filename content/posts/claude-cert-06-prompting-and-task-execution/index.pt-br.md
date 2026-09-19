@@ -1,7 +1,7 @@
 ---
 title: "Claude Certified Associate – Foundations: Domínio 4 — Prompting e Execução de Tarefas"
-date: 2026-09-19
-description: "A mesma solicitação, formulada de duas formas, produz dois níveis diferentes de resultado. O Domínio 4 da prova de certificação Claude, 14% dela, trata prompting como estrutura que se aprende, não um dom que algumas pessoas têm."
+date: 2026-09-16
+description: A mesma solicitação, formulada de duas formas, produz dois níveis diferentes de resultado. O Domínio 4 da prova de certificação Claude, 14% dela, trata prompting como estrutura que se aprende, não um dom que algumas pessoas têm.
 tags:
   - claude
   - anthropic

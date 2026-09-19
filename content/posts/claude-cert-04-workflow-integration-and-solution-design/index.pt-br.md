@@ -1,7 +1,7 @@
 ---
 title: "Claude Certified Associate – Foundations: Domínio 2 — Integração de Workflow e Design de Soluções"
-date: 2026-09-17
-description: "O Domínio 2 vale 16% da prova de certificação Claude. Não é sobre se um resultado é bom — é sobre decidir onde o Claude realmente se encaixa em um workflow, e onde não se encaixa."
+date: 2026-09-14
+description: O Domínio 2 vale 16% da prova de certificação Claude. Não é sobre se um resultado é bom — é sobre decidir onde o Claude realmente se encaixa em um workflow, e onde não se encaixa.
 tags:
   - claude
   - anthropic
