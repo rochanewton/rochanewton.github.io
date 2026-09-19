@@ -1,6 +1,6 @@
 ---
 title: "Claude Certified Associate – Foundations: Domínio 5 — Seleção de Produto e Modelo"
-date: 2026-09-20
+date: 2026-09-19
 description: "Antes de escrever um único prompt, quatro decisões já definem o teto de qualidade: ponto de entrada, camada de capacidade, nível de modelo, estratégia de contexto. O Domínio 5 da prova de certificação Claude, 12% dela, é esse framework."
 tags:
   - claude

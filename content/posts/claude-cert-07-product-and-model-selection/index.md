@@ -1,6 +1,6 @@
 ---
 title: "Claude Certified Associate – Foundations: Domain 5 — Product and Model Selection"
-date: 2026-09-20
+date: 2026-09-19
 description: "Before you write a single prompt, four decisions already set the quality ceiling: entry point, capability layer, model tier, context strategy. Domain 5 of the Claude certification exam, 12% of it, is that framework."
 tags:
   - claude
