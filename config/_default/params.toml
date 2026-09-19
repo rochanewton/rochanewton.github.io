@@ -43,8 +43,9 @@ smartTOC = true
   showMoreLink = true
   showMoreLinkDest = "posts"
   cardView = true
-  cardViewScreenWidth = false
+  cardViewScreenWidth = true
   layoutBackgroundBlur = false # only used when layout equals background
+  showReadingProgress = true
 
 [article]
   showDate = true
