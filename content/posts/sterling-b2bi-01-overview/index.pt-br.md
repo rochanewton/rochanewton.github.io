@@ -1,13 +1,20 @@
 ---
 title: "IBM Sterling B2B Integrator: Uma Visão Geral Rápida da Arquitetura"
-date: 2026-09-08
-description: "As poucas peças que compõem o IBM Sterling B2B Integrator, e como elas se encaixam — um mapa rápido antes dos aprofundamentos, com fontes."
-tags: ["ibm-sterling", "b2bi", "mft", "middleware", "architecture"]
-categories: ["IBM Sterling"]
-series: ["sterling-b2bi-architecture"]
+date: 2026-09-04
+description: As poucas peças que compõem o IBM Sterling B2B Integrator, e como elas se encaixam — um mapa rápido antes dos aprofundamentos, com fontes.
+tags:
+  - ibm-sterling
+  - b2bi
+  - mft
+  - middleware
+  - architecture
+categories:
+  - IBM Sterling
+series:
+  - sterling-b2bi-architecture
 series_order: 1
 showAuthor: true
-image: "cover.png"
+image: cover.png
 ---
 ![Página inicial do console de administração do Sterling B2B Integrator](admin-console-home.webp "A página inicial do console de administração — onde toda sessão começa")
 

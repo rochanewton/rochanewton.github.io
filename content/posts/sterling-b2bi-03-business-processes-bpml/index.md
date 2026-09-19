@@ -1,6 +1,6 @@
 ---
 title: "Business Processes and BPML in IBM Sterling B2B Integrator: Two Views of the Same Engine"
-date: 2026-09-09
+date: 2026-09-06
 description: What a Business Process actually is, what BPML is, why the Graphical Process Modeler and raw BPML are the same thing seen two ways, and the elements and scenarios that matter most when one breaks.
 tags:
   - ibm-sterling

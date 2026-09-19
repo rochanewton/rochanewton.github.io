@@ -1,7 +1,7 @@
 ---
 title: "Perimeter Servers in IBM Sterling B2B Integrator: Why the DMZ Box Calls Home Instead of the Other Way Around"
-date: 2026-09-12
-description: "What a Perimeter Server actually is, the reverseConnect mechanic that lets the DMZ box dial in instead of opening a hole into your core network, embedded vs. remote perimeter servers, how this differs from Sterling Secure Proxy, and the real troubleshooting scenarios that come up running one."
+date: 2026-09-08
+description: What a Perimeter Server actually is, the reverseConnect mechanic that lets the DMZ box dial in instead of opening a hole into your core network, embedded vs. remote perimeter servers, how this differs from Sterling Secure Proxy, and the real troubleshooting scenarios that come up running one.
 tags:
   - ibm-sterling
   - b2bi

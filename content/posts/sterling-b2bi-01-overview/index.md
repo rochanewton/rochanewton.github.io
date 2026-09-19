@@ -1,13 +1,20 @@
 ---
 title: "IBM Sterling B2B Integrator: A Quick Architecture Overview"
-date: 2026-09-08
-description: "The handful of pieces that make up IBM Sterling B2B Integrator, and how they fit together — a short map before the deep dives, with sources."
-tags: ["ibm-sterling", "b2bi", "mft", "middleware", "architecture"]
-categories: ["IBM Sterling"]
-series: ["sterling-b2bi-architecture"]
+date: 2026-09-04
+description: The handful of pieces that make up IBM Sterling B2B Integrator, and how they fit together — a short map before the deep dives, with sources.
+tags:
+  - ibm-sterling
+  - b2bi
+  - mft
+  - middleware
+  - architecture
+categories:
+  - IBM Sterling
+series:
+  - sterling-b2bi-architecture
 series_order: 1
 showAuthor: true
-image: "cover.png"
+image: cover.png
 ---
 ![Sterling B2B Integrator admin console home page](admin-console-home.webp "The admin console home page — where every session starts")
 

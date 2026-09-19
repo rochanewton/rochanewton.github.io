@@ -1,6 +1,6 @@
 ---
 title: "IBM Sterling B2B Integrator: Adapters vs. Services — A Distinção Que Realmente Importa"
-date: 2026-09-08
+date: 2026-09-05
 description: Por que "adapter" e "service" não são jargões intercambiáveis no Sterling B2B Integrator — o que cada um é, os que você realmente vai usar, e cenários reais para escolher entre eles.
 tags:
   - ibm-sterling

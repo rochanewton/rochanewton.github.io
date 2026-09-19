@@ -1,7 +1,7 @@
 ---
 title: "Mailboxes and File Gateway in IBM Sterling B2B Integrator: One Layer, Not Two Products"
-date: 2026-09-11
-description: "What a Mailbox actually is under the hood, how File Gateway sits on top of mailboxes and adapters as a routing layer rather than a competing product, and the real onboarding and troubleshooting scenarios that come up around both."
+date: 2026-09-07
+description: What a Mailbox actually is under the hood, how File Gateway sits on top of mailboxes and adapters as a routing layer rather than a competing product, and the real onboarding and troubleshooting scenarios that come up around both.
 tags:
   - ibm-sterling
   - b2bi

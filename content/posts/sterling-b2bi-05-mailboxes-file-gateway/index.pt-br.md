@@ -1,7 +1,7 @@
 ---
 title: "Mailboxes e File Gateway no IBM Sterling B2B Integrator: Uma Camada, Não Dois Produtos"
-date: 2026-09-11
-description: "O que uma Mailbox realmente é por baixo dos panos, como o File Gateway se apoia em mailboxes e adapters como uma camada de roteamento em vez de um produto concorrente, e os cenários reais de onboarding e resolução de problemas que aparecem em torno dos dois."
+date: 2026-09-07
+description: O que uma Mailbox realmente é por baixo dos panos, como o File Gateway se apoia em mailboxes e adapters como uma camada de roteamento em vez de um produto concorrente, e os cenários reais de onboarding e resolução de problemas que aparecem em torno dos dois.
 tags:
   - ibm-sterling
   - b2bi

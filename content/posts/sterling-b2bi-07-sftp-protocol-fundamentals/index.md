@@ -1,6 +1,6 @@
 ---
 title: "SFTP, FTP, FTPS: Protocol Behind the Adapters"
-date: 2026-09-10
+date: 2026-09-09
 description: "FTP, FTPS, and SFTP explained protocol by protocol — how each one actually works, ports, security, when to use and when to avoid — then a deep focus on SFTP/SSH: key pairs, key formats, ciphers, and MACs, since that's what carries most B2Bi partner traffic."
 tags:
   - sftp
