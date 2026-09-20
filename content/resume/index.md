@@ -11,7 +11,7 @@ showHero: false
 
 Senior Middleware & Infrastructure Engineer with 15+ years in enterprise IT, specializing in IBM Sterling Managed File Transfer (File Gateway, B2B Integrator, Connect:Direct), Linux systems administration, and AWS/Azure cloud infrastructure. Over the last five-plus years, hands-on supporting business-critical MFT environments for a Fortune 500 telecommunications provider, in 24x7 and follow-the-sun production models.
 
-{{< keyword icon="linkedin" >}} {{< button href="https://www.linkedin.com/in/rochanewton" target="_blank" rel="noopener noreferrer" >}}LinkedIn{{< /button >}}{{< /keyword >}}
+{{< cta url="https://www.linkedin.com/in/rochanewton" label="My Linkedin" >}}
 
 ## Professional Experience
 
@@ -67,7 +67,7 @@ Supported office networks, switches, print servers, and ITIL-based incident and 
 - Microsoft Certified: Azure Fundamentals
 - Claude Certified Associate – Foundations (CCAF), Anthropic — Issued Sep 2026
 
-*[View all badges on Credly](https://www.credly.com/users/rochanewton/badges/credly)*
+{{< cta url="https://www.credly.com/users/rochanewton/badges/credly"  target="_blank" rel="noopener noreferrer" label="My Credly" >}}
 
 ## Education
 
