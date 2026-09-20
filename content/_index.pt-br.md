@@ -4,10 +4,11 @@ description: "Notas sobre Middleware, Managed File Transfer e Infraestrutura por
 ---
 
 {{< typeit tag=h2 class="text-xl text-neutral-500 dark:text-neutral-400" speed=60 lifeLike=true breakLines=false loop=true >}}
-Engenheiro de Middleware
-Especialista em IBM Sterling
-Linux e Automação
-Aplicando IA em Operações de TI
+Middleware Engineer - IBM Sterling Specialist
+IBM Sterling B2B Integrator - IBM Sterling File Gateway - IBM Sterling Connect:Direct
+Linux Red Hat - Debian - Ubuntu & Automation
+Amazon Web Services - Microsoft Azure
+IA on IT Operations
 {{< /typeit >}}
 
-{{< button href="/resume/" target="_self" >}}Ver meu currículo{{< /button >}}
+{{< button href="/resume/" target="_self" >}}Meu currículo{{< /button >}}
