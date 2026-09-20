@@ -43,7 +43,7 @@ smartTOC = true
   showMoreLink = true
   showMoreLinkDest = "posts"
   cardView = true
-  cardViewScreenWidth = true
+  cardViewScreenWidth = false
   layoutBackgroundBlur = false # only used when layout equals background
   showReadingProgress = true
 
@@ -67,7 +67,7 @@ smartTOC = true
   relatedContentLimit = 3
   showTableOfContents = true
   showTaxonomies = true
-  showAuthorsBadges = false
+  showAuthorsBadges = true
   showWordCount = true
   showSummary = true
   showViews = true
