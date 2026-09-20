@@ -11,7 +11,7 @@ showHero: false
 
 Senior Middleware & Infrastructure Engineer with 15+ years in enterprise IT, specializing in IBM Sterling Managed File Transfer (File Gateway, B2B Integrator, Connect:Direct), Linux systems administration, and AWS/Azure cloud infrastructure. Over the last five-plus years, hands-on supporting business-critical MFT environments for a Fortune 500 telecommunications provider, in 24x7 and follow-the-sun production models.
 
-{{< button href="https://www.linkedin.com/in/rochanewton" target="_blank" rel="noopener noreferrer" >}}My LinkedIn{{< /button >}}
+{{< keyword icon="linkedin" >}} {{< button href="https://www.linkedin.com/in/rochanewton" target="_blank" rel="noopener noreferrer" >}}LinkedIn{{< /button >}}{{< /keyword >}}
 
 ## Professional Experience
 
