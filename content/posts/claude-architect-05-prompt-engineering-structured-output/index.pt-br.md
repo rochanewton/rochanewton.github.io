@@ -78,4 +78,4 @@ A pesquisa e a checagem de precisão técnica contra a documentação oficial s�
 
 ## Onde isso se encaixa
 
-Parte 5 de **Tornando-se um Claude Architect**, seguindo o [Domínio 3 — Claude Code Configuration & Workflows]({{< ref "/posts/claude-architect-04-claude-code-configuration-workflows/" >}}). A Parte 6 assume o Domínio 5 — Context Management & Reliability.
+Parte 5 de **Tornando-se um Claude Architect**, seguindo o [Domínio 3 — Claude Code Configuration & Workflows]({{< ref "/posts/claude-architect-04-claude-code-configuration-workflows/" >}}). A Parte 6 assume o [Domínio 5 — Context Management & Reliability]({{< ref "/posts/claude-architect-06-context-management-reliability/" >}}).

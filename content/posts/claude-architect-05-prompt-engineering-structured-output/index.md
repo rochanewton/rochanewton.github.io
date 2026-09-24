@@ -78,4 +78,4 @@ The research and the technical accuracy check against the official docs are AI-a
 
 ## Where this fits
 
-Part 5 of **Becoming a Claude Architect**, following [Domain 3 — Claude Code Configuration & Workflows]({{< ref "/posts/claude-architect-04-claude-code-configuration-workflows/" >}}). Part 6 takes on Domain 5 — Context Management & Reliability.
+Part 5 of **Becoming a Claude Architect**, following [Domain 3 — Claude Code Configuration & Workflows]({{< ref "/posts/claude-architect-04-claude-code-configuration-workflows/" >}}). Part 6 takes on [Domain 5 — Context Management & Reliability]({{< ref "/posts/claude-architect-06-context-management-reliability/" >}}).
