@@ -75,4 +75,4 @@ The research and the technical accuracy check against the official docs are AI-a
 
 ## Where this fits
 
-Part 6 of **Becoming a Claude Architect**, following [Domain 4 — Prompt Engineering & Structured Output]({{< ref "/posts/claude-architect-05-prompt-engineering-structured-output/" >}}). Part 7 wraps the series with a 100-question interactive practice quiz across all five domains.
+Part 6 of **Becoming a Claude Architect**, following [Domain 4 — Prompt Engineering & Structured Output]({{< ref "/posts/claude-architect-05-prompt-engineering-structured-output/" >}}). Part 7 wraps the series with a [100-question interactive practice quiz]({{< ref "/posts/claude-architect-07-practice-quiz/" >}}) across all five domains.

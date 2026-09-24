@@ -1,0 +1,174 @@
+{{- /*
+  quiz shortcode
+  Usage:
+    {{< quiz >}}
+    Q: Question text?
+    A) Option one
+    B) Option two
+    C) Option three
+    D) Option four
+    CORRECT: B
+    EXPLAIN: One or two sentences on why B is correct.
+    @@@
+    Q: Next question...
+    ...
+    {{< /quiz >}}
+
+  Each question block is separated by a line containing only @@@.
+  Clicking an option immediately marks it correct/incorrect and reveals
+  the explanation. No scoring, no shuffling, no paging.
+-*/ -}}
+<div class="quiz-container not-prose" data-quiz-id="{{ .Ordinal }}">
+<script type="text/plain" class="quiz-data">{{ .Inner }}</script>
+</div>
+{{ if not (.Page.Scratch.Get "quizAssetsLoaded") }}
+<style>
+.quiz-container { margin: 1.5rem 0; }
+.quiz-card {
+  background: var(--tw-prose-body, #fff);
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+html.dark .quiz-card { background: #1f1f1f; border-color: #333333; }
+.quiz-question { font-weight: 600; font-size: 16px; margin-bottom: 14px; color: inherit; }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-option {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; border: 1px solid #e2e2e2; border-radius: 8px;
+  cursor: pointer; font-size: 14.5px; background: transparent;
+  color: inherit; text-align: left; width: 100%;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  font-family: inherit;
+}
+html.dark .quiz-option { border-color: #333333; }
+.quiz-card:not(.quiz-answered) .quiz-option:hover { border-color: #2a78d6; }
+.quiz-option .quiz-letter { font-weight: 700; color: #2a78d6; width: 20px; flex-shrink: 0; }
+.quiz-card.quiz-answered .quiz-option { cursor: default; }
+.quiz-option.quiz-correct { background: #e6f6ea; border-color: #28c840; color: #1c7a30; }
+html.dark .quiz-option.quiz-correct { background: #16321e; border-color: #28c840; color: #6fdb85; }
+.quiz-option.quiz-correct .quiz-letter { color: inherit; }
+.quiz-option.quiz-incorrect { background: #fdecea; border-color: #e0524a; color: #b3261e; }
+html.dark .quiz-option.quiz-incorrect { background: #3a1a18; border-color: #e0524a; color: #ff9a92; }
+.quiz-option.quiz-incorrect .quiz-letter { color: inherit; }
+.quiz-explain {
+  margin-top: 12px; padding: 10px 14px; border-radius: 8px;
+  background: rgba(42, 120, 214, 0.08); font-size: 13.5px;
+  color: #6b6b6b; display: none;
+}
+html.dark .quiz-explain { color: #a0a0a0; }
+.quiz-card.quiz-answered .quiz-explain { display: block; }
+.quiz-mark { margin-left: auto; font-weight: 700; flex-shrink: 0; }
+</style>
+<script>
+(function () {
+  function parseQuizBlock(block) {
+    var lines = block.split("\n").map(function (l) { return l.trim(); }).filter(function (l) { return l.length; });
+    var question = "", options = [], correct = "", explain = "";
+    lines.forEach(function (line) {
+      if (line.indexOf("Q:") === 0) {
+        question = line.slice(2).trim();
+      } else if (/^[A-Z]\)/.test(line)) {
+        options.push({ letter: line[0], text: line.slice(2).trim() });
+      } else if (line.indexOf("CORRECT:") === 0) {
+        correct = line.slice(8).trim();
+      } else if (line.indexOf("EXPLAIN:") === 0) {
+        explain = line.slice(8).trim();
+      }
+    });
+    return { question: question, options: options, correct: correct, explain: explain };
+  }
+
+  function renderQuiz(container) {
+    var dataEl = container.querySelector(".quiz-data");
+    if (!dataEl) return;
+    var raw = dataEl.textContent;
+    var blocks = raw.split(/\n@@@\n|\r\n@@@\r\n/).map(function (b) { return b.trim(); }).filter(function (b) { return b.length; });
+    var frag = document.createDocumentFragment();
+    blocks.forEach(function (block, idx) {
+      var q = parseQuizBlock(block);
+      if (!q.question || !q.options.length) return;
+      var card = document.createElement("div");
+      card.className = "quiz-card";
+
+      var qEl = document.createElement("div");
+      qEl.className = "quiz-question";
+      qEl.textContent = (idx + 1) + ". " + q.question;
+      card.appendChild(qEl);
+
+      var optsEl = document.createElement("div");
+      optsEl.className = "quiz-options";
+
+      q.options.forEach(function (opt) {
+        var btn = document.createElement("button");
+        btn.className = "quiz-option";
+        btn.type = "button";
+        btn.setAttribute("data-letter", opt.letter);
+
+        var letterEl = document.createElement("span");
+        letterEl.className = "quiz-letter";
+        letterEl.textContent = opt.letter + ")";
+        btn.appendChild(letterEl);
+
+        var textEl = document.createElement("span");
+        textEl.textContent = opt.text;
+        btn.appendChild(textEl);
+
+        btn.addEventListener("click", function () {
+          if (card.classList.contains("quiz-answered")) return;
+          card.classList.add("quiz-answered");
+          var buttons = optsEl.querySelectorAll(".quiz-option");
+          buttons.forEach(function (b) {
+            if (b.getAttribute("data-letter") === q.correct) {
+              b.classList.add("quiz-correct");
+              var mark = document.createElement("span");
+              mark.className = "quiz-mark";
+              mark.textContent = "✓";
+              b.appendChild(mark);
+            }
+          });
+          if (opt.letter !== q.correct) {
+            btn.classList.add("quiz-incorrect");
+            var xmark = document.createElement("span");
+            xmark.className = "quiz-mark";
+            xmark.textContent = "✗";
+            btn.appendChild(xmark);
+          }
+        });
+
+        optsEl.appendChild(btn);
+      });
+
+      card.appendChild(optsEl);
+
+      if (q.explain) {
+        var explainEl = document.createElement("div");
+        explainEl.className = "quiz-explain";
+        explainEl.textContent = q.explain;
+        card.appendChild(explainEl);
+      }
+
+      frag.appendChild(card);
+    });
+    container.innerHTML = "";
+    container.appendChild(frag);
+  }
+
+  function initAllQuizzes() {
+    document.querySelectorAll(".quiz-container[data-quiz-id]").forEach(function (container) {
+      if (container.getAttribute("data-quiz-init") === "1") return;
+      container.setAttribute("data-quiz-init", "1");
+      renderQuiz(container);
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initAllQuizzes);
+  } else {
+    initAllQuizzes();
+  }
+})();
+</script>
+{{ .Page.Scratch.Set "quizAssetsLoaded" true }}
+{{ end }}

@@ -75,4 +75,4 @@ A pesquisa e a checagem de precisão técnica contra a documentação oficial s�
 
 ## Onde isso se encaixa
 
-Parte 6 de **Tornando-se um Claude Architect**, seguindo o [Domínio 4 — Prompt Engineering & Structured Output]({{< ref "/posts/claude-architect-05-prompt-engineering-structured-output/" >}}). A Parte 7 fecha a série com um quiz interativo de 100 perguntas cobrindo os cinco domínios.
+Parte 6 de **Tornando-se um Claude Architect**, seguindo o [Domínio 4 — Prompt Engineering & Structured Output]({{< ref "/posts/claude-architect-05-prompt-engineering-structured-output/" >}}). A Parte 7 fecha a série com um [quiz interativo de 100 perguntas]({{< ref "/posts/claude-architect-07-practice-quiz/" >}}) cobrindo os cinco domínios.
