@@ -69,4 +69,4 @@ O Claude Certified Architect – Foundations em uma passada: é a certificação
 
 ## Onde isso se encaixa
 
-Parte 1 de **Tornando-se um Claude Architect**. Esta série continua a partir de [Getting Claude Certified]({{< ref "/posts/claude-cert-01-fluency-4d-framework/" >}}), minha série de 9 partes sobre a prova Claude Certified Associate – Foundations — comece por lá se você ainda está começando com o Claude. A Parte 2 assume o Domínio 1 — Agentic Architecture & Orchestration.
+Parte 1 de **Tornando-se um Claude Architect**. Esta série continua a partir de [Getting Claude Certified]({{< ref "/posts/claude-cert-01-fluency-4d-framework/" >}}), minha série de 9 partes sobre a prova Claude Certified Associate – Foundations — comece por lá se você ainda está começando com o Claude. A Parte 2 assume o [Domínio 1 — Agentic Architecture & Orchestration]({{< ref "/posts/claude-architect-02-agentic-architecture-orchestration/" >}}).
