@@ -79,4 +79,4 @@ The research and the technical accuracy check against the official docs are AI-a
 
 ## Where this fits
 
-Part 4 of **Becoming a Claude Architect**, following [Domain 2 — Tool Design & MCP Integration]({{< ref "/posts/claude-architect-03-tool-design-mcp-integration/" >}}). Part 5 takes on Domain 4 — Prompt Engineering & Structured Output.
+Part 4 of **Becoming a Claude Architect**, following [Domain 2 — Tool Design & MCP Integration]({{< ref "/posts/claude-architect-03-tool-design-mcp-integration/" >}}). Part 5 takes on [Domain 4 — Prompt Engineering & Structured Output]({{< ref "/posts/claude-architect-05-prompt-engineering-structured-output/" >}}).

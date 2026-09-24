@@ -79,4 +79,4 @@ A pesquisa e a checagem de precisão técnica contra a documentação oficial s�
 
 ## Onde isso se encaixa
 
-Parte 4 de **Tornando-se um Claude Architect**, seguindo o [Domínio 2 — Tool Design & MCP Integration]({{< ref "/posts/claude-architect-03-tool-design-mcp-integration/" >}}). A Parte 5 assume o Domínio 4 — Prompt Engineering & Structured Output.
+Parte 4 de **Tornando-se um Claude Architect**, seguindo o [Domínio 2 — Tool Design & MCP Integration]({{< ref "/posts/claude-architect-03-tool-design-mcp-integration/" >}}). A Parte 5 assume o [Domínio 4 — Prompt Engineering & Structured Output]({{< ref "/posts/claude-architect-05-prompt-engineering-structured-output/" >}}).
