@@ -90,4 +90,4 @@ The research and the technical accuracy check against the official docs are AI-a
 
 ## Where this fits
 
-Part 2 of **Becoming a Claude Architect**, following [the series overview]({{< ref "/posts/claude-architect-01-overview/" >}}). Part 3 takes on Domain 2 — Tool Design & MCP Integration.
+Part 2 of **Becoming a Claude Architect**, following [the series overview]({{< ref "/posts/claude-architect-01-overview/" >}}). Part 3 takes on [Domain 2 — Tool Design & MCP Integration]({{< ref "/posts/claude-architect-03-tool-design-mcp-integration/" >}}).

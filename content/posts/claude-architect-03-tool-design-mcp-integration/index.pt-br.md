@@ -83,4 +83,4 @@ A pesquisa e a checagem de precisão técnica contra a documentação oficial s�
 
 ## Onde isso se encaixa
 
-Parte 3 de **Tornando-se um Claude Architect**, seguindo o [Domínio 1 — Agentic Architecture & Orchestration]({{< ref "/posts/claude-architect-02-agentic-architecture-orchestration/" >}}). A Parte 4 assume o Domínio 3 — Claude Code Configuration & Workflows.
+Parte 3 de **Tornando-se um Claude Architect**, seguindo o [Domínio 1 — Agentic Architecture & Orchestration]({{< ref "/posts/claude-architect-02-agentic-architecture-orchestration/" >}}). A Parte 4 assume o [Domínio 3 — Claude Code Configuration & Workflows]({{< ref "/posts/claude-architect-04-claude-code-configuration-workflows/" >}}).

@@ -90,4 +90,4 @@ A pesquisa e a checagem de precisão técnica contra a documentação oficial s�
 
 ## Onde isso se encaixa
 
-Parte 2 de **Tornando-se um Claude Architect**, seguindo [a visão geral da série]({{< ref "/posts/claude-architect-01-overview/" >}}). A Parte 3 assume o Domínio 2 — Tool Design & MCP Integration.
+Parte 2 de **Tornando-se um Claude Architect**, seguindo [a visão geral da série]({{< ref "/posts/claude-architect-01-overview/" >}}). A Parte 3 assume o [Domínio 2 — Tool Design & MCP Integration]({{< ref "/posts/claude-architect-03-tool-design-mcp-integration/" >}}).

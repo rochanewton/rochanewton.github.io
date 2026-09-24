@@ -83,4 +83,4 @@ The research and the technical accuracy check against the official docs are AI-a
 
 ## Where this fits
 
-Part 3 of **Becoming a Claude Architect**, following [Domain 1 — Agentic Architecture & Orchestration]({{< ref "/posts/claude-architect-02-agentic-architecture-orchestration/" >}}). Part 4 takes on Domain 3 — Claude Code Configuration & Workflows.
+Part 3 of **Becoming a Claude Architect**, following [Domain 1 — Agentic Architecture & Orchestration]({{< ref "/posts/claude-architect-02-agentic-architecture-orchestration/" >}}). Part 4 takes on [Domain 3 — Claude Code Configuration & Workflows]({{< ref "/posts/claude-architect-04-claude-code-configuration-workflows/" >}}).
