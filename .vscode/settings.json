@@ -1,0 +1,63 @@
+{
+  // ---------- Arquivos gerados e tema: fora da busca e do watcher ----------
+  "files.exclude": {
+    "**/.DS_Store": true,
+    ".hugo_build.lock": true
+  },
+  "search.exclude": {
+    "public/**": true,
+    "resources/_gen/**": true,
+    "themes/**": true
+  },
+  "files.watcherExclude": {
+    "**/public/**": true,
+    "**/resources/_gen/**": true,
+    "**/themes/**": true
+  },
+
+  // ---------- Abas legíveis: todo post se chama index.md ----------
+  "workbench.editor.customLabels.enabled": true,
+  "workbench.editor.customLabels.patterns": {
+    "content/posts/*/index.md": "${dirname} · en",
+    "content/posts/*/index.pt-br.md": "${dirname} · pt-br"
+  },
+
+  // ---------- Markdown ----------
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": false,
+    "editor.rulers": [],
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    // dois espaços no fim da linha = quebra de linha em Markdown
+    "files.trimTrailingWhitespace": false
+  },
+  // Hugo gera o TOC; não deixar a extensão inserir um no arquivo
+  "markdown.extension.toc.updateOnSave": false,
+  // Colar/arrastar imagem num post salva a imagem dentro do page bundle
+  "markdown.copyFiles.destination": {
+    "content/**/*.md": "${documentDirName}/"
+  },
+  "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
+
+  // ---------- Templates Hugo (Go templates) ----------
+  // Formatadores de HTML quebram {{ }} — nunca formatar layouts automaticamente
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+
+  // ---------- TOML (config/_default/*.toml) ----------
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.formatOnSave": true
+  },
+
+  // ---------- Fluxo Git: nunca commitar direto na main ----------
+  "git.branchProtection": ["main"],
+  "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
+  "git.fetchOnPull": true,
+  "git.detectSubmodules": false
+}

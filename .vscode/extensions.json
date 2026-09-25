@@ -1,0 +1,16 @@
+{
+  // Extensões recomendadas para este repositório (Hugo + Blowfish).
+  // O VS Code oferece instalar ao abrir a pasta.
+  "recommendations": [
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "eliostruyf.vscode-front-matter",
+    "tamasfe.even-better-toml",
+    "redhat.vscode-yaml",
+    "editorconfig.editorconfig",
+    "github.vscode-github-actions",
+    "github.vscode-pull-request-github",
+    "eamodio.gitlens",
+    "ms-vscode-remote.remote-containers"
+  ]
+}

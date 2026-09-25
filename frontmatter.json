@@ -1,0 +1,35 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "hugo",
+  "frontMatter.preview.host": "http://localhost:1313",
+  "frontMatter.content.publicFolder": "assets",
+  "frontMatter.taxonomy.dateFormat": "yyyy-MM-dd",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "Posts",
+      "path": "[[workspace]]/content/posts",
+      "contentTypes": ["post"]
+    }
+  ],
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "post",
+      "pageBundle": true,
+      "defaultFileName": "index",
+      "previewPath": "posts",
+      "fields": [
+        { "title": "Title", "name": "title", "type": "string", "single": true, "required": true },
+        { "title": "Date", "name": "date", "type": "datetime", "default": "{{now}}", "isPublishDate": true },
+        { "title": "Description", "name": "description", "type": "string", "required": true },
+        { "title": "Draft", "name": "draft", "type": "draft" },
+        { "title": "Tags", "name": "tags", "type": "tags" },
+        { "title": "Categories", "name": "categories", "type": "categories" },
+        { "title": "Series", "name": "series", "type": "list" },
+        { "title": "Series order", "name": "series_order", "type": "number" },
+        { "title": "Show author", "name": "showAuthor", "type": "boolean", "default": true },
+        { "title": "Cover image", "name": "image", "type": "string" }
+      ]
+    }
+  ],
+  "frontMatter.taxonomy.categories": ["Claude", "IBM Sterling"]
+}

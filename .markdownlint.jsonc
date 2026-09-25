@@ -1,0 +1,12 @@
+{
+  "default": true,
+  // Linhas longas são normais em prosa
+  "MD013": false,
+  // Shortcodes Hugo e HTML inline (quiz, figure, mermaid)
+  "MD033": false,
+  // O título vem do front matter, não de um "# " no corpo
+  "MD041": false,
+  "MD025": { "front_matter_title": "^\\s*title\\s*[:=]" },
+  // Mesmo título de seção em partes diferentes do post é ok
+  "MD024": { "siblings_only": true }
+}
