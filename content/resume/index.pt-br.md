@@ -3,13 +3,11 @@ title: "Currículo"
 description: "Currículo completo de Newton Rocha: mais de 15 anos em middleware IBM Sterling, AWS, Azure e infraestrutura Linux."
 showTableOfContents: true
 showDate: false
-showAuthor: false
-showReadingTime: false
-showWordCount: false
+showAuthor: true
+showReadingTime: true
+showWordCount: true
 showHero: false
 ---
-
-Engenheiro sênior de Middleware & Infraestrutura com mais de 15 anos em TI corporativa, especializado em Managed File Transfer IBM Sterling (File Gateway, B2B Integrator, Connect:Direct), administração de sistemas Linux e infraestrutura em nuvem AWS/Azure. Nos últimos cinco anos, atuação prática sustentando ambientes de MFT críticos para o negócio de uma operadora de telecomunicações da Fortune 500, em modelos de produção 24x7 e follow-the-sun.
 
 {{< button href="https://www.linkedin.com/in/rochanewton" target="_blank" rel="noopener noreferrer" >}}Meu LinkedIn{{< /button >}}
 

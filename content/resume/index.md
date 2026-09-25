@@ -3,13 +3,11 @@ title: "Resume"
 description: "Newton Rocha's full resume: 15+ years in IBM Sterling middleware, AWS, Azure, and Linux infrastructure."
 showTableOfContents: true
 showDate: false
-showAuthor: false
-showReadingTime: false
-showWordCount: false
+showAuthor: true
+showReadingTime: true
+showWordCount: true
 showHero: false
 ---
-
-Senior Middleware & Infrastructure Engineer with 15+ years in enterprise IT, specializing in IBM Sterling Managed File Transfer (File Gateway, B2B Integrator, Connect:Direct), Linux systems administration, and AWS/Azure cloud infrastructure. Over the last five-plus years, hands-on supporting business-critical MFT environments for a Fortune 500 telecommunications provider, in 24x7 and follow-the-sun production models.
 
 {{< cta url="https://www.linkedin.com/in/rochanewton" label="My Linkedin" >}}
 
@@ -17,8 +15,7 @@ Senior Middleware & Infrastructure Engineer with 15+ years in enterprise IT, spe
 
 {{< timeline >}}
 
-{{< timelineItem icon="worktree" header="Senior Middleware Engineer" badge="May 2024 – Present" subheader="DXC Technology" md="true" >}}
-*[dxc.com](https://www.dxc.com)*
+{{< timelineItem icon="worktree" header="Senior Middleware Engineer" badge="May 2024 – Present" subheader="DXC Technology" md="true" >}} *[dxc.com](https://www.dxc.com)*
 
 Lead middleware support for a business-critical Managed File Transfer platform serving a Fortune 500 telecom provider's US customer base, on IBM Sterling File Gateway, B2B Integrator, and Connect:Direct for UNIX. Act as team lead — coordinating priorities, escalations, and incident response, and driving root cause analysis for critical outages within SLA. Manage partner onboarding, ServiceNow change/incident processes, and disaster recovery. Automated Linux health checks with Bash, saving roughly 5 hours/week of manual effort and cutting query latency 20%. Built Power BI dashboards on ticket volume, on-call load, and overtime for leadership visibility, and work directly with IBM Support on product-level investigations.
 {{< /timelineItem >}}
