@@ -31,34 +31,41 @@ Memorizing a components list never worked, but tracing one file end to end did. 
 ![Full administration menu tree in the Sterling B2B Integrator admin console](admin-menu-tree.webp "The complete admin menu — Business Processes, Trading Partner, Deployment, EBICS, and Operations")
 
 ### Perimeter Server
+
 A partner connection doesn't hit the core engine directly. It lands on a **[Perimeter Server](https://www.ibm.com/docs/en/b2b-integrator/6.2.0?topic=servers-perimeter-in-sterling-b2b-integrator)** sitting out in the DMZ, which handles the actual protocol handshake (SFTP, AS2, HTTP) and forwards traffic inward over a secure channel. Most intro material skips this entirely, which is a shame, because it's the whole reason you can expose partner-facing endpoints without ever putting your core engine anywhere near the public internet. If you've ever wondered why a Sterling deployment diagram has boxes sitting outside the firewall, this is why — and it deserves its own post later in this series: [Part 6]({{< ref "/posts/sterling-b2bi-06-perimeter-servers/" >}}) covers exactly how that DMZ box talks to the core engine.
 
 ### Adapters
+
 From there, an **Adapter** picks it up. Adapters are narrow by design — SFTP, AS2, Connect:Direct, HTTP/S, JDBC, and a few dozen others — and each one does exactly one thing: receive or send a file over its specific protocol, then hand it to a Business Process.
 
 ![List of configured adapters in the Sterling B2B Integrator admin console, including AS2, FTP, SMTP, Command Line, HTTP Server, JDBC, and Kafka adapters](services-list.webp "A real adapter list — this is what 'narrow by design' looks like in practice")
 
 ### Business Process
+
 That handoff is where things get interesting. A **Business Process** is a workflow — modeled visually in the Graphical Process Modeler, stored underneath as [BPML](https://www.ibm.com/docs/en/b2b-integrator/6.2.0?topic=integrator-business-processes) (Business Process Markup Language) — that strings together steps: validate this, map that, encrypt this, route it, page someone if it fails. Practically everything meaningful in B2Bi happens inside a Business Process. It's the closest thing the platform has to a heart.
 
 ![Business Process Manager list in the Sterling B2B Integrator admin console, showing 807 processes including ACHDeenvelope, ACHEnvelope, and various AFTRoute processes](business-process-manager.webp "807 Business Processes in one environment — and that's a modest one")
 
 ### Services
+
 Inside that process, **Services** do the internal work — mapping, validation, extraction, compression, custom logic — while Adapters keep handling the outside world. A Business Process, stripped down, is mostly just Adapter and Service calls in sequence, with branches for when things go wrong (and in production, something always eventually goes wrong).
 
 ![Select a Service Type tree in the Sterling B2B Integrator admin console, showing categories like B2B Protocols, EDI, Translation, Transport, and Web Extensions](service-type-selection.webp "Services are organized into categories like this — EDI, Translation, and Transport cover most of what a Business Process actually does")
 
 ### Map
+
 Somewhere in that sequence, a **Map** usually runs. Partners almost never send data in the shape you actually need — EDI to XML, flat file to JSON, whatever the downstream system expects — and that translation happens in the Map Editor, which is deep enough to deserve its own post later in this series. I'm not exaggerating when I say some of the gnarliest bugs I've chased started as "the map did something weird with a null field."
 
 ![List of translation maps in the Sterling B2B Integrator admin console, showing hundreds of maps including ACH and EDI transaction translations](maps-list.webp "A real maps library — this environment alone has close to a thousand of them")
 
 ### Mailbox
+
 The file usually lands in a **Mailbox** — a secure, permissioned drop box inside B2Bi. This is where I see the most confusion, even among people who've used Sterling for years: File Gateway is not a separate product competing with B2Bi. It's a purpose-built UI and routing layer sitting on top of B2Bi's mailbox and adapter machinery, built specifically so partner file exchange can be managed without anyone having to touch BPML directly ([IBM's File Gateway overview](https://www.ibm.com/docs/en/b2b-integrator/6.2.0?topic=glance-sterling-file-gateway) is worth reading if this is new to you).
 
 ![Mailboxes list in the Sterling B2B Integrator admin console, showing the Root Mailbox, Dead Letter Mailbox, EDI Inbound/Outbound Collection and Extraction mailboxes, and per-partner mailboxes](mailboxes-list.webp "A typical mailbox tree — shared EDI collection points plus one mailbox per trading partner")
 
 ### Database
+
 And underneath all of it sits the **Database** — every Business Process's state, every document's tracking history, the full audit trail. Easy to take for granted until your first real outage, when document tracking data becomes the only honest record of what actually happened to a file. I've reconstructed more than one incident timeline purely from that table.
 
 ![Database Usage dashboard in the Sterling B2B Integrator admin console, showing database capacity, business processes waiting to be archived, indexed, or purged, and environment pool usage](database-usage.webp "The Database Usage dashboard — capacity, backlog, and connection pool health in one place")

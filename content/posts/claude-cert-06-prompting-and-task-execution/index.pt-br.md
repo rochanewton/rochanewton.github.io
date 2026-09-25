@@ -53,7 +53,7 @@ Se os critérios na primeira etapa estiverem errados, você pega isso antes da p
 Um primeiro rascunho raramente sai perfeito, e a correção nunca é reescrever o prompt inteiro — isso perde as partes que funcionaram e esconde qual mudança de fato resolveu o problema. Leia o resultado como um diagnóstico em vez disso: ele aponta direto para o componente que falhou.
 
 | Sintoma | Causa provável | Correção |
-|---|---|---|
+| --- | --- | --- |
 | Resultado genérico ou fora do alvo | Context estava raso | Adicione o contexto que o Claude não conseguiu inferir |
 | Resultado respondeu a pergunta errada | Verbo da task era ambíguo | Deixe a instrução mais precisa |
 | Resultado com tamanho, tom ou formato errado | Faltou uma constraint ou o format | Adicione |
@@ -66,7 +66,7 @@ Mude o único componente que o resultado indicou, reenvie e compare. Pare quando
 Os cinco componentes se aplicam sempre, mas a ênfase muda conforme o que você está fazendo. Análise quer restrições apertadas e critérios explícitos — baixa liberdade criativa, alta especificação. Pesquisa quer escopo claro e disciplina de fontes, com citações que você consegue de fato checar. Redação quer público, tom e formato fixados, com espaço para o Claude encontrar a fraseologia. Brainstorming quer restrições soltas e alta liberdade — superespecificar mata a variedade que você está buscando.
 
 | Tipo de tarefa | Apertar | Soltar |
-|---|---|---|
+| --- | --- | --- |
 | **Análise** | Critérios, padrões, escopo | Fraseologia |
 | **Pesquisa** | Pergunta, fontes, citações | Abordagem de síntese |
 | **Redação** | Público, tom, formato | Escolha de palavras |

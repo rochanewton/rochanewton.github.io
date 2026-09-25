@@ -31,7 +31,7 @@ O Domínio 1 da prova [Claude Certified Associate – Foundations](https://anthr
 Um retrato rápido da prova em si, do [guia oficial de exame](https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2F6nizmqk8tpzpfjvt6qmmav7rh%2Fpublic%2F1783542847%2FClaude+Certified+Associate+%E2%80%93+Foundations+Exam+Guide.pdf) da Anthropic:
 
 | | |
-|---|---|
+| --- | --- |
 | **Duração** | 120 minutos |
 | **Questões** | 60 |
 | **Preço** | US$ 99 |

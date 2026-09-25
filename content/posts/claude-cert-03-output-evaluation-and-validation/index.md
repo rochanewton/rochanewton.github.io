@@ -31,7 +31,7 @@ Domain 1 of the [Claude Certified Associate – Foundations](https://anthropic-p
 A quick snapshot of the exam itself, from Anthropic's [official exam guide](https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2F6nizmqk8tpzpfjvt6qmmav7rh%2Fpublic%2F1783542847%2FClaude+Certified+Associate+%E2%80%93+Foundations+Exam+Guide.pdf):
 
 | | |
-|---|---|
+| --- | --- |
 | **Length** | 120 minutes |
 | **Questions** | 60 |
 | **Price** | $99 USD |

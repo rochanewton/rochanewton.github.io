@@ -75,7 +75,7 @@ That trade-off is the whole point, and it means Research isn't the right call fo
 ## Match the tool to the job
 
 | | Chat | Projects | Artifacts | Research |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | **Persists across sessions?** | No | Yes — knowledge base + instructions | Yes — lives in its own window | No — output can become an artifact |
 | **Best for** | One-off questions, quick drafts | Ongoing work with reusable context | Substantial, reusable outputs | Multi-source investigation |
 | **Skip it when** | The task is genuinely ongoing | It's a true one-off | The content is short or disposable | One or two sources would settle it |

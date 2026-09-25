@@ -129,7 +129,7 @@ Material de referência que vale a pena ter salvo em vez de confiar em explicaç
 ### Comparação rápida
 
 | | FTP | FTPS | SFTP |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Conexões | 2 (controle + dados) | 2, envolvidas em TLS | 1 |
 | Porta(s) | 21 + dinâmica/20 | 21 ou 990 + dinâmica | 22 |
 | Criptografia | Nenhuma | TLS | Criptografia de transporte do SSH |

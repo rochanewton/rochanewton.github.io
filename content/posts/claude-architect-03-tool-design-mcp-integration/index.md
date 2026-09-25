@@ -40,7 +40,7 @@ The exam guide states this almost as a rule of thumb: giving an agent access to 
 Claude Code separates MCP server configuration by scope: **project-level** (`.mcp.json`, checked into version control) is for shared team tooling everyone on the repo gets automatically, while **user-level** (`~/.claude.json`) is for personal or experimental servers you don't want committed. Credentials go through environment variable expansion (`${API_KEY}`, with `${VAR:-default}` fallback syntax) rather than hardcoded into the config file, which is what makes a `.mcp.json` safe to commit in the first place — the file has the shape of the config, not the secret. The other architect-level habit worth calling out: reach for an existing, well-maintained community MCP server before building a custom one, and expose read-heavy content (like a catalog or knowledge base) as MCP **resources** rather than wrapping it in a tool that just returns a blob of text.
 
 | | Project scope (`.mcp.json`) | User scope (`~/.claude.json`) |
-|---|---|---|
+| --- | --- | --- |
 | Loads in | Current project | All your projects |
 | Shared with team | Yes, via version control | No |
 | Typical use | Shared team tooling | Personal or experimental servers |

@@ -51,6 +51,16 @@ jobs:
           HUGO_PARAMS_FIREBASE_MESSAGINGSENDERID: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}
           HUGO_PARAMS_FIREBASE_APPID: ${{ secrets.FIREBASE_APP_ID }}
 
+      - name: Check internal links
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
+        with:
+          args: >-
+            --offline --no-progress
+            --root-dir ${{ github.workspace }}/public
+            --remap "https://rochanewton\.me/ file://${{ github.workspace }}/public/"
+            --index-files index.html
+            'public/**/*.html'
+
       - name: Job summary
         if: always()
         shell: bash
@@ -80,3 +90,18 @@ jobs:
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: ./public
+
+  lint:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Markdown lint
+        uses: DavidAnson/markdownlint-cli2-action@21c1be1b93ad9ed58fa840aacc3f279cde2a72ff # v24.2.0
+        with:
+          globs: |
+            content/**/*.md
+            archetypes/**/*.md
+            *.md

@@ -12,7 +12,6 @@ Source of **[rochanewton.me](https://rochanewton.me/)** — Newton Rocha's perso
 | CI/CD | GitHub Actions — strict build, deploy, CodeQL, Dependabot |
 | View/like counters | Firebase (Firestore) — client config injected from repository secrets |
 
-
 ## Quality checks
 
 - **Strict build** — `hugo --panicOnWarning` in CI and deploy; broken `{{< ref >}}` links fail the build
@@ -28,4 +27,3 @@ Source of **[rochanewton.me](https://rochanewton.me/)** — Newton Rocha's perso
 - **Content** (articles and original images): [CC BY 4.0](LICENSE-CONTENT.md)
 
 Security issues: see [SECURITY.md](SECURITY.md).
-

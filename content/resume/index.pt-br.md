@@ -9,7 +9,7 @@ showWordCount: true
 showHero: false
 ---
 
-{{< button href="https://www.linkedin.com/in/rochanewton" target="_blank" rel="noopener noreferrer" >}}Meu LinkedIn{{< /button >}}
+{{< button href="<https://www.linkedin.com/in/rochanewton>" target="_blank" rel="noopener noreferrer" >}}Meu LinkedIn{{< /button >}}
 
 ## Experiência Profissional
 

@@ -64,7 +64,7 @@ Sessões longas perdem detalhes iniciais conforme o contexto enche e é comprimi
 Quatro ferramentas diferentes de busca e raciocínio, fáceis de escolher errado. O web search é para um fato atual rápido a partir de poucas fontes. O Research é para investigação abrangente, multi-fonte, com citações, e síntese comparativa. O Enterprise Search é para conhecimento organizacional interno — políticas, Slack, e-mail, documentos, contexto da empresa entre fontes. O Thinking é para raciocínio profundo em que informação externa não é a necessidade central.
 
 | Necessidade | Recorra a |
-|---|---|
+| --- | --- |
 | Fato atual rápido | Web search |
 | Investigação abrangente multi-fonte | Research |
 | Conhecimento interno da empresa entre ferramentas | Enterprise Search |

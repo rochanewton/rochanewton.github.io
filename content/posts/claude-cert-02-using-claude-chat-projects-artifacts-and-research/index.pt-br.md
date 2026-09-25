@@ -75,7 +75,7 @@ Essa troca é o ponto principal, e significa que o Research não é a escolha ce
 ## Combine a ferramenta com a tarefa
 
 | | Chat | Projects | Artifacts | Research |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | **Persiste entre sessões?** | Não | Sim — base de conhecimento + instruções | Sim — vive na própria janela | Não — o resultado pode virar um artifact |
 | **Melhor para** | Perguntas pontuais, rascunhos rápidos | Trabalho contínuo com contexto reutilizável | Resultados substanciais e reutilizáveis | Investigação de múltiplas fontes |
 | **Pule quando** | A tarefa é realmente contínua | É um caso pontual de verdade | O conteúdo é curto ou descartável | Uma ou duas fontes resolveriam |

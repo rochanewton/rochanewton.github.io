@@ -129,7 +129,7 @@ Reference material worth having bookmarked rather than trusting secondhand expla
 ### Quick comparison
 
 | | FTP | FTPS | SFTP |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Connections | 2 (control + data) | 2, TLS-wrapped | 1 |
 | Port(s) | 21 + dynamic/20 | 21 or 990 + dynamic | 22 |
 | Encryption | None | TLS | SSH transport encryption |

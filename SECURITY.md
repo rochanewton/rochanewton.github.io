@@ -2,7 +2,6 @@
 
 This repository is the source of [rochanewton.me](https://rochanewton.me/), a static site built with Hugo and deployed to GitHub Pages. It runs no servers and stores no user accounts. The only dynamic feature is the anonymous view/like counter, backed by Firebase and protected by Firestore Security Rules.
 
-
 ## Reporting a vulnerability
 
 Please **do not open a public issue**. Report it privately through GitHub's

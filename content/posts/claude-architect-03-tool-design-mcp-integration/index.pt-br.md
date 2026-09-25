@@ -40,7 +40,7 @@ O guia oficial da prova afirma isso quase como uma regra prática: dar a um agen
 O Claude Code separa a configuração de servidores MCP por escopo: **nível de projeto** (`.mcp.json`, versionado no controle de versão) é para ferramentas compartilhadas do time que todo mundo no repositório recebe automaticamente, enquanto **nível de usuário** (`~/.claude.json`) é para servidores pessoais ou experimentais que você não quer commitar. Credenciais passam por expansão de variável de ambiente (`${API_KEY}`, com sintaxe de fallback `${VAR:-default}`) em vez de ficarem fixas no arquivo de configuração, o que é o que torna um `.mcp.json` seguro para commitar em primeiro lugar — o arquivo tem o formato da configuração, não o segredo. O outro hábito no nível de arquiteto que vale destacar: preferir um servidor MCP comunitário já existente e bem mantido antes de construir um customizado, e expor conteúdo de leitura pesada (como um catálogo ou base de conhecimento) como **resources** do MCP, em vez de embrulhá-lo numa ferramenta que só retorna um bloco de texto.
 
 | | Escopo de projeto (`.mcp.json`) | Escopo de usuário (`~/.claude.json`) |
-|---|---|---|
+| --- | --- | --- |
 | Carrega em | Projeto atual | Todos os seus projetos |
 | Compartilhado com o time | Sim, via controle de versão | Não |
 | Uso típico | Ferramentas compartilhadas do time | Servidores pessoais ou experimentais |

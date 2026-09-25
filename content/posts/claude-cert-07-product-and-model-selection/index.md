@@ -64,7 +64,7 @@ Long sessions lose early detail as context fills and gets compressed. When a con
 Four different retrieval and reasoning tools, easy to reach for the wrong one. Web search is for a quick current fact from a small number of sources. Research is for comprehensive, multi-source, citation-backed investigation and comparative synthesis. Enterprise Search is for internal organizational knowledge — policies, Slack, email, docs, cross-source company context. Thinking is for deep reasoning where external information isn't the core need at all.
 
 | Need | Reach for |
-|---|---|
+| --- | --- |
 | Quick current fact | Web search |
 | Comprehensive multi-source investigation | Research |
 | Internal company knowledge across tools | Enterprise Search |

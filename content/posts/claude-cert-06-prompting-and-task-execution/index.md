@@ -53,7 +53,7 @@ If the criteria in step one are wrong, you catch it before scoring, not after th
 A first draft rarely lands perfectly, and the fix is never rewriting the whole prompt — that loses the parts that worked and hides which change actually fixed the problem. Read the output as a diagnostic instead: it points straight back to the component that fell short.
 
 | Symptom | Likely cause | Fix |
-|---|---|---|
+| --- | --- | --- |
 | Output is generic or off-base | Context was thin | Add the background Claude couldn't infer |
 | Output answered the wrong question | Task verb was ambiguous | Sharpen the instruction |
 | Output is the wrong length, tone, or shape | A constraint or format was missing | Add it |
@@ -66,7 +66,7 @@ Change the one component the output told you to change, resend, and compare. Sto
 The five components apply everywhere, but the emphasis shifts with what you're actually doing. Analysis wants tight constraints and explicit criteria — low creative latitude, high specification. Research wants clear scope and source discipline, with citations you can actually check. Drafting wants audience, tone, and format fixed, with room for Claude to find the phrasing. Brainstorming wants loose constraints and high latitude — over-specifying kills the range you're after.
 
 | Task type | Tighten | Loosen |
-|---|---|---|
+| --- | --- | --- |
 | **Analysis** | Criteria, standards, scope | Phrasing |
 | **Research** | Question, sources, citations | Synthesis approach |
 | **Drafting** | Audience, tone, format | Word choice |
