@@ -1,0 +1,32 @@
+{
+  // Ambiente reproduzível para o site: mesmo Hugo do CI (0.164.0 extended).
+  // Funciona no VS Code local (Dev Containers) e no GitHub Codespaces.
+  "name": "rochanewton.github.io (Hugo)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/hugo:1": {
+      "version": "0.164.0",
+      "extended": true
+    }
+  },
+  "postCreateCommand": "git submodule update --init --recursive",
+  "forwardPorts": [1313],
+  "portsAttributes": {
+    "1313": { "label": "Hugo", "onAutoForward": "openPreview" }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint",
+        "eliostruyf.vscode-front-matter",
+        "tamasfe.even-better-toml",
+        "redhat.vscode-yaml",
+        "editorconfig.editorconfig",
+        "github.vscode-github-actions",
+        "github.vscode-pull-request-github",
+        "eamodio.gitlens"
+      ]
+    }
+  }
+}

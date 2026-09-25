@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Hugo: servidor local (com drafts)",
+      "type": "shell",
+      "command": "hugo server --buildDrafts --disableFastRender --navigateToChanged",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "hugo",
+        "pattern": { "regexp": "^ERROR (.*)$", "message": 1 },
+        "background": {
+          "activesBegin": "^Watching for changes",
+          "beginsPattern": "^(Watching for changes|Change detected)",
+          "endsPattern": "^(Web Server is available|Total in)"
+        }
+      },
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "Hugo: build estrito (igual ao CI)",
+      "type": "shell",
+      "command": "hugo --panicOnWarning --minify --gc --destination /tmp/hugo-ci-check",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Hugo: novo post (page bundle en + pt-br)",
+      "type": "shell",
+      "command": "hugo new content --kind post-bundle posts/${input:postSlug} && code content/posts/${input:postSlug}/index.md",
+      "problemMatcher": []
+    },
+    {
+      "label": "Tema: atualizar Blowfish (submodule)",
+      "type": "shell",
+      "command": "git submodule update --remote --merge themes/blowfish && git -C themes/blowfish log --oneline -1",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "postSlug",
+      "type": "promptString",
+      "description": "Slug do post (ex.: sterling-b2bi-09-cdu-connect-direct)"
+    }
+  ]
+}
