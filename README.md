@@ -27,3 +27,6 @@ Source of **[rochanewton.me](https://rochanewton.me/)** — Newton Rocha's perso
 - **Content** (articles and original images): [CC BY 4.0](LICENSE-CONTENT.md)
 
 Security issues: see [SECURITY.md](SECURITY.md).
+
+
+
