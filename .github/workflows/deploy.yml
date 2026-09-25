@@ -6,6 +6,16 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: ["main"]
+    paths-ignore:
+      - "README.md"
+      - "LICENSE*"
+      - "SECURITY.md"
+      - "cspell.json"
+      - ".markdownlint*"
+      - ".editorconfig"
+      - ".vscode/**"
+      - ".devcontainer/**"
+      - "scripts/**"
   workflow_dispatch:
 
 permissions:
