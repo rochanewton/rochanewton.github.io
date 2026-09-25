@@ -57,7 +57,7 @@
 
   // ---------- Fluxo Git: nunca commitar direto na main ----------
   "git.branchProtection": ["main"],
-  "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
+  "git.branchProtectionPrompt": "alwaysPrompt",
   "git.fetchOnPull": true,
   "git.detectSubmodules": false
 }

@@ -1,4 +1,19 @@
+# Hugo build output
 /public/
 /resources/_gen/
 /.hugo_build.lock
+hugo_stats.json
+
+# macOS
 .DS_Store
+._*
+
+# Editors and tools
+.frontmatter/database/
+*.bak
+*.swp
+*~
+
+# Local secrets — never commit
+.env
+.env.*

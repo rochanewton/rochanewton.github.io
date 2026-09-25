@@ -1,23 +1,28 @@
 name: CI
 
-# Runs on every pull request targeting main.
-# Validates that the site builds cleanly before any change is allowed to merge.
+# Strict build check for pull requests (Dependabot updates, config/layout changes).
+# Direct pushes to main are checked by the same strict build in deploy.yml.
 on:
   pull_request:
     branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-check:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
-          fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -25,23 +30,14 @@ jobs:
           hugo-version: "0.164.0"
           extended: true
 
+      # Fails on any WARN, and on broken {{< ref >}} links between posts.
       - name: Build (strict — fail on warnings)
         run: hugo --panicOnWarning --minify
         env:
           # Same Firebase env vars as deploy.yml — see that file's comment.
-          # Not required for a successful build (the theme skips the
-          # Firebase block entirely when these are unset), but kept in
-          # sync so CI validates the same config shape as production.
           HUGO_PARAMS_FIREBASE_APIKEY: ${{ secrets.FIREBASE_API_KEY }}
           HUGO_PARAMS_FIREBASE_AUTHDOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN }}
           HUGO_PARAMS_FIREBASE_PROJECTID: ${{ secrets.FIREBASE_PROJECT_ID }}
           HUGO_PARAMS_FIREBASE_STORAGEBUCKET: ${{ secrets.FIREBASE_STORAGE_BUCKET }}
           HUGO_PARAMS_FIREBASE_MESSAGINGSENDERID: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}
           HUGO_PARAMS_FIREBASE_APPID: ${{ secrets.FIREBASE_APP_ID }}
-
-      - name: Check for broken internal links
-        run: |
-          if grep -rEo '\]\(/[^)]*\)' content/ | grep -v '^\s*$'; then
-            echo "Found internal links — review manually if needed."
-          fi
-          echo "Build succeeded — site is ready to merge."

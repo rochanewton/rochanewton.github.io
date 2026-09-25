@@ -5,6 +5,8 @@
     "yzhang.markdown-all-in-one",
     "davidanson.vscode-markdownlint",
     "eliostruyf.vscode-front-matter",
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-portuguese-brazilian",
     "tamasfe.even-better-toml",
     "redhat.vscode-yaml",
     "editorconfig.editorconfig",

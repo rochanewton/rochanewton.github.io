@@ -1,21 +1,21 @@
 # Security Policy
 
-## Supported Versions
+This repository is the source of [rochanewton.me](https://rochanewton.me/), a static site built with Hugo and deployed to GitHub Pages. It runs no servers and stores no user accounts. The only dynamic feature is the anonymous view/like counter, backed by Firebase and protected by Firestore Security Rules.
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+## Reporting a vulnerability
 
-## Reporting a Vulnerability
+Please **do not open a public issue**. Report it privately through GitHub's
+[Report a vulnerability](https://github.com/rochanewton/rochanewton.github.io/security/advisories/new) form and include:
 
-Use this section to tell people how to report a vulnerability.
+- the affected URL, file or workflow
+- steps to reproduce
+- the impact you observed
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+I will acknowledge the report within 7 days and aim to fix confirmed issues within 30 days. Credit is given in the fix commit if you want it.
+
+## Scope
+
+In scope: this repository's templates, configuration, scripts and GitHub Actions workflows — for example XSS through a layout, a leaked secret, or an over-permissioned workflow.
+
+Out of scope: GitHub Pages infrastructure, third-party services, and the upstream [Blowfish theme](https://github.com/nunocoracao/blowfish/security) (report those to their maintainers).

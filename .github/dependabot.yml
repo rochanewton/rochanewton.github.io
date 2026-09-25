@@ -1,0 +1,22 @@
+# Weekly update PRs for GitHub Actions and the Blowfish theme.
+# The CI workflow runs the strict Hugo build on each PR before you merge.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      github-actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: ci
+
+  - package-ecosystem: gitsubmodule
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    commit-message:
+      prefix: theme

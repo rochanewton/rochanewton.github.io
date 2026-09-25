@@ -9,6 +9,7 @@ title = "Newton Rocha"
   rtl = false
   dateFormat = "02/01/2006"
   logo = ""
+  copyright = "© { year } Newton Rocha · Conteúdo sob licença [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.pt-br)"
   description = "Notas sobre Middleware, Managed File Transfer e Infraestrutura por Newton Rocha — IBM Sterling, Linux, nuvem e como estou aplicando IA em operações de TI."
 
 [params.author]
