@@ -2,7 +2,7 @@
 
 Newton Rocha's personal site — resume, articles, tips, and real-world case studies on IBM Sterling / Managed File Transfer, Linux infrastructure, automation, and applying AI to IT operations.
 
-Live at: **https://rochanewton.github.io/**
+Live at: **https://rochanewton.me/**
 
 ## Stack
 

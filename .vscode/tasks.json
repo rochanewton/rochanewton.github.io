@@ -18,10 +18,9 @@
       "presentation": { "reveal": "always", "panel": "dedicated" }
     },
     {
-      "label": "Hugo: build de verificação (antes do PR)",
+      "label": "Hugo: build estrito (igual ao CI)",
       "type": "shell",
-      // Igual ao CI, mas sem --panicOnWarning: hoje o aviso de data/quotes404.json trava esse modo
-      "command": "hugo --minify --gc --destination /tmp/hugo-ci-check",
+      "command": "hugo --panicOnWarning --minify --gc --destination /tmp/hugo-ci-check",
       "group": { "kind": "build", "isDefault": true },
       "problemMatcher": []
     },
