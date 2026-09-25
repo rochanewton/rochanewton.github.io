@@ -31,6 +31,12 @@
       "problemMatcher": []
     },
     {
+      "label": "Hugo: instalar a versão do CI (macOS)",
+      "type": "shell",
+      "command": "./scripts/install-hugo.sh",
+      "problemMatcher": []
+    },
+    {
       "label": "Tema: atualizar Blowfish (submodule)",
       "type": "shell",
       "command": "git submodule update --remote --merge themes/blowfish && git -C themes/blowfish log --oneline -1",
