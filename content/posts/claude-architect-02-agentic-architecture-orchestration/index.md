@@ -27,8 +27,22 @@ Domain 1 — **Agentic Architecture & Orchestration** — is the single heaviest
 
 The whole agentic loop comes down to one signal: **`stop_reason`**. Your application sends a request, Claude responds, and you check that field. `stop_reason: "tool_use"` means Claude has decided to call one or more tools — you execute them, package the output as `tool_result` blocks, and send a new request with the results appended. The loop repeats **while `stop_reason == "tool_use"`**. Anything else — most commonly `"end_turn"` — means Claude has produced its final answer and the loop exits.
 
+The agentic loop is a pattern that runs a one-shot AI model call into a continuous, goal-driven process by iterating through composing messages, receiving model responses, inspecting those responses, executing tools and feeding results back into the conversation history.
+
 The architect-level point here is the anti-pattern to avoid: don't try to detect "is Claude done?" by parsing the text of its reply for phrases like "I'm finished" or "here's the answer." That's fragile and model-dependent. `stop_reason` is a structured, contractual signal built for exactly this — use it.
 
+There are four main "stop_reason" values handle:
+- *endTurn:* The model finished naturally; your code should exit the loop and return the response.
+- *tool_use:* The model requests one or more tools to be executed; your code must run these tools, append results to history and continue the loop.
+- *maxTokens:* The response was cut off due to token limits; handle this by either continuing the response or surfacing an error.
+- *stopSequence:* The model stopped at a custom-defined string; treat it like endTurn but extract content before the stop sequence.
+
+The tool_use:
+- When the model requests tool use, your code must extract all tool call blocks (not just the first), execute each tool, and capture their outputs.
+- Append the assistant's full response message to the conversation history before appending the tool results; this preservers the correct sequence and context for the model.
+- Each tool result must include the exact matching tool use ID to link results to requests; mismatches cause confusion and errors
+- If multiple tools are called, combine all their results into a single user message as an array of tool results blocks.
+- Implement a maximum iteration limit to prevent infinite loops caused by repeated or failed tool calls.
 ## Key point 2: multi-agent orchestration is a hub, not a mesh
 
 When one agent isn't enough, the pattern the exam tests is **coordinator/subagent hub-and-spoke**: a single coordinator agent manages all inter-subagent communication, error handling, and information routing. Subagents don't talk to each other directly — everything routes through the coordinator. This keeps failure handling centralized and avoids the combinatorial mess of every agent needing to know about every other agent.
