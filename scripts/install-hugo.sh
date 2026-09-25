@@ -6,7 +6,7 @@ set -euo pipefail
 [[ "$(uname -s)" == "Darwin" ]] || { echo "Script para macOS. No Dev Container o Hugo já vem instalado."; exit 1; }
 
 repo_root="$(cd "$(dirname "$0")/.." && pwd)"
-version="$(grep -m1 -E 'hugo-version:' "$repo_root/.github/workflows/ci.yml" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')"
+version="$(grep -m1 -E 'hugo-version:' "$repo_root/.github/workflows/build.yml" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')"
 dest="${HUGO_INSTALL_DIR:-$HOME/.local/bin}"
 pkg="hugo_extended_${version}_darwin-universal.pkg"
 base="https://github.com/gohugoio/hugo/releases/download/v${version}"
