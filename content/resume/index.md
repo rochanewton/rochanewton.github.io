@@ -9,7 +9,7 @@ showWordCount: true
 showHero: false
 ---
 
-{{< cta url="<https://www.linkedin.com/in/rochanewton>" label="My Linkedin" >}}
+{{< cta url="https://www.linkedin.com/in/rochanewton" label="My Linkedin" >}}
 
 ## Professional Experience
 
@@ -64,7 +64,7 @@ Supported office networks, switches, print servers, and ITIL-based incident and 
 - Microsoft Certified: Azure Fundamentals
 - Claude Certified Associate – Foundations (CCAF), Anthropic — Issued Sep 2026
 
-{{< cta url="<https://www.credly.com/users/rochanewton/badges/credly>"  target="_blank" rel="noopener noreferrer" label="My Credly" >}}
+{{< cta url="https://www.credly.com/users/rochanewton/badges/credly"  target="_blank" rel="noopener noreferrer" label="My Credly" >}}
 
 ## Education
 

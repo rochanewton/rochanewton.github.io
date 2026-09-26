@@ -20,7 +20,7 @@ aliases:
 
 Every SSH and SFTP client has the same scary moment: you connect to a server you've connected to a hundred times before, and instead of a normal prompt you get something like this from OpenSSH:
 
-```
+```text
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -75,7 +75,7 @@ That bottom-right red box is the warning from the top of this post. Everything a
 
 A host key fingerprint is a short hash of the actual key, used because comparing a full key visually is impractical. Modern OpenSSH shows fingerprints as base64-encoded SHA256 by default:
 
-```
+```text
 SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 

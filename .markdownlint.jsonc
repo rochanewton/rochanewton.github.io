@@ -8,5 +8,9 @@
   "MD041": false,
   "MD025": { "front_matter_title": "^\\s*title\\s*[:=]" },
   // Mesmo título de seção em partes diferentes do post é ok
-  "MD024": { "siblings_only": true }
+  "MD024": { "siblings_only": true },
+  //Falso positivo: diagramas indentados dentro do shortcode {{< mermaid >}}
+  "MD046": false,
+  // Falso positivo: URLs em parâmetros de shortcodes ({{< cta url="…" >}}) não podem levar < >
+  "MD034": false
 }

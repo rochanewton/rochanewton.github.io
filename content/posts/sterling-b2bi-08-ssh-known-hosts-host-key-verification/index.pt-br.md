@@ -20,7 +20,7 @@ aliases:
 
 Todo cliente SSH e SFTP tem o mesmo momento assustador: você se conecta a um servidor ao qual já se conectou centenas de vezes, e em vez de um prompt normal, recebe algo assim do OpenSSH:
 
-```
+```text
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -75,7 +75,7 @@ Aquela caixa vermelha no canto inferior direito é o aviso do topo deste post. T
 
 Uma fingerprint de host key é um hash curto da chave real, usado porque comparar uma chave completa visualmente é impraticável. O OpenSSH moderno mostra fingerprints como SHA256 codificado em base64 por padrão:
 
-```
+```text
 SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
