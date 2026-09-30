@@ -42,6 +42,12 @@
   weight = 32
 
 [[main]]
+  name = "GitHub"
+  pageRef = "categories/github"
+  parent = "articles"
+  weight = 33
+
+[[main]]
   identifier = "linkedin"
   pre = "linkedin"
   url = "https://www.linkedin.com/in/rochanewton"
