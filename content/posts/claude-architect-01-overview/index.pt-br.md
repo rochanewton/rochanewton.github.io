@@ -1,6 +1,6 @@
 ---
 title: "Tornando-se um Claude Architect: Visão Geral — Claude Certified Architect – Foundations"
-date: 2026-09-24
+date: 2026-09-20
 description: "Uma nova certificação, uma nova série. O Claude Certified Architect – Foundations testa se você consegue projetar sistemas com Claude que outras pessoas vão construir em cima — não só usar bem o Claude. Veja o que a prova cobre e o que esta série vai percorrer."
 tags:
   - claude

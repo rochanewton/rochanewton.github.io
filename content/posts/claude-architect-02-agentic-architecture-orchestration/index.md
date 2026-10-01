@@ -1,6 +1,6 @@
 ---
 title: "Becoming a Claude Architect: Agentic Architecture & Orchestration — Domain 1"
-date: 2026-09-24
+date: 2026-09-21
 description: "The heaviest domain on the Claude Certified Architect – Foundations exam, at 27%. The agentic loop, coordinator/subagent orchestration, subagent configuration, deterministic enforcement with hooks, task decomposition, and session management — the seven task areas of Domain 1."
 tags:
   - claude

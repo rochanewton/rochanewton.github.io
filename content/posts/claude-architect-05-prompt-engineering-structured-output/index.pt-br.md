@@ -1,6 +1,6 @@
 ---
 title: "Tornando-se um Claude Architect: Prompt Engineering & Structured Output — Domínio 4"
-date: 2026-09-24
+date: 2026-09-25
 description: "20% da prova Claude Certified Architect – Foundations: critérios explícitos em vez de instruções vagas, few-shot prompting, saída com schema garantido via tool use e JSON schemas, loops de validação/retentativa, revisão multi-instância e a Message Batches API."
 tags:
   - claude

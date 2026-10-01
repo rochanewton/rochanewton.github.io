@@ -1,6 +1,6 @@
 ---
 title: "Tornando-se um Claude Architect: Tool Design & MCP Integration — Domínio 2"
-date: 2026-09-24
+date: 2026-09-23
 description: "18% da prova Claude Certified Architect – Foundations: escrever descrições de ferramentas que o modelo realmente consegue escolher entre si, respostas de erro estruturadas do MCP, tool_choice e acesso escopado, escopo de servidores MCP, e quando usar Grep vs. Glob vs. Edit."
 tags:
   - claude

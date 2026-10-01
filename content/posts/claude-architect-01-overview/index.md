@@ -1,6 +1,6 @@
 ---
 title: "Becoming a Claude Architect: Overview — Claude Certified Architect – Foundations"
-date: 2026-09-24
+date: 2026-09-20
 description: "A new certification, a new series. Claude Certified Architect – Foundations tests whether you can design Claude systems other people build on — not just use Claude well. Here's what the exam covers and what this series will walk through."
 tags:
   - claude

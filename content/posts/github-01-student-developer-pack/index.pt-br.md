@@ -1,6 +1,6 @@
 ---
 title: "GitHub Student Developer Pack: o que está incluído e como eu usaria"
-date: 2026-09-30
+date: 2026-09-28
 description: "O que estudantes verificados realmente recebem do GitHub Education — Copilot Student, Codespaces, GitHub Pro e ofertas de parceiros para cloud, domínios, dados e observabilidade — e as condições que você precisa checar antes de ativar qualquer coisa."
 tags:
   - github

@@ -1,6 +1,6 @@
 ---
 title: "Becoming a Claude Architect: Prompt Engineering & Structured Output — Domain 4"
-date: 2026-09-24
+date: 2026-09-25
 description: "20% of the Claude Certified Architect – Foundations exam: explicit criteria over vague instructions, few-shot prompting, guaranteed schema-compliant output with tool use and JSON schemas, validation/retry loops, multi-instance review, and the Message Batches API."
 tags:
   - claude

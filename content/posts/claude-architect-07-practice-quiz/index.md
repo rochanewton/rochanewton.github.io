@@ -1,6 +1,6 @@
 ---
 title: "Becoming a Claude Architect: 100-Question Practice Quiz — Part 7"
-date: 2026-09-24
+date: 2026-09-27
 description: "An unofficial, AI-assisted practice quiz for the Claude Certified Architect – Foundations exam: 20 questions per domain, 100 total, with instant feedback and explanations."
 tags:
   - claude

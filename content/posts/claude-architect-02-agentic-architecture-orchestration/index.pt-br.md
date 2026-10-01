@@ -1,6 +1,6 @@
 ---
 title: "Tornando-se um Claude Architect: Agentic Architecture & Orchestration — Domínio 1"
-date: 2026-09-24
+date: 2026-09-21
 description: "O domínio mais pesado da prova Claude Certified Architect – Foundations, com 27%. O agentic loop, orquestração coordenador/subagente, configuração de subagentes, enforcement determinístico com hooks, decomposição de tarefas e gerenciamento de sessão — as sete áreas de tarefa do Domínio 1."
 tags:
   - claude

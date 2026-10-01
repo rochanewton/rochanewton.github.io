@@ -1,6 +1,6 @@
 ---
 title: "Tornando-se um Claude Architect: Context Management & Reliability — Domínio 5"
-date: 2026-09-24
+date: 2026-09-26
 description: "15% da prova Claude Certified Architect – Foundations: o efeito lost-in-the-middle, gatilhos explícitos de escalonamento, propagação estruturada de erros em sistemas multiagente, scratchpads para exploração de bases de código grandes, e calibração de confiança com proveniência."
 tags:
   - claude

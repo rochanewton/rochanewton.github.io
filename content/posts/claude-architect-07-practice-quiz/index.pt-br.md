@@ -1,6 +1,6 @@
 ---
 title: "Tornando-se um Claude Architect: Quiz de Prática com 100 Perguntas — Parte 7"
-date: 2026-09-24
+date: 2026-09-27
 description: "Um quiz de prática não oficial, com apoio de IA, para a prova Claude Certified Architect – Foundations: 20 perguntas por domínio, 100 no total, com feedback instantâneo e explicações."
 tags:
   - claude

@@ -1,6 +1,6 @@
 ---
 title: "Becoming a Claude Architect: Tool Design & MCP Integration — Domain 2"
-date: 2026-09-24
+date: 2026-09-23
 description: "18% of the Claude Certified Architect – Foundations exam: writing tool descriptions the model can actually choose between, structured MCP error responses, tool_choice and scoped access, MCP server scoping, and when to reach for Grep vs. Glob vs. Edit."
 tags:
   - claude

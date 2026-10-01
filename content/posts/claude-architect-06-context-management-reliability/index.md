@@ -1,6 +1,6 @@
 ---
 title: "Becoming a Claude Architect: Context Management & Reliability — Domain 5"
-date: 2026-09-24
+date: 2026-09-26
 description: "15% of the Claude Certified Architect – Foundations exam: the lost-in-the-middle effect, explicit escalation triggers, structured error propagation across multi-agent systems, scratchpads for large codebase exploration, and confidence calibration with provenance."
 tags:
   - claude
