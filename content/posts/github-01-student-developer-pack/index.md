@@ -39,11 +39,11 @@ The part people miss: **verification doesn't activate everything.** Each partner
 
 ## Key point 2: What GitHub gives you directly
 
-| Benefit | What you get | The detail that matters |
-| --- | --- | --- |
-| **GitHub Pro** | Free while you're a student | A personal account plan upgrade. Many core features are already in GitHub Free ([compare plans](https://docs.github.com/en/get-started/learning-about-github/githubs-plans)) |
-| **Copilot Student** | Free AI coding assistant | Its own plan, **not** Copilot Pro: an allowance of AI credits, auto model selection only, no third-party agents ([plans](https://docs.github.com/en/copilot/get-started/plans)) |
-| **Codespaces** | Cloud dev environments in the browser or VS Code | Up to **180 core-hours/month** plus Pro-level storage ([students docs](https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students)) |
+| Benefit             | What you get                                     | The detail that matters                                                                                                                                                                                |
+| ------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **GitHub Pro**      | Free while you're a student                      | A personal account plan upgrade. Many core features are already in GitHub Free ([compare plans](https://docs.github.com/en/get-started/learning-about-github/githubs-plans))                           |
+| **Copilot Student** | Free AI coding assistant                         | Its own plan, **not** Copilot Pro: an allowance of AI credits, auto model selection only, no third-party agents ([plans](https://docs.github.com/en/copilot/get-started/plans))                        |
+| **Codespaces**      | Cloud dev environments in the browser or VS Code | Up to **180 core-hours/month** plus Pro-level storage ([students docs](https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students)) |
 
 Two of these need more explanation.
 
@@ -104,7 +104,7 @@ The order matters. Learn a concept, build something small, deploy it, watch it r
 To be clear about my own usage: I use two benefits from the Pack.
 
 - **Copilot Student.** I use it in VS Code, my main editor. It speeds up the boring parts, but I still read every suggestion before accepting it. It's a helper, not a substitute for understanding the code.
-- **The Namecheap .me domain.** The domain for this site, **rochanewton.me**, came from the Pack's free year of .me registration. That's the first lesson from the "check the terms" section: the free part is **one year**. Next year's renewal is at the regular price, and that's on me.
+- **The Namecheap .me domain.** The domain for this site, **https://rochanewton.me**, came from the Pack's free year of .me registration. That's the first lesson from the "check the terms" section: the free part is **one year**. Next year's renewal is at the regular price, and that's on me.
 
 Everything else in this post is described from the official terms, not from hands-on testing. When I use any of it for my cloud lab, it'll get its own post.
 
