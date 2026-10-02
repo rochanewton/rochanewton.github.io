@@ -109,7 +109,7 @@ Redundancy costs money, though. The goal isn't to duplicate everything by reflex
 "High" availability is vague. In practice the target is expressed as the percentage of time the service is available: the famous "nines." The [AWS Well-Architected Reliability Pillar](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/availability.html) defines availability as available-for-use time divided by total time, and gives this reference table:
 
 | Availability | Maximum unavailability per year | Example workloads (per AWS) |
-|---|---|---|
+| --- | --- | --- |
 | 99% | 3 days 15 hours | Batch processing, data extraction and load jobs |
 | 99.9% | 8 hours 45 minutes | Internal tools |
 | 99.95% | 4 hours 22 minutes | Online commerce, point of sale |
@@ -125,7 +125,7 @@ Every extra nine divides the allowed downtime by ten, and usually **multiplies c
 A highly available architecture thinks about redundancy layer by layer:
 
 | Layer | Risk | How AWS solves it |
-|---|---|---|
+| --- | --- | --- |
 | Entry point | A single point receives all traffic | [Elastic Load Balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html), spread across AZs |
 | Compute | An instance dies | Multiple instances + [Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html) replacing failed ones |
 | Database | The primary becomes unavailable | [RDS Multi-AZ](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZSingleStandby.html) with a standby and automatic failover |
@@ -272,7 +272,7 @@ flowchart LR
 {{< /mermaid >}}
 
 | Strategy | What's ready in the recovery Region | Typical RTO / RPO | Cost |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Backup & Restore** | Only the backups. Infrastructure is rebuilt on demand, ideally with IaC | Hours | Low |
 | **Pilot Light** | Data replicated and the "core" provisioned, but servers switched off | Tens of minutes | Low to medium |
 | **Warm Standby** | A complete, working but scaled-down copy that scales up on failover | Minutes | Medium to high |
@@ -311,7 +311,7 @@ Some tools that help:
 ## HA vs. DR, side by side
 
 | | High Availability | Disaster Recovery |
-|---|---|---|
+| --- | --- | --- |
 | **Question** | How do I keep running when *something* fails? | How do I recover when *everything* fails? |
 | **Scope** | Components (instance, disk, database, AZ) | The whole workload (Region, site, data) |
 | **Mechanism** | Redundancy + automatic failover | A separate copy of the environment + point-in-time backups |
@@ -350,7 +350,7 @@ Because in infrastructure, the question is never **if** something will fail. It'
 
 ## Sources and further reading
 
-**AWS (primary sources for this post)**
+### AWS (primary sources for this post)
 
 - [AWS Well-Architected: Reliability Pillar — Availability](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/availability.html): definition of availability and the "nines" table
 - [Reliability Pillar — Shared Responsibility Model for Resiliency](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/shared-responsibility-model-for-resiliency.html)
@@ -362,7 +362,7 @@ Because in infrastructure, the question is never **if** something will fail. It'
 - [AWS Fault Injection Service](https://docs.aws.amazon.com/fis/latest/userguide/what-is.html)
 - Werner Vogels, [10 Lessons from 10 Years of Amazon Web Services](https://www.allthingsdistributed.com/2016/03/10-lessons-from-10-years-of-aws.html)
 
-**Other perspectives (beyond AWS)**
+### Other perspectives (beyond AWS)
 
 - [IBM — What is high availability?](https://www.ibm.com/think/topics/high-availability)
 - [Red Hat — What is high availability?](https://www.redhat.com/en/topics/linux/what-is-high-availability)
