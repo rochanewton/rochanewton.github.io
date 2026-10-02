@@ -48,6 +48,12 @@
   weight = 33
 
 [[main]]
+  name = "Tech Tips"
+  pageRef = "categories/tech-tips"
+  parent = "articles"
+  weight = 34
+
+[[main]]
   identifier = "linkedin"
   pre = "linkedin"
   url = "https://www.linkedin.com/in/rochanewton"
