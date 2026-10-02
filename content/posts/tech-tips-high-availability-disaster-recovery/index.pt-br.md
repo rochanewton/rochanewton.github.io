@@ -109,7 +109,7 @@ Mas redundância tem custo. O objetivo não é duplicar tudo por reflexo, e sim 
 "Alta" disponibilidade é vago. Na prática, a meta é expressa em porcentagem de tempo em que o serviço está disponível, os famosos "noves". O [Reliability Pillar do AWS Well-Architected](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/availability.html) define disponibilidade como o tempo em que a aplicação está disponível para uso dividido pelo tempo total, e traz esta tabela de referência:
 
 | Disponibilidade | Indisponibilidade máxima por ano | Exemplos de workload (segundo a AWS) |
-|---|---|---|
+| --- | --- | --- |
 | 99% | 3 dias e 15 horas | Jobs batch, extração e carga de dados |
 | 99,9% | 8 horas e 45 minutos | Ferramentas internas |
 | 99,95% | 4 horas e 22 minutos | E-commerce, ponto de venda |
@@ -125,7 +125,7 @@ Cada nove a mais divide o tempo de indisponibilidade permitido por dez, e normal
 Uma arquitetura altamente disponível pensa na redundância camada por camada:
 
 | Camada | Risco | Como resolver na AWS |
-|---|---|---|
+| --- | --- | --- |
 | Entrada | Um único ponto recebe todo o tráfego | [Elastic Load Balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html), que é distribuído entre AZs |
 | Compute | Uma instância cai | Várias instâncias + [Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html) recriando as que falham |
 | Banco de dados | O banco primário fica indisponível | [RDS Multi-AZ](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZSingleStandby.html) com standby e failover automático |
@@ -272,7 +272,7 @@ flowchart LR
 {{< /mermaid >}}
 
 | Estratégia | O que fica pronto na região de recuperação | RTO / RPO típicos | Custo |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Backup & Restore** | Só os backups. A infraestrutura é recriada na hora, de preferência com IaC | Horas | Baixo |
 | **Pilot Light** | Dados replicados e o "núcleo" provisionado, mas com servidores desligados | Dezenas de minutos | Baixo a médio |
 | **Warm Standby** | Uma cópia completa e funcional, porém reduzida, que escala no failover | Minutos | Médio a alto |
@@ -311,7 +311,7 @@ Algumas ferramentas que ajudam nisso:
 ## HA vs. DR, lado a lado
 
 | | Alta Disponibilidade | Disaster Recovery |
-|---|---|---|
+| --- | --- | --- |
 | **Pergunta** | Como continuo funcionando quando *algo* falha? | Como me recupero quando *tudo* falha? |
 | **Escopo** | Componentes (instância, disco, banco, AZ) | O workload inteiro (região, site, dados) |
 | **Mecanismo** | Redundância + failover automático | Cópia separada do ambiente + backups point-in-time |
@@ -350,7 +350,7 @@ Porque, em infraestrutura, a questão nunca é **se** algo vai falhar. É **quan
 
 ## Fontes e leitura adicional
 
-**AWS (fontes primárias deste post)**
+### AWS (fontes primárias deste post)
 
 - [AWS Well-Architected: Reliability Pillar — Availability](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/availability.html): definição de disponibilidade e a tabela dos "noves"
 - [Reliability Pillar — Shared Responsibility Model for Resiliency](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/shared-responsibility-model-for-resiliency.html)
@@ -362,7 +362,7 @@ Porque, em infraestrutura, a questão nunca é **se** algo vai falhar. É **quan
 - [AWS Fault Injection Service](https://docs.aws.amazon.com/fis/latest/userguide/what-is.html)
 - Werner Vogels, [10 Lessons from 10 Years of Amazon Web Services](https://www.allthingsdistributed.com/2016/03/10-lessons-from-10-years-of-aws.html)
 
-**Outras visões (fora da AWS)**
+### Outras visões (fora da AWS)
 
 - [IBM — O que é alta disponibilidade?](https://www.ibm.com/br-pt/think/topics/high-availability)
 - [Red Hat — What is high availability?](https://www.redhat.com/en/topics/linux/what-is-high-availability)
