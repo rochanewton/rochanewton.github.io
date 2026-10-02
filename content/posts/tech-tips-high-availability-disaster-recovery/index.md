@@ -109,7 +109,7 @@ Redundancy costs money, though. The goal isn't to duplicate everything by reflex
 "High" availability is vague. In practice the target is expressed as the percentage of time the service is available: the famous "nines." The [AWS Well-Architected Reliability Pillar](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/availability.html) defines availability as available-for-use time divided by total time, and gives this reference table:
 
 | Availability | Maximum unavailability per year | Example workloads (per AWS) |
-|---|---|---|
+| --- | --- | --- |
 | 99% | 3 days 15 hours | Batch processing, data extraction and load jobs |
 | 99.9% | 8 hours 45 minutes | Internal tools |
 | 99.95% | 4 hours 22 minutes | Online commerce, point of sale |
@@ -125,7 +125,7 @@ Every extra nine divides the allowed downtime by ten, and usually **multiplies c
 A highly available architecture thinks about redundancy layer by layer:
 
 | Layer | Risk | How AWS solves it |
-|---|---|---|
+| --- | --- | --- |
 | Entry point | A single point receives all traffic | [Elastic Load Balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html), spread across AZs |
 | Compute | An instance dies | Multiple instances + [Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html) replacing failed ones |
 | Database | The primary becomes unavailable | [RDS Multi-AZ](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZSingleStandby.html) with a standby and automatic failover |
